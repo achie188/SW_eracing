@@ -13,4 +13,4 @@ def format(df):
     df = df.rename(columns={'speedInKmHours': 'Speed'}).round(1)
     df = df.rename(columns={'powerupUsed': 'PowerUps Used'})
 
-    
+    return df

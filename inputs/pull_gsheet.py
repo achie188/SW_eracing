@@ -20,7 +20,7 @@ credentials = Credentials.from_service_account_info(
 gc = gspread.authorize(credentials)
 sh =  gc.open("SW_E-Racing_23")
 
-def import_gsheet(sheet):
+def pull_gsheet(sheet):
     wks = sh.worksheet(sheet)
     df = pd.DataFrame(wks.get_all_records())
 

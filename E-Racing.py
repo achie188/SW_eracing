@@ -7,26 +7,19 @@ sys.path.append('/Users/achie188/Library/CloudStorage/GitHub/Personal/SW_eracing
 
 
 from inputs.pull_zwift import pull_zwift
+from inputs.pull_gsheet import pull_gsheet
 
-#3921745
-event_id = '3921745'
+#Stage_ids
+stage1 = '3921745'
 
-#Test event
-t1 = pull_zwift(event_id)
+#Events
+prologue = pull_gsheet("Prologue")
+t1 = pull_zwift(stage1)
 
 
 interval=5 * 1000
 
-#rename columns
-t1 = t1.rename(columns={'position': '#'})
-t1 = t1.rename(columns={'heartRateInBpm': 'HR'})
-t1 = t1.rename(columns={'powerOutputInWatts': 'Watts'})
-t1 = t1.rename(columns={'powerInWattsPerKg': 'Watts/Kg'}).round(2)
-t1 = t1.rename(columns={'liveTimeGapToLeaderInSeconds': 'Gap'})
-t1 = t1.rename(columns={'completionTimeInSeconds': 'Finish Time'})
-t1 = t1.rename(columns={'distanceInMeters': 'Distance'}).round(1)
-t1 = t1.rename(columns={'speedInKmHours': 'Speed'}).round(1)
-t1 = t1.rename(columns={'powerupUsed': 'PowerUps Used'})
+
 
 
 
@@ -48,9 +41,21 @@ st.markdown("""
 
 st.subheader("Welcome to the Sexy Walrus E-Racing Series 2023! 👋")
 
-st.write("The below show live data from the Sexy Walrus E-Racing Series - Stage 1.")
+st.write("The below shows the results and current standings of the Sexy Walrus E-Racing Series.")
 
-if t1.empty:
-    st.write("Race not started yet, no data. Please be patient.")
-else:
-    st.dataframe(t1, height=2000, hide_index=True)
+tab1, tab2, tab3 = st.tabs(["Current Race", "Championship", "All Results"])
+
+
+with tab1:
+    if t1.empty:
+        st.write("Race not started yet, no data. Please be patient.")
+    else:
+        st.dataframe(t1, height=2000, hide_index=True)
+
+with tab2:
+    tab11, tab12, tab13, tab14, tab15, tab16 = st.tabs("Prologue", "Stage 1", "Stage 2", "Stage 3", "Stage 4", "Stage 5")
+
+    with tab11:
+        st.subheader('Prologue Results')
+
+        st.dataframe(prologue, hide_index=True)

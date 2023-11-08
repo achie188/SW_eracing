@@ -88,7 +88,7 @@ with tab1:
 
         other_columns = [col for col in ind.columns if col != 'Total']
         column_order = other_columns[:2] + ['Total'] + other_columns[2:]
-        df = ind.reindex(columns=column_order)
+        ind = ind.reindex(columns=column_order)
 
         st.dataframe(ind, height=1500, hide_index=True)
 

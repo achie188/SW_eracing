@@ -1,4 +1,8 @@
-pandas
+altair
 numpy
+pandas
+pydeck
 streamlit
+gspread
 streamlit-autorefresh
+gspread-dataframe

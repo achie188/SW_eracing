@@ -57,7 +57,7 @@ st.write("The below shows the results and current standings of the Sexy Walrus E
 tab1, tab2, tab3 = st.tabs(["Championship", "All Results", "LIVE NOW"])
 
 
-with tab1:
+with tab3:
     if live.empty:
         st.write("No live data right now.")
     else:
@@ -69,9 +69,9 @@ with tab2:
     with tab11:
         st.subheader('Prologue Results')
 
-        st.dataframe(prologue, height=1000, hide_index=True)
+        st.dataframe(prologue, height=1500, hide_index=True)
 
     with tab12:
         st.subheader('Stage 1 Results')
 
-        st.dataframe(s1, height=1000, hide_index=True)
+        st.dataframe(s1, height=1500, hide_index=True)

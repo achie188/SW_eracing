@@ -7,7 +7,7 @@ sys.path.append('/Users/achie188/Library/CloudStorage/GitHub/Personal/SW_eracing
 
 from inputs.pull_zwift import pull_zwift
 from inputs.pull_gsheet import pull_gsheet
-from pipeline.formatting import format_results
+from pipeline.formatting import format_results, add_team
 
 
 interval=60 * 1000
@@ -23,6 +23,7 @@ ath_ids = pull_gsheet("Athlete_ids")
 
 #Get Events
 prologue = pull_gsheet("Prologue")
+prologue = add_team(prologue, ath_ids)
 
 s1r = pull_zwift(stage1)
 s1p = pull_gsheet("Stage1")

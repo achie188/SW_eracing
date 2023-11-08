@@ -39,3 +39,14 @@ def format_results(res, pts, ath_ids):
     df = df.rename(columns={'Ed_Name': 'Name'})
 
     return df
+
+def add_team(df, ath_ids):
+
+    ath_ids = ath_ids[['Ed_Name', 'Team']]
+
+    df = pd.merge(df, ath_ids, left_on='Name', right_on='Ed_Name', how='inner')
+
+    df.drop(columns=['Ed_Name'], inplace=True)
+
+    return df
+

@@ -20,11 +20,14 @@ def format(df):
     df = df.rename(columns={'powerOutputInWatts': 'Watts'})
     df = df.rename(columns={'powerInWattsPerKg': 'Watts/Kg'}).round(2)
     df = df.rename(columns={'liveTimeGapToLeaderInSeconds': 'Gap'})
-    df = df.rename(columns={'completionTimeInSeconds': 'Finish Time'})
+    df = df.rename(columns={'completionTimeInSeconds': 'Time'})
     df = df.rename(columns={'distanceInMeters': 'Distance'}).round(1)
     df = df.rename(columns={'speedInKmHours': 'Speed'}).round(1)
     df = df.rename(columns={'powerupUsed': 'PowerUps Used'})
 
-    df['Finish Time'] = df['Finish Time'].apply(format_mmss)
+    df['Time'] = df['Time'].apply(format_mmss)
+
+    fastest_time = df['Time'].min()
+    df['Diff'] = df['Time'] - fastest_time
     
     return df

@@ -24,7 +24,7 @@ def pull_zwift(event_id):
     race_data = pd.DataFrame(placement_data)
 
     if not(race_data).empty:
-        race_data.drop(columns=['jerseyHash', 'location', 'countryCodeAlpha2Code', 'crossingStartingLineGap', 'rideOnsCounter', 'arrivalAtInSeconds'], inplace=True)
+        race_data.drop(columns=['jerseyHash', 'location', 'countryCodeAlpha2Code', 'crossingStartingLineGap', 'rideOnsCounter', 'arrivalAtInSeconds', 'groupNumber'], inplace=True)
 
     return race_data
 

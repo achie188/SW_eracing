@@ -26,7 +26,7 @@ t1 = t1.rename(columns={'liveTimeGapToLeaderInSeconds': 'Gap'})
 t1 = t1.rename(columns={'completionTimeInSeconds': 'Finish Time'})
 t1 = t1.rename(columns={'distanceInMeters': 'Distance'}).round(1)
 t1 = t1.rename(columns={'speedInKmHours': 'Speed'}).round(1)
-t1 = t1.rename(columns={'powerUpUsed': 'PowerUps Used'})
+t1 = t1.rename(columns={'powerupUsed': 'PowerUps Used'})
 
 
 

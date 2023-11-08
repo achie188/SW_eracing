@@ -1,4 +1,16 @@
 import pandas as pd
+import numpy as np
+
+
+
+#Format mm:ss
+def format_mmss(seconds):
+    if np.isnan(seconds):
+        return '0:00'
+    elif seconds < 600:  # Less than 10 minutes
+        return '{:01d}:{:02d}'.format(int(seconds // 60), int(seconds % 60))  # M:SS format
+    else:
+        return '{:02d}:{:02d}'.format(int(seconds // 60), int(seconds % 60))  # MM:SS format
 
 def format(df):
 
@@ -13,4 +25,6 @@ def format(df):
     df = df.rename(columns={'speedInKmHours': 'Speed'}).round(1)
     df = df.rename(columns={'powerupUsed': 'PowerUps Used'})
 
+    df['Finish Time'] = df['Finish Time'].apply(format_mmss)
+    
     return df

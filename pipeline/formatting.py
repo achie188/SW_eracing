@@ -25,9 +25,9 @@ def format(df):
     df = df.rename(columns={'speedInKmHours': 'Speed'}).round(1)
     df = df.rename(columns={'powerupUsed': 'PowerUps Used'})
 
-    df['Time'] = df['Time'].apply(format_mmss)
-
     fastest_time = df['Time'].min()
     df['Diff'] = df['Time'] - fastest_time
+
+    df['Time'] = df['Time'].apply(format_mmss)
     
     return df

@@ -96,7 +96,7 @@ with tab1:
         st.subheader('Teams')
 
         other_columns = [col for col in team.columns if col != 'Total Pts']
-        column_order = other_columns[:2] + ['Total Pts'] + other_columns[2:]
+        column_order = other_columns[:1] + ['Total Pts'] + other_columns[1:]
         team = team.reindex(columns=column_order)
 
         st.dataframe(team, hide_index=True)

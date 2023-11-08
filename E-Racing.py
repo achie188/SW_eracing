@@ -38,8 +38,8 @@ live = pull_zwift(stage2)
 ind = pull_gsheet("Individual")
 team = pull_gsheet("Team")
 
-ind = ind.sort_values(by='column_name', ascending=False)
-team = team.sort_values(by='column_name', ascending=False)
+ind = ind.sort_values(by='Total', ascending=False)
+team = team.sort_values(by='Total', ascending=False)
 
 
 

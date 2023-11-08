@@ -12,7 +12,13 @@ def format_mmss(seconds):
     else:
         return '{:02d}:{:02d}'.format(int(seconds // 60), int(seconds % 60))  # MM:SS format
 
-def format(df):
+def format_results(df, ath_ids):
+
+    df['playerId'] = pd.to_numeric(df['playerId'], errors='coerce')
+    ath_ids['zwiZwift_Idft_id'] = pd.to_numeric(ath_ids['Zwift_Id'], errors='coerce')
+                                                
+    df = pd.merge(df, ath_ids, left_on='playerId', right_on='Zwift_Id', how='inner')
+
 
     #rename columns
     df = df.rename(columns={'position': '#'})
@@ -25,9 +31,9 @@ def format(df):
     df = df.rename(columns={'speedInKmHours': 'Speed'}).round(1)
     df = df.rename(columns={'powerupUsed': 'PowerUps Used'})
 
-    fastest_time = df['Time'].min()
-    df['Diff'] = df['Time'] - fastest_time
-
     df['Time'] = df['Time'].apply(format_mmss)
-    
+
+
+    df = df[['Ed_Name', 'Time', 'Gap', 'HR', 'Watts', 'Watt/Kg']]
+
     return df

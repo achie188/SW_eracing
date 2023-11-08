@@ -12,13 +12,13 @@ def format_mmss(seconds):
     else:
         return '{:02d}:{:02d}'.format(int(seconds // 60), int(seconds % 60))  # MM:SS format
 
-def format_results(df, ath_ids):
+def format_results(res, pts, ath_ids):
 
-    df['playerId'] = pd.to_numeric(df['playerId'], errors='coerce')
+    res['playerId'] = pd.to_numeric(res['playerId'], errors='coerce')
     ath_ids['zwiZwift_Idft_id'] = pd.to_numeric(ath_ids['Zwift_Id'], errors='coerce')
                                                 
-    df = pd.merge(df, ath_ids, left_on='playerId', right_on='Zwift_Id', how='inner')
-
+    df = pd.merge(res, ath_ids, left_on='playerId', right_on='Zwift_Id', how='inner')
+    df = pd.merge(df, pts, left_on='Ed_Name', right_on='Name', how='inner')
 
     #rename columns
     df = df.rename(columns={'position': '#'})
@@ -34,7 +34,7 @@ def format_results(df, ath_ids):
     df['Time'] = df['Time'].apply(format_mmss)
 
 
-    df = df[['#', 'Ed_Name', 'Time', 'Gap', 'HR', 'Watts', 'Watts/Kg']]
+    df = df[['#', 'Ed_Name', 'Time', 'Gap', 'HR', 'Watts', 'Watts/Kg', 'Fin pts', 'KoM #', 'KOM', 'Int. S', 'Des Sp/Cl', 'Reports', 'MAR', 'Par. Pts', 'Total pts', 'Orange pts']]
 
     df = df.rename(columns={'Ed_Name': 'Name'})
 

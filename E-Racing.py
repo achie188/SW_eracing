@@ -23,9 +23,12 @@ ath_ids = pull_gsheet("Athlete_ids")
 
 #Get Events
 prologue = pull_gsheet("Prologue")
-s1 = pull_zwift(stage1)
 
-s1 = format_results(s1, ath_ids)
+s1r = pull_zwift(stage1)
+s1p = pull_gsheet("Stage1")
+s1 = format_results(s1r, s1p, ath_ids)
+
+
 
 #Live event
 live = pull_zwift(stage2)

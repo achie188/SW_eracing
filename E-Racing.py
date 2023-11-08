@@ -10,7 +10,7 @@ from inputs.pull_gsheet import pull_gsheet
 from pipeline.formatting import format_results
 
 
-interval=5 * 1000
+interval=60 * 1000
 
 
 #Stage_ids
@@ -38,6 +38,8 @@ live = pull_zwift(stage2)
 ind = pull_gsheet("Individual")
 team = pull_gsheet("Team")
 
+ind = ind.sort_values(by='column_name', ascending=False)
+team = team.sort_values(by='column_name', ascending=False)
 
 
 
@@ -48,7 +50,7 @@ st.set_page_config(
     layout="wide"
 )
 
-#st_autorefresh(interval, limit=1000)
+st_autorefresh(interval, limit=1000)
 
 st.markdown("""
         <style>
@@ -83,7 +85,7 @@ with tab1:
     with tab12:
         st.subheader('Teams')
 
-        st.dataframe(team, height=1500, hide_index=True)
+        st.dataframe(team, hide_index=True)
 
 with tab2:
     tab21, tab22, tab23, tab24, tab25, tab26 = st.tabs(["Prologue", "Stage 1", "Stage 2", "Stage 3", "Stage 4", "Stage 5"])

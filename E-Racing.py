@@ -24,7 +24,6 @@ ath_ids = pull_gsheet("Athlete_ids")
 #Get Events
 prologue = pull_gsheet("Prologue")
 prologue = add_team(prologue, ath_ids)
-prologue = prologue[['Name', 'Team', 'Time', 'Av pow', ]]
 
 s1r = pull_zwift(stage1)
 s1p = pull_gsheet("Stage1")
@@ -38,6 +37,8 @@ live = pull_zwift(stage2)
 
 #Get Standings
 ind = pull_gsheet("Individual")
+ind = add_team(ind, ath_ids)
+
 team = pull_gsheet("Team")
 
 ind['Total'] = pd.to_numeric(ind['Total'], errors='coerce')

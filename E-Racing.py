@@ -36,7 +36,7 @@ live = pull_zwift(stage2)
 
 #Get Standings
 ind = pull_gsheet("Individual")
-team = pull_gsheet("team")
+team = pull_gsheet("Team")
 
 
 

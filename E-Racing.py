@@ -33,7 +33,6 @@ t1 = t1.rename(columns={'powerupUsed': 'PowerUps Used'})
 # Set up Streamlit app
 st.set_page_config(
     page_title="SW E-Racing",
-    layout="wide"
 )
 
 st_autorefresh(interval, limit=1000)

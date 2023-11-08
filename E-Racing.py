@@ -47,7 +47,7 @@ team['Total Pts'] = pd.to_numeric(team['Total Pts'], errors='coerce')
 ind = ind.sort_values(by='Total', ascending=False)
 team = team.sort_values(by='Total Pts', ascending=False)
 
-
+#orange = pull_gsheet("Orange")
 
 
 # Set up Streamlit app

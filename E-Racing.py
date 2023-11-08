@@ -34,7 +34,9 @@ s1 = format_results(s1r, s1p, ath_ids)
 live = pull_zwift(stage2)
 
 
-
+#Get Standings
+ind = pull_gsheet("Individual")
+team = pull_gsheet("team")
 
 
 
@@ -70,16 +72,28 @@ with tab3:
         st.dataframe(live, height=2000, hide_index=True)
 
 
-
-with tab2:
-    tab11, tab12, tab13, tab14, tab15, tab16 = st.tabs(["Prologue", "Stage 1", "Stage 2", "Stage 3", "Stage 4", "Stage 5"])
+with tab1:
+    tab11, tab12 = st.tabs(['Individual', 'Teams'])
 
     with tab11:
+        st.subheader('Individal')
+
+        st.dataframe(ind, height=1500, hide_index=True)
+
+    with tab12:
+        st.subheader('Teams')
+
+        st.dataframe(team, height=1500, hide_index=True)
+
+with tab2:
+    tab21, tab22, tab23, tab24, tab25, tab26 = st.tabs(["Prologue", "Stage 1", "Stage 2", "Stage 3", "Stage 4", "Stage 5"])
+
+    with tab21:
         st.subheader('Prologue Results')
 
         st.dataframe(prologue, height=1500, hide_index=True)
 
-    with tab12:
+    with tab22:
         st.subheader('Stage 1 Results')
 
         st.dataframe(s1, height=1500, hide_index=True)

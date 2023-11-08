@@ -38,6 +38,9 @@ live = pull_zwift(stage2)
 ind = pull_gsheet("Individual")
 team = pull_gsheet("Team")
 
+ind['Total'] = pd.to_numeric(ind['Total'], errors='coerce')
+team['Total Pts'] = pd.to_numeric(team['Total Pts'], errors='coerce')
+
 ind = ind.sort_values(by='Total', ascending=False)
 team = team.sort_values(by='Total Pts', ascending=False)
 

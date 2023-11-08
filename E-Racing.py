@@ -6,7 +6,7 @@ import sys
 sys.path.append('/Users/achie188/Library/CloudStorage/GitHub/Personal/SW_eracing')
 
 
-from pull_zwift import pull_zwift
+from inputs.pull_zwift import pull_zwift
 
 #3921745
 event_id = '3921745'
@@ -36,7 +36,7 @@ st.set_page_config(
     layout="wide"
 )
 
-st_autorefresh(interval, limit=1000)
+#st_autorefresh(interval, limit=1000)
 
 st.markdown("""
         <style>

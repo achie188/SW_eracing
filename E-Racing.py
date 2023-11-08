@@ -69,9 +69,9 @@ with tab2:
     with tab11:
         st.subheader('Prologue Results')
 
-        st.dataframe(prologue, hide_index=True)
+        st.dataframe(prologue, height=1000, hide_index=True)
 
-    with tab11:
+    with tab12:
         st.subheader('Stage 1 Results')
 
-        st.dataframe(s1, hide_index=True)
+        st.dataframe(s1, height=1000, hide_index=True)

@@ -5,19 +5,30 @@ import sys
 
 sys.path.append('/Users/achie188/Library/CloudStorage/GitHub/Personal/SW_eracing')
 
-
 from inputs.pull_zwift import pull_zwift
 from inputs.pull_gsheet import pull_gsheet
 
-#Stage_ids
-stage1 = '3921745'
-
-#Events
-prologue = pull_gsheet("Prologue")
-t1 = pull_zwift(stage1)
-
 
 interval=5 * 1000
+
+
+#Stage_ids
+stage1 = '3921745'
+stage2 = ''
+
+
+
+#Get Events
+prologue = pull_gsheet("Prologue")
+s1 = pull_zwift(stage1)
+
+
+
+#Live event
+live = pull_zwift(stage2)
+
+
+
 
 
 
@@ -47,15 +58,20 @@ tab1, tab2, tab3 = st.tabs(["Current Race", "Championship", "All Results"])
 
 
 with tab1:
-    if t1.empty:
+    if live.empty:
         st.write("Race not started yet, no data. Please be patient.")
     else:
-        st.dataframe(t1, height=2000, hide_index=True)
+        st.dataframe(live, height=2000, hide_index=True)
 
 with tab2:
-    tab11, tab12, tab13, tab14, tab15, tab16 = st.tabs("Prologue", "Stage 1", "Stage 2", "Stage 3", "Stage 4", "Stage 5")
+    tab11, tab12, tab13, tab14, tab15, tab16 = st.tabs(["Prologue", "Stage 1", "Stage 2", "Stage 3", "Stage 4", "Stage 5"])
 
     with tab11:
         st.subheader('Prologue Results')
 
         st.dataframe(prologue, hide_index=True)
+
+    with tab11:
+        st.subheader('Stage 1 Results')
+
+        st.dataframe(s1, hide_index=True)

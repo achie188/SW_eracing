@@ -24,6 +24,7 @@ ath_ids = pull_gsheet("Athlete_ids")
 #Get Events
 prologue = pull_gsheet("Prologue")
 prologue = add_team(prologue, ath_ids)
+prologue = prologue[['Name', 'Team', 'Time', 'Av pow', ]]
 
 s1r = pull_zwift(stage1)
 s1p = pull_gsheet("Stage1")

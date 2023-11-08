@@ -34,7 +34,7 @@ def format_results(res, pts, ath_ids):
     df['Time'] = df['Time'].apply(format_mmss)
 
 
-    df = df[['#', 'Ed_Name', 'Team', 'Time', 'Gap', 'HR', 'Watts', 'Watts/Kg', 'Fin pts ', 'KoM #', 'KOM', 'Int. S', 'DS/DC', 'Report', 'MAR', 'Par. Pts', 'Total pts', 'Orange pts']]
+    df = df[['#', 'Ed_Name', 'Team', 'Time', 'Gap', 'HR', 'Watts', 'Watts/Kg', 'Fin pts ', 'KoM #', 'KOM', 'Int. S', 'DS/DC', 'Report', 'MAR', 'Par.', 'Orange', 'Total pts']]
 
     df = df.rename(columns={'Ed_Name': 'Name'})
 
@@ -45,6 +45,13 @@ def add_team(df, ath_ids):
     ath_ids = ath_ids[['Ed_Name', 'Team']]
 
     df = pd.merge(df, ath_ids, left_on='Name', right_on='Ed_Name', how='inner')
+
+    # Get the column names excluding the 'column_name' you want to move
+    other_columns = [col for col in df.columns if col != 'Team']
+
+    # Create the new column order putting 'column_name' as the second column
+    column_order = other_columns[:1] + ['Team'] + other_columns[1:]
+    df = df.reindex(columns=column_order)
 
     df.drop(columns=['Ed_Name'], inplace=True)
 

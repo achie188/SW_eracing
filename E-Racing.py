@@ -84,7 +84,7 @@ with tab1:
     tab11, tab12 = st.tabs(['Individual', 'Teams'])
 
     with tab11:
-        st.subheader('Individal')
+        st.subheader('Individual')
 
         st.dataframe(ind, height=1500, hide_index=True)
 

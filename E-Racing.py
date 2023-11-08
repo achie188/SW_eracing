@@ -7,6 +7,7 @@ sys.path.append('/Users/achie188/Library/CloudStorage/GitHub/Personal/SW_eracing
 
 from inputs.pull_zwift import pull_zwift
 from inputs.pull_gsheet import pull_gsheet
+from pipeline.formatting import format
 
 
 interval=5 * 1000
@@ -22,7 +23,7 @@ stage2 = '1111111'
 prologue = pull_gsheet("Prologue")
 s1 = pull_zwift(stage1)
 
-
+s1 = format(s1)
 
 #Live event
 live = pull_zwift(stage2)
@@ -62,6 +63,8 @@ with tab3:
         st.write("No live data right now.")
     else:
         st.dataframe(live, height=2000, hide_index=True)
+
+
 
 with tab2:
     tab11, tab12, tab13, tab14, tab15, tab16 = st.tabs(["Prologue", "Stage 1", "Stage 2", "Stage 3", "Stage 4", "Stage 5"])

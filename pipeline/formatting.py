@@ -1,6 +1,7 @@
 import pandas as pd
 
-def results(df):
+def format(df):
+
     #rename columns
     df = df.rename(columns={'position': '#'})
     df = df.rename(columns={'heartRateInBpm': 'HR'})
@@ -11,3 +12,5 @@ def results(df):
     df = df.rename(columns={'distanceInMeters': 'Distance'}).round(1)
     df = df.rename(columns={'speedInKmHours': 'Speed'}).round(1)
     df = df.rename(columns={'powerupUsed': 'PowerUps Used'})
+
+    

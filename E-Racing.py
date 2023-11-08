@@ -3,9 +3,7 @@ import streamlit as st
 from streamlit_autorefresh import st_autorefresh
 import sys
 
-sys.path.append('/Users/achie188/Library/CloudStorage/GitHub/4CC/SLT')
-sys.path.append('/Users/achie188/Library/CloudStorage/GitHub/4CC/SLT/input')
-sys.path.append('/Users/achie188/Library/CloudStorage/GitHub/4CC/SLT/pipeline')
+sys.path.append('/Users/achie188/Library/CloudStorage/GitHub/Personal/SW_eracing')
 
 
 from pull_zwift import pull_zwift

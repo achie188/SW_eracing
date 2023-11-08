@@ -9,7 +9,7 @@ sys.path.append('/Users/achie188/Library/CloudStorage/GitHub/Personal/SW_eracing
 from pull_zwift import pull_zwift
 
 #3921745
-event_id = '3917221'
+event_id = '3921745'
 
 #Test event
 t1 = pull_zwift(event_id)

@@ -50,7 +50,7 @@ def add_team(df, ath_ids):
     other_columns = [col for col in df.columns if col != 'Team']
 
     # Create the new column order putting 'column_name' as the second column
-    column_order = other_columns[:1] + ['Team'] + other_columns[1:]
+    column_order = other_columns[:2] + ['Team'] + other_columns[2:]
     df = df.reindex(columns=column_order)
 
     df.drop(columns=['Ed_Name'], inplace=True)

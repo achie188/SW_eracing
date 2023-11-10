@@ -87,7 +87,7 @@ with tab1:
         st.subheader('Individual')
 
         other_columns = [col for col in ind.columns if col != 'Total']
-        column_order = other_columns[:2] + ['Total'] + other_columns[2:]
+        column_order = other_columns[:3] + ['Total'] + other_columns[3:]
         ind = ind.reindex(columns=column_order)
 
         st.dataframe(ind, height=1500, hide_index=True)
@@ -96,7 +96,7 @@ with tab1:
         st.subheader('Teams')
 
         other_columns = [col for col in team.columns if col != 'Total Pts']
-        column_order = other_columns[:1] + ['Total Pts'] + other_columns[1:]
+        column_order = other_columns[:2] + ['Total Pts'] + other_columns[2:]
         team = team.reindex(columns=column_order)
 
         st.dataframe(team, hide_index=True)

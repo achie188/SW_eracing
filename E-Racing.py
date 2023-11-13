@@ -130,11 +130,41 @@ with tab4:
 
     with tab41:
         st.subheader('Walrus E-Racing 2023')
-        st.write('Prologue Results')
+        st.write('''Sexy Walrus e-racing league 2023
+
+It’s the fireworks. That’s how you can tell. The Series has started. Even now people are out there, defying the odds, dealing with all sorts of mechanical issues, pairing problems, mental deficiencies, and serious lung diseases. Busting their guts out all over the 7.2km parcours of the prologue. 
+
+For those with bad memories, or for others who consciously choose not to remember,   the 2022 sexy walrus e-racing league wrapped up with Equine Onlyfans walking away with the top spot in the series. But it was Dovistar’s Oli Dammone who took the Orange Jersey and was awarded a fetching casquette as a result. 
+
+Routes Coffee TZA Draconi’s Al Bath ran hot and cold all series, but did enough to snatch not only the sprinter’s jersey but also the climber’s too. A basket full of gels was his just reward. 
+
+But time moves on, bellies increase in diameter, and e-cycling teams struggle for cash. 
+
+The cycling world has had a bloodied year, and none of the teams from last year have survived into 2023. But this void have created space for some smaller UK companies to venture into cycling, with the cash to fund some exciting new teams for 2023.''')
 
     with tab42:
         st.subheader('Lego Boots')
-        st.write('Prologue Results')
+        st.write('''Lego pours millions into doomed vanity project.
+
+Sunday 5th November 2023 Legoland
+
+For years the top team at Lego have been considering a move into the world of pro cycling. And this year, they have finally taken the plunge, emptied their pockets, gathered up the scattered pennies, and spent them on a pro e-cycling outfit. 
+
+To do so they have teamed up with Boots. It feels like an odd combination, (and a few stories have circulated about how the CFO at Boots was taken out for a lobster lunch by a few Lego directors. It transpired the CFO was on the way out of the company anyway, got totally pissed, and ended up signing up to the agreement muttering “fuck it all” under his breath). 
+
+Despite the coming together of these two behemoths, Lego Boots have been struggling to raise the cash to entice one rider in particular: Bill Smith.  According to reliable sources, Bill was demanding an extortionate salary, and therefore a third title sponsor had to be found at short notice. Some big names were interested, but time was cripplingly short, and the best the Lego Boots partnership could do was P&O ferries, who gladly provided the extra cash to secure the services of the hardened professional Bill Smith,(despite P&O knowing that P&O was bound to be left off the title name when used by Adam Bylthe on GCN commentary). 
+
+As part of Bill’s contract, he had demanded that he would need a full team to support him in his GC bid, and insisted it would be “all in for Bill”.  So what was needed was domestiques willing to turn themselves inside out, upside down, and over the hill and far away for Bill, week in, week out. 
+
+To do this, Lego Boots immediately crawled all over the decaying carcass of what was previously Routes Coffee TZA Draconi. And like a hungry vulture, they picked up nearly the whole squad that had previously been punching holes in walls for the ‘Al brothers’.  
+
+With contracts expired, and the wise heads of Al and Al now out the picture, Lizzy, Nic, Tom and Tom were happy to sign up to Lego Boots and look for new opportunities of their own. (Little did they know Bill Smith had his own designs as to what they would be allowed to do on the road.)
+
+With a dwindling purse, Lego Boots still had spots in their rooster to fill. Wetbeak and Monk, a couple of older riders well past their peak, were brought on board. Largely because no other team would take them, and Lego Boots is paying them peanuts. 
+
+And the final spot went to Alex Hadcock. A talented climber, but a neo-pro and totally untested in the heated world of Walrus e-cycling. Some say this deal was a gamble, Lego Boots would say this deal was cheap as chips. 
+
+Only time will tell how delicious those chips will be.''')
 
     with tab43:
         st.subheader('Amazon Beaconsfield Services')
@@ -142,7 +172,31 @@ with tab4:
 
     with tab44:
         st.subheader('Tesla Thames Water')
-        st.write('Prologue Results')
+        st.write('''London, UK, November 4, 2023
+
+FOR IMMEDIATE RELEASE
+
+Tesla and Thames Water Unite in Cycling Endeavor for the Greater Good
+
+In a groundbreaking collaboration that defies expectations, Tesla, the pioneering electric car company, and Thames Water, the UK's leading water utility provider, have joined forces to propel the world of professional cycling into a new era.
+
+The partnership was officially unveiled at a press conference attended by Elon Musk, the visionary CEO of Tesla, and Alastair Cochran, the forward-thinking CEO of Thames Water. Their announcement marks a significant moment in the history of cycling as the two seemingly unrelated giants pool their resources to launch a brand-new cycling team: Team Tesla Thames Water.
+
+This unique partnership is set to bring a fresh perspective to the world of professional cycling, as Tesla's commitment to clean energy and innovation marries Thames Water's dedication to responsible water management. The unlikely union underscores the shared ambition to conquer the 2023 Zwift Championships, one of the most prestigious events in the cycling calendar.
+
+In a surprising twist, the newly formed Team Tesla Thames Water has signed Rich Tyler, a rising star in the cycling world, to bolster their roster. Known for his remarkable sprinting skills and podium finishes, Tyler is poised to be a key asset in the team's pursuit of championship glory.
+
+However, the team's lineup isn't complete without the enigmatic Edwin Smith, a mercurial talent whose career has spanned decades. The question on everyone's mind is whether Smith, now considered "long in the tooth" by some, still possesses the prowess to contribute to the team's quest for victory. His inclusion adds an element of intrigue to the team's composition.
+
+When asked about the partnership, Elon Musk stated, "Cycling is more than just sport; it's a symbol of human potential and the power of sustainable transportation. Our partnership with Thames Water aims to underscore the importance of preserving our planet's resources, just as we do with electric vehicles. Team Tesla Thames Water is not just a cycling team; it's a testament to our shared commitment to a greener future."
+
+Alastair Cochran, CEO of Thames Water, added, "As stewards of water, we understand the significance of responsible resource management. Joining forces with Tesla is a declaration that our actions speak louder than words. We're excited about the journey ahead, both on the road and in our shared mission to champion sustainability."
+
+The team's distinctive blue and green jerseys symbolize the fusion of electric energy and water, while reflecting their dedication to clean, renewable energy sources. It's a visual reminder of their commitment to a more sustainable future.
+
+Team Tesla Thames Water also announced an exciting partnership with Scott bikes and Volvo cars to elevate their on-road and off-road experiences. Sunweb remains a valued partner, ensuring the team's continued growth and success.
+
+With the 2023 Zwift Championships on the horizon, Team Tesla Thames Water's journey promises to be a thrilling blend of competition and commitment to the environment, as they ride towards a future where sport and sustainability go hand in hand.''')
 
     with tab45:
         st.subheader('AstraZenaca Trailfinders')

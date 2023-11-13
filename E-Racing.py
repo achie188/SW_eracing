@@ -24,28 +24,31 @@ stage_path = location + r'/inputs/raceinfo/stages.csv'
 athlete_path = location + r'/inputs/raceinfo/athletes.csv'
 prologue_path = location + r'/inputs/raceinfo/prologue.csv'
 pts_path = location + r'/inputs/raceinfo/points.csv'
+handicaps_path = location + r'/inputs/raceinfo/handicaps.csv'
 
 #Get ids
 current_time = time.localtime()
 
-if (current_time.tm_min >= 0 and current_time.tm_min <= 5):
-    stages, ath_ids, prologue, pts = pull_ids("Stage_ids", "Athlete_ids", "Prologue", "Points")
+if (current_time.tm_min >= 50 and current_time.tm_min <= 5):
+    stages, ath_ids, prologue, pts, handicaps = pull_ids("Stage_ids", "Athlete_ids", "Prologue", "Points", "Handicaps")
 
     save_csv(stages, stage_path)
     save_csv(ath_ids, athlete_path)
     save_csv(prologue, prologue_path)
     save_csv(pts, pts_path)
+    save_csv(handicaps, handicaps_path)
 
 else:
     stages = load_csv(stage_path)
     ath_ids = load_csv(athlete_path)
     prologue = load_csv(prologue_path)
     pts = load_csv(pts_path)
+    handicaps = load_csv(handicaps_path)
 
 
 stage_values = ['Stage_1', 'Stage_2', 'Stage_3', 'Stage_4', 'Stage_5', 'Stage_6']
 zwift_ids = get_zwift_ids(stage_values, stages)
-
+handicaps.drop(columns=['Zwift_id'], inplace=True)
 
 prologue = add_team(prologue, ath_ids)
 
@@ -110,7 +113,7 @@ with tab3:
 
 
 with tab1:
-    tab11, tab12, tab13, tab14, tab15 = st.tabs(['Individual', 'Teams', 'Orange', 'KOM', 'Sprinter'])
+    tab11, tab12, tab13, tab14, tab15, tab16 = st.tabs(['Individual', 'Teams', 'Orange', 'KOM', 'Sprinter', 'Handicaps'])
 
     with tab11:
         col1, col2 = st.columns([2,3])
@@ -278,6 +281,15 @@ with tab1:
                     
             8.2. Details of the intermediate sprints and KOM will be made clear in advance of the relevant race.        
                         ''')
+
+    with tab16:
+        col1, col2 = st.columns(2)
+        with col1: 
+            st.subheader('Handicaps')
+            st.dataframe(handicaps, height= int(35.2*(handicaps.shape[0]+1)), hide_index=True)
+        
+        with col2:
+            st.markdown()
 
 with tab2:
     tab21, tab22, tab23, tab24, tab25, tab26 = st.tabs(["Prologue", "Stage 1", "Stage 2", "Stage 3", "Stage 4", "Stage 5"])

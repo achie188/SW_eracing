@@ -121,8 +121,33 @@ with tab1:
         st.dataframe(team_pts, hide_index=True)
 
     with tab13:
-        st.subheader('Orange Jersey Race')
-        st.dataframe(orange_df, height = int(35.2*(orange_df.shape[0]+1)), hide_index=True)
+        col1, col2 = st.columns
+        with col1:
+            st.subheader('Orange Jersey Race')
+            st.dataframe(orange_df, height = int(35.2*(orange_df.shape[0]+1)), hide_index=True)
+        with col2:
+            st.subheader('Orange Jersey Rules')
+            st.markdown('''
+                        #### 11. Orange jersey competition
+            11.1. Points available at the end of each week (starting after the conclusion of Week 1 - Ie. No points awarded after the Prologue) for rider’s position in Orange jersey leaderboard. A rider must have finished a race to be awarded any points. 
+                    
+            11.2. Points available at the end of the season for the top 10 in the orange jersey leaderboard. 11.3. See Schedules 1 and 2 below for the points available. 
+                    
+            11.4. The Orange Jersey leaderboard tracks overall time over each stage. (Otherwise known as General Classification.) 
+                    
+            11.5. If a rider does not start, or does not finish, a stage, then their time taken will be the greater of (i) 5 minutes slower than the fastest finisher for that stage, and (ii) 30 seconds slower than the slowest finisher on that stage. 
+                    
+            ##### Orange passes 
+            11.6. Each team will have 6 Orange Passes. A team can use an Orange Pass on any given stage for any rider that has either: 
+            - (i) not started that stage, or 
+            - (ii) has had a technical problem meaning that they could not complete that stage. 
+                    
+            11.7. Where an Orange Pass is used, instead of calculating their time as per 11.5 above that rider will receive the slower of: 
+            - (i) the same time as the second slowest rider in their team; and 
+            - (ii) 90s slower than the rider who finishes first in that race. 
+                    
+            11.8. If a rider uses an Orange Pass, they will not receive any Orange Jeresy points for that week, except for the final week, in which case that rider will receive points for their final finishing position (if they so qualify).
+            ''')
 
     with tab14:
         st.subheader('Polka Dot Jersey')
@@ -192,7 +217,6 @@ with tab4:
         st.subheader('Sexy Walrus E-Racing League 2023')
         st.markdown('''
             #### 1. Overview
-            1.0.1 Late submission of press release will result in a 25 point fine.
                         
             1.1. There will be 5 weeks of action. Each week will have one or two races. Details of what each week will entail will be released in good time before each week.
                                 

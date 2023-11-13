@@ -1,8 +1,6 @@
 import pandas as pd
 import numpy as np
 
-from inputs.pull_zwift import pull_zwift
-
 
 #Format mm:ss
 def format_mmss(seconds):

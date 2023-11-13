@@ -4,7 +4,7 @@ import os
 
 from inputs.pull_gsheet import pull_gsheet, push_gsheet
 from inputs.pull_zwift import pull_zwift
-from inputs.helpers import save_csv, load_csv
+from inputs.helpers import load_csv
 from pipeline.formatting import format_results, format_mmss
 
 location = os.getcwd()
@@ -15,10 +15,6 @@ pts_path = location + r'/inputs/raceinfo/points.csv'
 pts = load_csv(pts_path)
 prologue = load_csv(prologue_path)
 
-
-
-# pts = pull_gsheet("Points")
-# prologue = pull_gsheet("Prologue")
 
 
 def process_dataframe(df, stage_name):

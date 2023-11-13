@@ -7,15 +7,15 @@ import os
 sys.path.append('/Users/achie188/Library/CloudStorage/GitHub/Personal/SW_eracing')
 
 from inputs.pull_zwift import pull_zwift
-from inputs.pull_gsheet import pull_gsheet, pull_ids
-from inputs.helpers import save_csv, load_csv
-from pipeline.formatting import add_team, get_zwift_ids, final_format, highlight_team
+from inputs.pull_gsheet import pull_ids
+from inputs.helpers import save_csv
+from pipeline.formatting import add_team, get_zwift_ids, final_format
 from pipeline.calcs import get_stage, calc_overall_pts, calc_overall_orange
 
 location = os.getcwd()
 
 
-interval=60 * 1000
+#interval=60 * 1000
 
 stages_complete = ['Prologue', 'Stage 1']
 

@@ -235,7 +235,7 @@ with tab4:
                     
             5.3. In addition to the above (Ie outside of the points pots), further points are available for the Orange Jersey, most aggressive rider, and race reports (see below). 
             
-            - ##### 6. Category 1: Finishingposition  
+            ##### 6. Category 1: Finishing Position  
             6.1. These points will be awarded to the riders on a % of the category pot basis (Ie. a % of the allocated Finishing Position %) . Whereby the higher the finishing position, the higher % of the pot you receive. See Schedule 3 for the percentage distributions. 
                     
             6.2. As an example, if you come first you would get 10% of the pot. But if you came 21st you would get 2.1% of the pot. 
@@ -244,12 +244,12 @@ with tab4:
                     
             6.4. This ‘remainder’ (whatever it may be) will be reallocated to the riders equally amongst all riders that raced.
             
-            - ##### 7. Category 2: KOM points
+            ##### 7. Category 2: KOM Points
             7.1. These may be awarded on certain races but not necessarily every race. 
                     
             7.2. The points allocated will be determined on a race by race basis, as it will depend on the severity of the climb it relates to. 
             
-            - ##### 8. Category 3: Intermediate Sprint points
+            ##### 8. Category 3: Intermediate Sprint points
             8.1. The points allocated will be determined on a race by race basis. 
                     
             8.2. Details of the intermediate sprints and KOM will be made clear in advance of the relevant race. 

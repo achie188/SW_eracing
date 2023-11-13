@@ -143,10 +143,8 @@ But time moves on, bellies increase in diameter, and e-cycling teams struggle fo
 The cycling world has had a bloodied year, and none of the teams from last year have survived into 2023. But this void have created space for some smaller UK companies to venture into cycling, with the cash to fund some exciting new teams for 2023.''')
 
     with tab42:
-        st.subheader('Lego Boots')
-        st.write('''Lego pours millions into doomed vanity project.
-
-Sunday 5th November 2023 Legoland
+        st.subheader('Lego pours millions into doomed vanity project')
+        st.write('''Sunday 5th November 2023 Legoland
 
 For years the top team at Lego have been considering a move into the world of pro cycling. And this year, they have finally taken the plunge, emptied their pockets, gathered up the scattered pennies, and spent them on a pro e-cycling outfit. 
 
@@ -168,13 +166,11 @@ Only time will tell how delicious those chips will be.''')
 
     with tab43:
         st.subheader('Amazon Beaconsfield Services')
-        st.write('Prologue Results')
+        st.write('')
 
     with tab44:
-        st.subheader('Tesla Thames Water')
+        st.subheader('FOR IMMEDIATE RELEASE')
         st.write('''London, UK, November 4, 2023
-
-FOR IMMEDIATE RELEASE
 
 Tesla and Thames Water Unite in Cycling Endeavor for the Greater Good
 
@@ -199,10 +195,8 @@ Team Tesla Thames Water also announced an exciting partnership with Scott bikes 
 With the 2023 Zwift Championships on the horizon, Team Tesla Thames Water's journey promises to be a thrilling blend of competition and commitment to the environment, as they ride towards a future where sport and sustainability go hand in hand.''')
 
     with tab45:
-        st.subheader('AstraZenaca Trailfinders')
-        st.write('''The e-Pedlars Lancet 7/11/2023
-
-By Penny Farthing
+        st.subheader('The e-Pedlars Lancet 7/11/2023')
+        st.write('''By Penny Farthing
 
 In a surprising twist in the world of SW eracing, the remnants of the infamous Evil Greens have found a new lease of life through a partnership between AstraZeneca and Trailfinders. This unexpected alliance was driven by a unique vision: AstraZeneca's aspiration to invest more in Watopian diseases whilst supporting washed up Greens' bruiser, Teo Lopez.
 

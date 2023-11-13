@@ -118,6 +118,7 @@ def calc_overall_pts(pro, s1, s2a, s2b, s3, s4, s5, s6):
 
     ind_df = ind_df.loc[ind_df['Total'] != 0]
 
+    ind_df = ind_df.sort_values(by='Total', ascending=True)
     ind_df.reset_index(inplace=True)
     ind_df['#'] = ind_df.index + 1
 
@@ -125,6 +126,8 @@ def calc_overall_pts(pro, s1, s2a, s2b, s3, s4, s5, s6):
     column_order = ['#'] + other_columns[0:]
     ind_df = ind_df.reindex(columns=column_order)
     ind_df.drop(columns=['index'], inplace=True)
+
+
 
     # calc team pts
     team_df = combined_df.pivot_table(index='Team', columns='Stage', values='Total', aggfunc='sum', fill_value=0)
@@ -134,6 +137,7 @@ def calc_overall_pts(pro, s1, s2a, s2b, s3, s4, s5, s6):
 
     team_df = team_df.loc[team_df['Total'] != 0]
 
+    team_df = team_df.sort_values(by='Total', ascending=True)
     team_df.reset_index(inplace=True)
     team_df['#'] = team_df.index + 1
 

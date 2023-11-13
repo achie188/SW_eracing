@@ -165,7 +165,8 @@ def calc_overall_orange(pro, s1, s2a, s2b, s3, s4, s5, s6, columns_to_replace):
     # calc times
     orange_df = combined_df.pivot_table(index='Name', columns='Stage', values='Time_secs', aggfunc='sum', fill_value=0)
     orange_df = orange_df.reset_index()
-    orange_df['Time_secs'] = orange_df.sum(axis=1)
+    numeric_columns = orange_df.select_dtypes(include=[np.number]).columns
+    orange_df['Time_secs'] = orange_df[numeric_columns].sum(axis=1)
 
     orange_df[columns_to_replace] = orange_df[columns_to_replace].apply(replace_zeros, axis=0)
 

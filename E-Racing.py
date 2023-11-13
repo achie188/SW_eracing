@@ -517,7 +517,7 @@ Only time will tell how delicious those chips will be.''')
 
         with col2:
             st.subheader('Amazon Team')
-            st.dataframe(amazon, height = int(35.2*(lego_boots.shape[0]+1)), hide_index=True)
+            st.dataframe(amazon, height = int(35.2*(amazon.shape[0]+1)), hide_index=True)
 
     with tab44:
         col1, col2 = st.columns(2)
@@ -549,7 +549,7 @@ With the 2023 Zwift Championships on the horizon, Team Tesla Thames Water's jour
 
         with col2:
             st.subheader('Tesla Thames Water Team')
-            st.dataframe(tesla, height = int(35.2*(lego_boots.shape[0]+1)), hide_index=True)
+            st.dataframe(tesla, height = int(35.2*(tesla.shape[0]+1)), hide_index=True)
 
     with tab45:
         col1, col2 = st.columns(2)
@@ -569,4 +569,4 @@ This partnership not only breathes new life into the Greens but also signifies a
         
         with col2:
             st.subheader('AstraZenaca Team')
-            st.dataframe(astrazen, height = int(35.2*(lego_boots.shape[0]+1)), hide_index=True)
+            st.dataframe(astrazen, height = int(35.2*(astrazen.shape[0]+1)), hide_index=True)

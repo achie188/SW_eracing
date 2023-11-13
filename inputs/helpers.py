@@ -55,6 +55,8 @@ def get_ids():
     if (current_time.tm_min >= 0 and current_time.tm_min <= 20):
         stages, ath_ids, prologue, pts, handicaps = pull_ids("Stage_ids", "Athlete_ids", "Prologue", "Points", "Handicaps")
 
+        prologue = add_team(prologue, ath_ids)
+        
         save_csv(stages, stage_path)
         save_csv(ath_ids, athlete_path)
         save_csv(prologue, prologue_path)

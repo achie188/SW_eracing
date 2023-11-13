@@ -79,7 +79,7 @@ def final_format(df):
     else:
         df.drop(columns=['Time_secs', 'Stage'], inplace=True)
         df = df.rename(columns={'Time_nice': 'Time'})
-        df.replace({None: '', 0: '', 'None': ''}, inplace=True)
+        df.replace({None: '', 0: '', 'None': '', np.nan: ''}, inplace=True)
 
         return df
     

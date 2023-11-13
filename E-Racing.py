@@ -79,7 +79,7 @@ st.subheader("Welcome to the Sexy Walrus E-Racing Series 2023! 👋")
 
 st.write("The below shows the results and current standings of the Sexy Walrus E-Racing Series👇 ")
 
-tab1, tab2, tab3 = st.tabs(["Championship", "All Results", "LIVE NOW"])
+tab1, tab2, tab3, tab4 = st.tabs(["Championship", "All Results", "LIVE NOW", "About"])
 
 
 with tab3:
@@ -124,3 +124,38 @@ with tab2:
         st.subheader('Stage 1 Results')
 
         st.dataframe(s1, height=1500, hide_index=True)
+
+with tab4:
+    tab41, tab42, tab43, tab44, tab45 = st.tabs(['Walrus E-Racing', 'Lego Boots', 'Amazon Beaconsfield Services', 'Tesla Thames Water', 'AstraZenaca Trailfinders'])
+
+    with tab41:
+        st.subheader('Walrus E-Racing 2023')
+        st.write('Prologue Results')
+
+    with tab42:
+        st.subheader('Lego Boots')
+        st.write('Prologue Results')
+
+    with tab43:
+        st.subheader('Amazon Beaconsfield Services')
+        st.write('Prologue Results')
+
+    with tab44:
+        st.subheader('Tesla Thames Water')
+        st.write('Prologue Results')
+
+    with tab45:
+        st.subheader('AstraZenaca Trailfinders')
+        st.write('''The e-Pedlars Lancet 7/11/2023
+
+By Penny Farthing
+
+In a surprising twist in the world of SW eracing, the remnants of the infamous Evil Greens have found a new lease of life through a partnership between AstraZeneca and Trailfinders. This unexpected alliance was driven by a unique vision: AstraZeneca's aspiration to invest more in Watopian diseases whilst supporting washed up Greens' bruiser, Teo Lopez.
+
+Now captain Lopez had endured a challenging summer, having been attacked by a swarm of extremely venomous Watopian feather beetles, on a late season training ride. His personal journey resonated with AstraZeneca's mission, and the addition of Trailfinders was perfect for this new, intrepid, outfit.
+
+Vice Captain Dickie Tyler will play a crucial role in maintaining team morale and optimising strategy, whilst seasoned veterans, Rob Friend and Duncan Singh, bring a wealth of experience and camaraderie. Duncan Singh aptly remarked, "We might be 'wily old heads,' but we still have a few tricks up our sleeves."
+
+The team welcoms fresh faces, including Davyd Greenish, who excitedly declared, "I'm thrilled to be part of this team!" Beth Wilson and Nick Foley add youthful enthusiasm and unpredictability to the squad.
+
+This partnership not only breathes new life into the Greens but also signifies a unique fusion of goals – AstraZeneca's commitment to Watopian diseases and the resilience and determination of the once-feared Evil Greens. It's a story of renewal and hope, anchored by the experienced, the determined, and the newcomers, all propelled forward by a shared mission to make a meaningful impact in the e-racing world.''')

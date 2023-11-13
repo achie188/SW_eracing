@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 
 
+
 #Format mm:ss
 def format_mmss(seconds):
     if np.isnan(seconds):
@@ -57,6 +58,13 @@ def add_team(df, ath_ids):
     return df
 
 
+def convert_to_int(value):
+    try:
+        return int(value)
+    except (ValueError, TypeError):
+        return None
+
+
 def get_zwift_ids(stage_values, df):
     zwift_ids = []
     for stage_value in stage_values:
@@ -66,6 +74,9 @@ def get_zwift_ids(stage_values, df):
         except IndexError:
             # Handle the case where no matching row is found
             zwift_ids.append(None)
+
+    zwift_ids = [convert_to_int(value) for value in zwift_ids]
+
     return zwift_ids
 
 

@@ -28,7 +28,7 @@ pts_path = location + r'/inputs/raceinfo/points.csv'
 #Get ids
 current_time = time.localtime()
 
-if (current_time.tm_min >= 1 and current_time.tm_min <= 5):
+if (current_time.tm_min >= 0 and current_time.tm_min <= 5):
     stages, ath_ids, prologue, pts = pull_ids("Stage_ids", "Athlete_ids", "Prologue", "Points")
 
     save_csv(stages, stage_path)
@@ -45,6 +45,7 @@ else:
 
 stage_values = ['Stage_1', 'Stage_2', 'Stage_3', 'Stage_4', 'Stage_5', 'Stage_6']
 zwift_ids = get_zwift_ids(stage_values, stages)
+
 
 prologue = add_team(prologue, ath_ids)
 

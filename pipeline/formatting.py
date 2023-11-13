@@ -34,7 +34,7 @@ def format_results(res, ath_ids):
 
     df['Time_nice'] = df['Time_secs'].apply(format_mmss)
 
-    df = df[['#', 'Ed_Name', 'Team', 'Time_nice', 'Time_secs', 'Gap', 'HR', 'Watts', 'Watts/Kg']]
+    df = df[['#', 'Ed_Name', 'Team', 'Time_nice', 'Time_secs', 'Gap', 'HR', 'Watts', 'W/Kg']]
 
     df = df.rename(columns={'Ed_Name': 'Name'})
 

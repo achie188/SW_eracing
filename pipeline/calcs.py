@@ -5,16 +5,17 @@ import os
 from inputs.pull_gsheet import pull_gsheet, push_gsheet
 from inputs.pull_zwift import pull_zwift
 from inputs.helpers import load_csv
-from pipeline.formatting import format_results, format_mmss
+from pipeline.formatting import format_results, format_mmss, add_team
 
 location = os.getcwd()
 
 prologue_path = location + r'/inputs/raceinfo/prologue.csv'
 pts_path = location + r'/inputs/raceinfo/points.csv'
+athlete_path = location + r'/inputs/raceinfo/athletes.csv'
 
 pts = load_csv(pts_path)
 prologue = load_csv(prologue_path)
-
+ath_ids = load_csv(athlete_path)
 
 
 def process_dataframe(df, stage_name):
@@ -104,6 +105,9 @@ def get_stage(stage, stage_num, ath_ids, orange_df=prologue):
 
 
 def calc_overall_pts(pro, s1, s2, s3, s4, s5, s6):
+
+    ath_ids = load_csv(athlete_path)
+
     all_dataframes = [
         process_dataframe(pro, 'Prologue'),
         process_dataframe(s1, 'Stage 1'),
@@ -138,6 +142,7 @@ def calc_overall_pts(pro, s1, s2, s3, s4, s5, s6):
     ind_df.drop(columns=['index'], inplace=True)
 
     ind_df = ind_df.round(0)
+    ind_pts = add_team(ind_df, ath_ids)
 
     # calc team pts
     team_df = combined_df.pivot_table(index='Team', columns='Stage', values='Total', aggfunc='sum', fill_value=0)
@@ -244,6 +249,15 @@ def calc_overall_orange(pro, s1, s2, s3, s4, s5, s6, columns_to_replace):
     orange_df = orange_df.reindex(columns=column_order)
     orange_df.drop(columns=['index', 'Time_secs'], inplace=True)
 
-
+    orange_df = add_team(orange_df, ath_ids)
 
     return orange_df
+
+def handicaps_format(df):
+    df.drop(columns=['Zwift_id'], inplace=True)
+    df['#'] = df.index + 1
+    df = df[['#', 'Name', 'Weight', 'Bike', 'Wheels', 'New Weight', 'Adjustment']]
+    df.replace({None: '', 0: '', 'None': '', np.nan: ''}, inplace=True)
+    df = add_team(df, ath_ids)
+
+    return df

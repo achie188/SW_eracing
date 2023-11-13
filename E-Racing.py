@@ -2,63 +2,32 @@ import pandas as pd
 import streamlit as st
 from streamlit_autorefresh import st_autorefresh
 import sys
-import os
-import time
-import numpy as np
 
 sys.path.append('/Users/achie188/Library/CloudStorage/GitHub/Personal/SW_eracing')
 
 from inputs.pull_zwift import pull_zwift
-from inputs.pull_gsheet import pull_ids
-from inputs.helpers import save_csv, load_csv
-from pipeline.formatting import add_team, get_zwift_ids, final_format
-from pipeline.calcs import get_stage, calc_overall_pts, calc_overall_orange
+from inputs.helpers import get_ids
+from pipeline.formatting import get_zwift_ids, final_format
+from pipeline.calcs import get_stage, calc_overall_pts, calc_overall_orange, handicaps_format
 
-location = os.getcwd()
 
 
 interval=240 * 1000
 
 stages_complete = ['Prologue', 'Stage 1']
 
-stage_path = location + r'/inputs/raceinfo/stages.csv'
-athlete_path = location + r'/inputs/raceinfo/athletes.csv'
-prologue_path = location + r'/inputs/raceinfo/prologue.csv'
-pts_path = location + r'/inputs/raceinfo/points.csv'
-handicaps_path = location + r'/inputs/raceinfo/handicaps.csv'
 
 #Get ids
-current_time = time.localtime()
-
-if (current_time.tm_min >= 0 and current_time.tm_min <= 4):
-    stages, ath_ids, prologue, pts, handicaps = pull_ids("Stage_ids", "Athlete_ids", "Prologue", "Points", "Handicaps")
-
-    save_csv(stages, stage_path)
-    save_csv(ath_ids, athlete_path)
-    save_csv(prologue, prologue_path)
-    save_csv(pts, pts_path)
-    save_csv(handicaps, handicaps_path)
-
-else:
-    stages = load_csv(stage_path)
-    ath_ids = load_csv(athlete_path)
-    prologue = load_csv(prologue_path)
-    pts = load_csv(pts_path)
-    handicaps = load_csv(handicaps_path)
-
+stages, ath_ids, prologue, pts, handicaps = get_ids()
 
 stage_values = ['Stage_1', 'Stage_2', 'Stage_3', 'Stage_4', 'Stage_5', 'Stage_6']
 zwift_ids = get_zwift_ids(stage_values, stages)
 
-handicaps.drop(columns=['Zwift_id'], inplace=True)
-handicaps['#'] = handicaps.index + 1
-handicaps = handicaps[['#', 'Name', 'Weight', 'Bike', 'Wheels', 'New Weight', 'Adjustment']]
-handicaps.replace({None: '', 0: '', 'None': '', np.nan: ''}, inplace=True)
-handicaps = add_team(handicaps, ath_ids)
-
-prologue = add_team(prologue, ath_ids)
+handicaps = handicaps_format(handicaps)
 
 
+
+#Get stage data
 s1, orange_df = get_stage(zwift_ids[0], "Stage_1", ath_ids)
 s2, orange_df = get_stage(zwift_ids[1], "Stage_2", ath_ids, orange_df)
 s3, orange_df = get_stage(zwift_ids[2], "Stage_3", ath_ids, orange_df)
@@ -67,14 +36,12 @@ s5, orange_df = get_stage(zwift_ids[4], "Stage_5", ath_ids, orange_df)
 s6, orange_df = get_stage(zwift_ids[5], "Stage_6", ath_ids, orange_df)
 
 
+#Calc points
 ind_pts, team_pts, kom_pts, sprinter_pts = calc_overall_pts(prologue, s1, s2, s3, s4, s5, s6)
 orange_df = calc_overall_orange(prologue, s1, s2, s3, s4, s5, s6, stages_complete)
 
-ind_pts = add_team(ind_pts, ath_ids)
-orange_df = add_team(orange_df, ath_ids)
 
-# ind_pts = ind_pts.style.apply(highlight_team, subset=['Team'], axis=0)
-
+#Final formatting
 prologue = final_format(prologue)
 s1 = final_format(s1)
 s2 = final_format(s2)
@@ -86,6 +53,11 @@ s6 = final_format(s6)
 
 #Get live event
 live = pull_zwift(zwift_ids[1])
+
+
+
+
+
 
 
 # Set up Streamlit app

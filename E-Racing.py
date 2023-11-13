@@ -113,8 +113,52 @@ with tab1:
     tab11, tab12, tab13, tab14, tab15 = st.tabs(['Individual', 'Teams', 'Orange', 'KOM', 'Sprinter'])
 
     with tab11:
-        st.subheader('Individual Series Standings')
-        st.dataframe(ind_pts, height = int(35.2*(ind_pts.shape[0]+1)), hide_index=True)
+        col1, col2 = st.columns([2,3])
+        with col1:
+            st.subheader('Individual Series Standings')
+            st.dataframe(ind_pts, height = int(35.2*(ind_pts.shape[0]+1)), hide_index=True)
+
+        with col2:
+            st.subheader('Points Rules')
+            st.markdown('''
+                         #### 5. THE POINTS SYSTEM EXPLAINED
+                        5.1. Each week there will be a points pot, all of which will be distributed out across three different categories (Finishing position, Intermediate sprints, KOM points). The categories are explained below. Each different category will have a % of the points pot allocated to it, which may be different each week.
+                        For example, a race that had points solely for finishing position would have 100% of the points for the ‘Finishing Position’ category, and 0% for the other categories. A race that was all about intermediate sprinting might have 70% of the points pot allocated to the ‘intermediate sprints’ category, and 30% allocated to finishing position. 
+                                
+                        5.2. The prologue will have 500 points available in the points pot. Weeks 1 through to and including week 5 will have 1,000 points in the pot. And the final week will have 2,000 points. 
+                                
+                        5.3. In addition to the above (Ie outside of the points pots), further points are available for the Orange Jersey, most aggressive rider, and race reports (see below). 
+                        
+                        ##### 6. Category 1: Finishing Position  
+                        6.1. These points will be awarded to the riders on a % of the category pot basis (Ie. a % of the allocated Finishing Position %) . Whereby the higher the finishing position, the higher % of the pot you receive. See Schedule 3 for the percentage distributions. 
+                                
+                        6.2. As an example, if you come first you would get 10% of the pot. But if you came 21st you would get 2.1% of the pot. 
+                                
+                        6.3. However, if there are fewer than 40 riders racing, then not all the pot will be distributed out (as the lower placings will now not be filled), leaving a ‘remainder’ amount. 
+                                
+                        6.4. This ‘remainder’ (whatever it may be) will be reallocated to the riders equally amongst all riders that raced.
+                        
+                        ##### 7. Category 2: KOM Points
+                        7.1. These may be awarded on certain races but not necessarily every race. 
+                                
+                        7.2. The points allocated will be determined on a race by race basis, as it will depend on the severity of the climb it relates to. 
+                        
+                        ##### 8. Category 3: Intermediate Sprint points
+                        8.1. The points allocated will be determined on a race by race basis. 
+                                
+                        8.2. Details of the intermediate sprints and KOM will be made clear in advance of the relevant race. 
+                        
+                        #### 9. Most aggressive rider
+                        9.1. Twenty points available each week to the most aggressive rider, as chosen by agreement by team leaders. (Things that might win you this award are activities such as going on a wild hopeless attack that is doomed to fail, and inevitably does fail.) 
+                                
+                        9.2. Only one MAR per night 
+                                
+                        9.3. Most aggressive rider over the course of the season will be awarded 100 points after the conclusion of the final week’s race. 
+                        
+                        #### 10. Race reports
+                        Twenty points will be awarded to the team of any rider that submits a race report after each week, that is deemed to be ‘up to snuff’ by agreement of the team captains. 
+                        '''
+                        )
 
     with tab12:
         col1, col2 = st.columns([2,3])
@@ -122,12 +166,8 @@ with tab1:
             st.subheader('Teams Series Standings')
             st.dataframe(team_pts, hide_index=True)
         with col2:
-            st.subheader('Team Series Rules')
+            st.subheader('Points Rules')
             st.markdown('''
-                        #### 2. How To Win?
-
-                        2.1. The league will be won by the team that amasses the most points over the course of the season. 
-
                          #### 5. THE POINTS SYSTEM EXPLAINED
                         5.1. Each week there will be a points pot, all of which will be distributed out across three different categories (Finishing position, Intermediate sprints, KOM points). The categories are explained below. Each different category will have a % of the points pot allocated to it, which may be different each week.
                         For example, a race that had points solely for finishing position would have 100% of the points for the ‘Finishing Position’ category, and 0% for the other categories. A race that was all about intermediate sprinting might have 70% of the points pot allocated to the ‘intermediate sprints’ category, and 30% allocated to finishing position. 

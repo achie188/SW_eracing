@@ -81,3 +81,12 @@ def final_format(df):
         df = df.rename(columns={'Time_nice': 'Time'})
 
         return df
+    
+def highlight_team(team):
+    colors = {
+            'Lego Boots': 'lightcoral', 
+            'Amazon Beaconsfield Services': 'lightblue', 
+            'AstraZenaca Trailfinders': 'lightgreen',
+            'Tesla Thames Water': 'lightgreen',
+            }
+    return [f'background-color: {colors.get(t, "")}' for t in team]

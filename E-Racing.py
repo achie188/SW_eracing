@@ -7,7 +7,7 @@ sys.path.append('/Users/achie188/Library/CloudStorage/GitHub/Personal/SW_eracing
 
 from inputs.pull_zwift import pull_zwift
 from inputs.pull_gsheet import pull_gsheet
-from pipeline.formatting import add_team, get_zwift_ids, final_format
+from pipeline.formatting import add_team, get_zwift_ids, final_format, highlight_team
 from pipeline.calcs import get_stage, calc_overall_pts, calc_overall_orange
 
 
@@ -45,6 +45,7 @@ orange_df = calc_overall_orange(prologue, s1, s2a, s2b, s3, s4, s5, s6, stages_c
 ind_pts = add_team(ind_pts, ath_ids)
 orange_df = add_team(orange_df, ath_ids)
 
+ind_pts = ind_pts.style.apply(highlight_team, subset=['Team'], axis=0)
 
 prologue = final_format(prologue)
 s1 = final_format(s1)

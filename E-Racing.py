@@ -129,7 +129,7 @@ with tab2:
 
         with col2:
             st.markdown('''
-                        #### Race Report - Tesla Thames Water
+                        #### Race Report - Tesla
                         
                         Go go go. George Dix is flying at the front of the race. His team behind them. They look amazing in their Amazon Prime blue jerseys. Dixy is so angry you can tell by looking at his electronic avatar. Why the hell are they going so fast.
 
@@ -149,6 +149,21 @@ with tab2:
                         ‘The winners of week 1 have never won the season!’ 
 
                         Someone belched loudly''')
+
+            st.markdown('''
+                        #### Race Report - AstraZenaca
+                        
+                        A tough night for the Trailfinders.
+
+                        Camp was very upbeat leading up to the season opener. The new faces had settled in nicely and they’d put together a more than respectable set of prologue times. And instead of the habitual pre-race panic, there was an air of serenity in the group. Confidence was high.
+                        
+                        New signing Foley, in particular, was chomping at the bit to prove his worth to the sponsors. He was in great shape and he knew it. He was straight out into the breakaway, going toe to toe with the mercurial Monkfish. 
+
+                        Unfortunately, the rest of the team were no match for ‘Foley Fever’. Friend, Lopez and Tyler looked well short of last season’s form. The diamonds they once had in their legs, had turned into thick, gloopy, treacle. Normally so reliable in the sprint, they were caught at the back of the peloton reminiscing over former glories. Singh did fight hard on the climb, but his lungs were soon full of toxic levels of Volcanic ash and that was his day done. Wilson was perhaps the bravest of the Trailfinders tonight – this was her first race as a professional, and she was shown no mercy by the cut-throat Amazonian prime captain, Dix. 
+
+                        Lego Boots – with the race director in their ranks – were unstoppable tonight and deserve real credit. With their big budget and unlimited supply of baby oil, they’ve cemented their reputation as the bookie’s favourites.  Foley, Tesla captain Humphreys, and Amazon debutant Warmachine – were all up there at the business end…but they couldn’t quite get hold of those slippery Boots out front. 
+
+                        It'll be a restless night for the AZ Trailfinders there’s no doubt about it. But we’re only in week 1. And as the old saying goes, you can’t lose it in week 1. Can you?''')
 
 with tab4:
     tab41, tab42, tab43, tab44, tab45 = st.tabs(['Walrus E-Racing', 'Lego Boots', 'Amazon Beaconsfield Services', 'Tesla Thames Water', 'AstraZenaca Trailfinders'])

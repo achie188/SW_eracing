@@ -121,11 +121,10 @@ with tab2:
         st.dataframe(prologue, height=1500, hide_index=True)
 
     with tab22:
-        st.subheader('Stage 1 Results')
-
         col1, col2 = st.columns([5,2])
 
         with col1:
+            st.subheader('Stage 1 Results')
             st.dataframe(s1, height=1500, hide_index=True)
 
         with col2:

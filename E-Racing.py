@@ -121,7 +121,7 @@ with tab1:
         st.dataframe(team_pts, hide_index=True)
 
     with tab13:
-        col1, col2 = st.columns
+        col1, col2 = st.columns()
         with col1:
             st.subheader('Orange Jersey Race')
             st.dataframe(orange_df, height = int(35.2*(orange_df.shape[0]+1)), hide_index=True)

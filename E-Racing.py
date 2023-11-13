@@ -6,7 +6,7 @@ import sys
 sys.path.append('/Users/achie188/Library/CloudStorage/GitHub/Personal/SW_eracing')
 
 from inputs.pull_zwift import pull_zwift
-from inputs.pull_gsheet import pull_gsheet
+from inputs.pull_gsheet import pull_gsheet, pull_ids
 from pipeline.formatting import add_team, get_zwift_ids, final_format, highlight_team
 from pipeline.calcs import get_stage, calc_overall_pts, calc_overall_orange
 
@@ -16,17 +16,12 @@ interval=60 * 1000
 stages_complete = ['Prologue', 'Stage 1']
 
 
-#Stage_ids
-stages = pull_gsheet("Stage_ids")
+#Get ids
+stages, ath_ids, prologue = pull_ids("Stage_ids", "Athlete_ids", "Prologue")
 
 stage_values = ['Stage_1', 'Stage_2', 'Stage_3', 'Stage_4', 'Stage_5', 'Stage_6']
 zwift_ids = get_zwift_ids(stage_values, stages)
 
-#Get athlete_ids
-ath_ids = pull_gsheet("Athlete_ids")
-
-#Get Events
-prologue = pull_gsheet("Prologue")
 prologue = add_team(prologue, ath_ids)
 
 

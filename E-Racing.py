@@ -296,9 +296,9 @@ with tab1:
             
             They are designed to make the racing as even as possible, penalising the strongest riders with worse bikes and extra weight. And even then Teo usually still wins.
                         
-            Handicaps based laregly off the end of last year’s season. Almost everyone will say “but I’m not as fit as I was then!” but that’s the case for everyone. So we’re keeping them like that, unless there’s some significant thing (eg broken leg) which might mean the handicap might change. 
+            Handicaps based laregly off the end of last year’s season. And everyone always says “but I’m not as fit as I was then!” but that’s the case for everyone. So they are being kept like that, unless there’s some significant thing (eg broken leg) which might mean the handicap might change. 
 
-            After the prologue, we’ll look again at the handicaps and see if some results are way off the pace and need an altered handicap.
+            After each round, handicaps are again fiercely fought over by the captains, with adjustments made to riders weights and bikes. And even then, Teo will still usually win.
             ''')
 
 with tab2:

@@ -7,16 +7,20 @@ sys.path.append('/Users/achie188/Library/CloudStorage/GitHub/Personal/SW_eracing
 
 from inputs.pull_zwift import pull_zwift
 from inputs.pull_gsheet import pull_gsheet
-from pipeline.formatting import format_results, add_team
+from pipeline.formatting import add_team, get_zwift_ids, final_format
+from pipeline.calcs import get_stage, calc_overall_pts, calc_overall_orange
 
 
 interval=60 * 1000
 
+stages_complete = ['Prologue', 'Stage 1']
+
 
 #Stage_ids
-stage1 = '3921745'
-stage2 = '1111111'
+stages = pull_gsheet("Stage_ids")
 
+stage_values = ['Stage_1', 'Stage_2a', 'Stage_2b', 'Stage_3', 'Stage_4', 'Stage_5', 'Stage_6']
+zwift_ids = get_zwift_ids(stage_values, stages)
 
 #Get athlete_ids
 ath_ids = pull_gsheet("Athlete_ids")
@@ -25,29 +29,32 @@ ath_ids = pull_gsheet("Athlete_ids")
 prologue = pull_gsheet("Prologue")
 prologue = add_team(prologue, ath_ids)
 
-s1r = pull_zwift(stage1)
-s1p = pull_gsheet("Stage1")
-s1 = format_results(s1r, s1p, ath_ids)
+
+s1, orange_df = get_stage(zwift_ids[0], "Stage_1", ath_ids)
+s2a, orange_df = get_stage(zwift_ids[1], "Stage_2a", ath_ids, orange_df)
+s2b, orange_df = get_stage(zwift_ids[2], "Stage_2b", ath_ids, orange_df)
+s3, orange_df = get_stage(zwift_ids[3], "Stage_3", ath_ids, orange_df)
+s4, orange_df = get_stage(zwift_ids[4], "Stage_4", ath_ids, orange_df)
+s5, orange_df = get_stage(zwift_ids[5], "Stage_5", ath_ids, orange_df)
+s6, orange_df = get_stage(zwift_ids[6], "Stage_6", ath_ids, orange_df)
 
 
+ind_pts, team_pts = calc_overall_pts(prologue, s1, s2a, s2b, s3, s4, s5, s6)
+orange_df = calc_overall_orange(prologue, s1, s2a, s2b, s3, s4, s5, s6, stages_complete)
 
-#Live event
-live = pull_zwift(stage2)
+
+prologue = final_format(prologue)
+s1 = final_format(s1)
+s2a = final_format(s2a)
+s2b = final_format(s2b)
+s3 = final_format(s3)
+s4 = final_format(s4)
+s5 = final_format(s5)
+s6 = final_format(s6)
 
 
-#Get Standings
-ind = pull_gsheet("Individual")
-ind = add_team(ind, ath_ids)
-
-team = pull_gsheet("Team")
-
-ind['Total'] = pd.to_numeric(ind['Total'], errors='coerce')
-team['Total Pts'] = pd.to_numeric(team['Total Pts'], errors='coerce')
-
-ind = ind.sort_values(by='Total', ascending=False)
-team = team.sort_values(by='Total Pts', ascending=False)
-
-#orange = pull_gsheet("Orange")
+#Get live event
+live = pull_zwift(zwift_ids[1])
 
 
 # Set up Streamlit app
@@ -74,32 +81,26 @@ tab1, tab2, tab3 = st.tabs(["Championship", "All Results", "LIVE NOW"])
 
 
 with tab3:
-    if live.empty:
-        st.write("No live data right now.")
-    else:
+    if live is not None and not live.empty:
         st.dataframe(live, height=2000, hide_index=True)
+    else:
+        st.write("No live data right now.")
 
 
 with tab1:
-    tab11, tab12 = st.tabs(['Individual', 'Teams'])
+    tab11, tab12, tab13 = st.tabs(['Individual', 'Teams', 'Orange'])
 
     with tab11:
         st.subheader('Individual')
-
-        other_columns = [col for col in ind.columns if col != 'Total']
-        column_order = other_columns[:3] + ['Total'] + other_columns[3:]
-        ind = ind.reindex(columns=column_order)
-
-        st.dataframe(ind, height=1500, hide_index=True)
+        st.dataframe(ind_pts, height=1500, hide_index=True)
 
     with tab12:
         st.subheader('Teams')
+        st.dataframe(team_pts, hide_index=True)
 
-        other_columns = [col for col in team.columns if col != 'Total Pts']
-        column_order = other_columns[:2] + ['Total Pts'] + other_columns[2:]
-        team = team.reindex(columns=column_order)
-
-        st.dataframe(team, hide_index=True)
+    with tab13:
+        st.subheader('Orange Jersey')
+        st.dataframe(orange_df, height=1500, hide_index=True)
 
 with tab2:
     tab21, tab22, tab23, tab24, tab25, tab26 = st.tabs(["Prologue", "Stage 1", "Stage 2", "Stage 3", "Stage 4", "Stage 5"])

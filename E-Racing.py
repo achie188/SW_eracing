@@ -19,7 +19,7 @@ stages_complete = ['Prologue', 'Stage 1']
 #Stage_ids
 stages = pull_gsheet("Stage_ids")
 
-stage_values = ['Stage_1', 'Stage_2a', 'Stage_2b', 'Stage_3', 'Stage_4', 'Stage_5', 'Stage_6']
+stage_values = ['Stage_1', 'Stage_2', 'Stage_3', 'Stage_4', 'Stage_5', 'Stage_6']
 zwift_ids = get_zwift_ids(stage_values, stages)
 
 #Get athlete_ids
@@ -31,16 +31,15 @@ prologue = add_team(prologue, ath_ids)
 
 
 s1, orange_df = get_stage(zwift_ids[0], "Stage_1", ath_ids)
-s2a, orange_df = get_stage(zwift_ids[1], "Stage_2a", ath_ids, orange_df)
-s2b, orange_df = get_stage(zwift_ids[2], "Stage_2b", ath_ids, orange_df)
-s3, orange_df = get_stage(zwift_ids[3], "Stage_3", ath_ids, orange_df)
-s4, orange_df = get_stage(zwift_ids[4], "Stage_4", ath_ids, orange_df)
-s5, orange_df = get_stage(zwift_ids[5], "Stage_5", ath_ids, orange_df)
-s6, orange_df = get_stage(zwift_ids[6], "Stage_6", ath_ids, orange_df)
+s2, orange_df = get_stage(zwift_ids[1], "Stage_2", ath_ids, orange_df)
+s3, orange_df = get_stage(zwift_ids[2], "Stage_3", ath_ids, orange_df)
+s4, orange_df = get_stage(zwift_ids[3], "Stage_4", ath_ids, orange_df)
+s5, orange_df = get_stage(zwift_ids[4], "Stage_5", ath_ids, orange_df)
+s6, orange_df = get_stage(zwift_ids[5], "Stage_6", ath_ids, orange_df)
 
 
-ind_pts, team_pts = calc_overall_pts(prologue, s1, s2a, s2b, s3, s4, s5, s6)
-orange_df = calc_overall_orange(prologue, s1, s2a, s2b, s3, s4, s5, s6, stages_complete)
+ind_pts, team_pts, kom_pts, sprinter_pts = calc_overall_pts(prologue, s1, s2, s3, s4, s5, s6)
+orange_df = calc_overall_orange(prologue, s1, s2, s3, s4, s5, s6, stages_complete)
 
 ind_pts = add_team(ind_pts, ath_ids)
 orange_df = add_team(orange_df, ath_ids)
@@ -49,8 +48,7 @@ orange_df = add_team(orange_df, ath_ids)
 
 prologue = final_format(prologue)
 s1 = final_format(s1)
-s2a = final_format(s2a)
-s2b = final_format(s2b)
+s2 = final_format(s2)
 s3 = final_format(s3)
 s4 = final_format(s4)
 s5 = final_format(s5)
@@ -92,7 +90,7 @@ with tab3:
 
 
 with tab1:
-    tab11, tab12, tab13 = st.tabs(['Individual', 'Teams', 'Orange'])
+    tab11, tab12, tab13, tab14, tab15 = st.tabs(['Individual', 'Teams', 'Orange', 'KOM', 'Sprinter'])
 
     with tab11:
         st.subheader('Individual')
@@ -105,6 +103,14 @@ with tab1:
     with tab13:
         st.subheader('Orange Jersey')
         st.dataframe(orange_df, height=1500, hide_index=True)
+
+    with tab14:
+        st.subheader('Polka Dot Jersey')
+        st.dataframe(kom_pts, height=1500, hide_index=True)
+
+    with tab15:
+        st.subheader('Ciclamino Jersey')
+        st.dataframe(sprinter_pts, height=1500, hide_index=True)
 
 with tab2:
     tab21, tab22, tab23, tab24, tab25, tab26 = st.tabs(["Prologue", "Stage 1", "Stage 2", "Stage 3", "Stage 4", "Stage 5"])

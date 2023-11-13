@@ -94,12 +94,11 @@ def get_stage(stage, stage_num, ath_ids, orange_df=prologue):
     return stage_res, orange_df
 
 
-def calc_overall_pts(pro, s1, s2a, s2b, s3, s4, s5, s6):
+def calc_overall_pts(pro, s1, s2, s3, s4, s5, s6):
     all_dataframes = [
         process_dataframe(pro, 'Prologue'),
         process_dataframe(s1, 'Stage 1'),
-        process_dataframe(s2a, 'Stage 2a'),
-        process_dataframe(s2b, 'Stage 2b'),
+        process_dataframe(s2, 'Stage 2'),
         process_dataframe(s3, 'Stage 3'),
         process_dataframe(s4, 'Stage 4'),
         process_dataframe(s5, 'Stage 5'),
@@ -107,8 +106,10 @@ def calc_overall_pts(pro, s1, s2a, s2b, s3, s4, s5, s6):
     ]
 
     # Concatenate the DataFrames
-    all_dataframes = [pro, s1, s2a, s2b, s3, s4, s5, s6]
+    all_dataframes = [pro, s1, s2, s3, s4, s5, s6]
     combined_df = pd.concat(all_dataframes, ignore_index=True)
+
+
 
     # calc individual pts
     ind_df = combined_df.pivot_table(index='Name', columns='Stage', values='Total', aggfunc='sum', fill_value=0)
@@ -129,8 +130,6 @@ def calc_overall_pts(pro, s1, s2a, s2b, s3, s4, s5, s6):
 
     ind_df = ind_df.round(0)
 
-
-
     # calc team pts
     team_df = combined_df.pivot_table(index='Team', columns='Stage', values='Total', aggfunc='sum', fill_value=0)
     team_df.reset_index(inplace=True)
@@ -150,16 +149,53 @@ def calc_overall_pts(pro, s1, s2a, s2b, s3, s4, s5, s6):
 
     team_df = team_df.round(0)
 
-    return ind_df, team_df
+    # calc KOM pts
+    kom_df = combined_df.pivot_table(index='Team', columns='Stage', values='KOM', aggfunc='sum', fill_value=0)
+    kom_df.reset_index(inplace=True)
+    numeric_columns = kom_df.select_dtypes(include=[np.number]).columns
+    kom_df['Total'] = kom_df[numeric_columns].sum(axis=1)
+
+    kom_df = kom_df.loc[kom_df['Total'] != 0]
+
+    kom_df = kom_df.sort_values(by='Total', ascending=False)
+    kom_df.reset_index(inplace=True)
+    kom_df['#'] = kom_df.index + 1
+
+    other_columns = [col for col in kom_df.columns if col != '#']
+    column_order = ['#'] + other_columns[0:]
+    kom_df = kom_df.reindex(columns=column_order)
+    kom_df.drop(columns=['index'], inplace=True)  
+
+    kom_df = kom_df.round(0)
+
+    # calc sprinter pts
+    sprinter_df = combined_df.pivot_table(index='Team', columns='Stage', values='KOM', aggfunc='sum', fill_value=0)
+    sprinter_df.reset_index(inplace=True)
+    numeric_columns = sprinter_df.select_dtypes(include=[np.number]).columns
+    sprinter_df['Total'] = sprinter_df[numeric_columns].sum(axis=1)
+
+    sprinter_df = sprinter_df.loc[sprinter_df['Total'] != 0]
+
+    sprinter_df = sprinter_df.sort_values(by='Total', ascending=False)
+    sprinter_df.reset_index(inplace=True)
+    sprinter_df['#'] = sprinter_df.index + 1
+
+    other_columns = [col for col in sprinter_df.columns if col != '#']
+    column_order = ['#'] + other_columns[0:]
+    sprinter_df = sprinter_df.reindex(columns=column_order)
+    sprinter_df.drop(columns=['index'], inplace=True)  
+
+    sprinter_df = sprinter_df.round(0)
+
+    return ind_df, team_df, kom_df, sprinter_df
 
 
-def calc_overall_orange(pro, s1, s2a, s2b, s3, s4, s5, s6, columns_to_replace):
+def calc_overall_orange(pro, s1, s2, s3, s4, s5, s6, columns_to_replace):
 
     all_dataframes = [
         process_dataframe(pro, 'Prologue'),
         process_dataframe(s1, 'Stage 1'),
-        process_dataframe(s2a, 'Stage 2a'),
-        process_dataframe(s2b, 'Stage 2b'),
+        process_dataframe(s2, 'Stage 2'),
         process_dataframe(s3, 'Stage 3'),
         process_dataframe(s4, 'Stage 4'),
         process_dataframe(s5, 'Stage 5'),

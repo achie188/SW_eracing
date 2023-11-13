@@ -129,9 +129,9 @@ with tab4:
     tab41, tab42, tab43, tab44, tab45 = st.tabs(['Walrus E-Racing', 'Lego Boots', 'Amazon Beaconsfield Services', 'Tesla Thames Water', 'AstraZenaca Trailfinders'])
 
     with tab41:
-        st.subheader('Sexy Walrus e-racing league 2023')
-        st.write('''
- 1. Overview
+        st.subheader('Sexy Walrus E-Racing L eague 2023')
+        st.markdown('''
+#1. Overview
                  
 1.1 There will be 5 weeks of action. Each week will have one or two races. Details of what each week will entail will be released in good time before each week. 
 1.2. Here is a summary of what is in store:

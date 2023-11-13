@@ -93,15 +93,15 @@ with tab1:
     tab11, tab12, tab13, tab14, tab15 = st.tabs(['Individual', 'Teams', 'Orange', 'KOM', 'Sprinter'])
 
     with tab11:
-        st.subheader('Individual')
+        st.subheader('Individual Series Standings')
         st.dataframe(ind_pts, height=1500, hide_index=True)
 
     with tab12:
-        st.subheader('Teams')
+        st.subheader('Teams Series Standings')
         st.dataframe(team_pts, hide_index=True)
 
     with tab13:
-        st.subheader('Orange Jersey')
+        st.subheader('Orange Jersey Race')
         st.dataframe(orange_df, height=1500, hide_index=True)
 
     with tab14:

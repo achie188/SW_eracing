@@ -1,12 +1,24 @@
 import pandas as pd
 import numpy as np
+import os
 
 from inputs.pull_gsheet import pull_gsheet, push_gsheet
 from inputs.pull_zwift import pull_zwift
+from inputs.helpers import save_csv, load_csv
 from pipeline.formatting import format_results, format_mmss
 
-pts = pull_gsheet("Points")
-prologue = pull_gsheet("Prologue")
+location = os.getcwd()
+
+prologue_path = location + r'/inputs/raceinfo/prologue.csv'
+pts_path = location + r'/inputs/raceinfo/points.csv'
+
+pts = load_csv(pts_path)
+prologue = load_csv(prologue_path)
+
+
+
+# pts = pull_gsheet("Points")
+# prologue = pull_gsheet("Prologue")
 
 
 def process_dataframe(df, stage_name):
@@ -32,7 +44,8 @@ def replace_zeros(column):
 
 def orange(orange_df, new_stage):
 
-    pts = pull_gsheet("Points")
+    pts = load_csv(pts_path)
+    prologue = load_csv(prologue_path)
 
     if orange_df is None:
         orange_df = prologue
@@ -63,9 +76,7 @@ def orange(orange_df, new_stage):
     return df, orange_df
 
 
-def calc_points(stage, stage_num):
-    
-    pts = pull_gsheet("Points")
+def calc_points(stage, stage_num, pts):
 
     columns_to_keep = ["#", stage_num]
     pts.drop(pts.columns.difference(columns_to_keep), axis=1, inplace=True)
@@ -83,7 +94,7 @@ def get_stage(stage, stage_num, ath_ids, orange_df=prologue):
         df = pull_zwift(stage)
         f_df = format_results(df, ath_ids)
         f_df_o, orange_df = orange(orange_df, f_df)
-        f_df_pts = calc_points(f_df, stage_num)
+        f_df_pts = calc_points(f_df, stage_num, pts)
 
         f_df_o_pts = pd.merge(f_df_pts, f_df_o, left_on='Name', right_on='Name', how='inner')
         # f_df_o_pts.drop(columns=['#'], inplace=True   )

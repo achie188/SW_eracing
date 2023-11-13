@@ -2,13 +2,17 @@ import pandas as pd
 import streamlit as st
 from streamlit_autorefresh import st_autorefresh
 import sys
+import os
 
 sys.path.append('/Users/achie188/Library/CloudStorage/GitHub/Personal/SW_eracing')
 
 from inputs.pull_zwift import pull_zwift
 from inputs.pull_gsheet import pull_gsheet, pull_ids
+from inputs.helpers import save_csv, load_csv
 from pipeline.formatting import add_team, get_zwift_ids, final_format, highlight_team
 from pipeline.calcs import get_stage, calc_overall_pts, calc_overall_orange
+
+location = os.getcwd()
 
 
 interval=60 * 1000
@@ -17,7 +21,18 @@ stages_complete = ['Prologue', 'Stage 1']
 
 
 #Get ids
-stages, ath_ids, prologue = pull_ids("Stage_ids", "Athlete_ids", "Prologue")
+stages, ath_ids, prologue, pts = pull_ids("Stage_ids", "Athlete_ids", "Prologue", "Points")
+
+stage_path = location + r'/inputs/raceinfo/stages.csv'
+athlete_path = location + r'/inputs/raceinfo/athletes.csv'
+prologue_path = location + r'/inputs/raceinfo/prologue.csv'
+pts_path = location + r'/inputs/raceinfo/points.csv'
+
+save_csv(stages, stage_path)
+save_csv(ath_ids, athlete_path)
+save_csv(prologue, prologue_path)
+save_csv(pts, pts_path)
+
 
 stage_values = ['Stage_1', 'Stage_2', 'Stage_3', 'Stage_4', 'Stage_5', 'Stage_6']
 zwift_ids = get_zwift_ids(stage_values, stages)

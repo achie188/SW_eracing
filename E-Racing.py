@@ -29,7 +29,7 @@ handicaps_path = location + r'/inputs/raceinfo/handicaps.csv'
 #Get ids
 current_time = time.localtime()
 
-if (current_time.tm_min >= 50 and current_time.tm_min <= 5):
+if (current_time.tm_min >= 0 and current_time.tm_min <= 4):
     stages, ath_ids, prologue, pts, handicaps = pull_ids("Stage_ids", "Athlete_ids", "Prologue", "Points", "Handicaps")
 
     save_csv(stages, stage_path)
@@ -289,7 +289,11 @@ with tab1:
             st.dataframe(handicaps, height= int(35.2*(handicaps.shape[0]+1)), hide_index=True)
         
         with col2:
-            st.markdown()
+            st.markdown('''
+            Handicaps based off the end of last year’s season. Almost everyone will say “but I’m not as fit as I was then!” but that’s the case for everyone. So we’re keeping them like that, unless there’s some significant thing (eg broken leg) which might mean the handicap might change. 
+
+            After the prologue, we’ll look again at the handicaps and see if some results are way off the pace and need an altered handicap.
+            ''')
 
 with tab2:
     tab21, tab22, tab23, tab24, tab25, tab26 = st.tabs(["Prologue", "Stage 1", "Stage 2", "Stage 3", "Stage 4", "Stage 5"])

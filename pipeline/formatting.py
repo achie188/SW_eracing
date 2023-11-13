@@ -79,9 +79,11 @@ def final_format(df):
     else:
         df.drop(columns=['Time_secs', 'Stage'], inplace=True)
         df = df.rename(columns={'Time_nice': 'Time'})
+        df.replace({None: '', 0: ''}, inplace=True)
 
         return df
     
+
 def highlight_team(team):
     colors = {
             'Lego Boots': 'lightcoral', 

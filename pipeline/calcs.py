@@ -118,7 +118,7 @@ def calc_overall_pts(pro, s1, s2a, s2b, s3, s4, s5, s6):
 
     ind_df = ind_df.loc[ind_df['Total'] != 0]
 
-    ind_df = ind_df.sort_values(by='Total', ascending=True)
+    ind_df = ind_df.sort_values(by='Total', ascending=False)
     ind_df.reset_index(inplace=True)
     ind_df['#'] = ind_df.index + 1
 
@@ -137,7 +137,7 @@ def calc_overall_pts(pro, s1, s2a, s2b, s3, s4, s5, s6):
 
     team_df = team_df.loc[team_df['Total'] != 0]
 
-    team_df = team_df.sort_values(by='Total', ascending=True)
+    team_df = team_df.sort_values(by='Total', ascending=False)
     team_df.reset_index(inplace=True)
     team_df['#'] = team_df.index + 1
 

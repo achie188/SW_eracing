@@ -123,7 +123,14 @@ with tab2:
     with tab22:
         st.subheader('Stage 1 Results')
 
-        st.dataframe(s1, height=1500, hide_index=True)
+        col1, col2 = st.columns([5,2])
+
+        with col1:
+            st.dataframe(s1, height=1500, hide_index=True)
+
+        with col2:
+            st.markdown('''
+                        #### Race Report''')
 
 with tab4:
     tab41, tab42, tab43, tab44, tab45 = st.tabs(['Walrus E-Racing', 'Lego Boots', 'Amazon Beaconsfield Services', 'Tesla Thames Water', 'AstraZenaca Trailfinders'])

@@ -121,15 +121,15 @@ with tab1:
 
     with tab13:
         st.subheader('Orange Jersey Race')
-        st.dataframe(orange_df, height=1500, hide_index=True)
+        st.dataframe(orange_df, height = int(35.2*(orange_df.shape[0]+1)), hide_index=True)
 
     with tab14:
         st.subheader('Polka Dot Jersey')
-        st.dataframe(kom_pts, height=1500, hide_index=True)
+        st.dataframe(kom_pts, height = int(35.2*(kom_pts.shape[0]+1)), hide_index=True)
 
     with tab15:
         st.subheader('Ciclamino Jersey')
-        st.dataframe(sprinter_pts, height=1500, hide_index=True)
+        st.dataframe(sprinter_pts, height = int(35.2*(sprinter_pts.shape[0]+1)), hide_index=True)
 
 with tab2:
     tab21, tab22, tab23, tab24, tab25, tab26 = st.tabs(["Prologue", "Stage 1", "Stage 2", "Stage 3", "Stage 4", "Stage 5"])
@@ -137,14 +137,14 @@ with tab2:
     with tab21:
         st.subheader('Prologue Results')
 
-        st.dataframe(prologue, height=1500, hide_index=True)
+        st.dataframe(prologue, height = int(35.2*(prologue.shape[0]+1)), hide_index=True)
 
     with tab22:
         col1, col2 = st.columns([5,3])
 
         with col1:
             st.subheader('Stage 1 Results')
-            st.dataframe(s1, height=2000, hide_index=True)
+            st.dataframe(s1, height = int(35.2*(s1.shape[0]+1)), hide_index=True)
 
         with col2:
             st.markdown('''

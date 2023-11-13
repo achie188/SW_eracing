@@ -114,7 +114,8 @@ def calc_overall_pts(pro, s1, s2a, s2b, s3, s4, s5, s6):
     ind_df = combined_df.pivot_table(index='Name', columns='Stage', values='Total', aggfunc='sum', fill_value=0)
     ind_df = ind_df.reset_index()
     ind_df['Total'] = ind_df.sum(axis=1)
-    ind_df = ind_df.sort_values(by='Total', ascending=False)
+    numeric_columns = ind_df.select_dtypes(include=[np.number]).columns
+    ind_df['Total'] = ind_df[numeric_columns].sum(axis=1)
 
     ind_df = ind_df.loc[ind_df['Total'] != 0]
 

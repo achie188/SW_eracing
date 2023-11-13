@@ -101,3 +101,19 @@ def highlight_team(team):
             'Tesla Thames Water': 'lightgreen',
             }
     return [f'background-color: {colors.get(t, "")}' for t in team]
+
+
+def teams_slice(df, team, handicaps, columns_to_replace):
+    filtered_df = df[df['Team'] == team].copy()
+
+    filtered_df = pd.merge(filtered_df, handicaps, left_on='Name', right_on='Name', how='inner')
+    filtered_df.drop(columns=['#_y', 'Team_y'], inplace=True)
+    filtered_df = filtered_df.rename(columns={'#_x': '#', 'Team_x': 'Team'})
+    
+    additional_columns = ['#', 'Name', 'Team', 'Weight', 'New Weight', 'Adjustment', 'Bike', 'Wheels']
+
+    filtered_df = filtered_df[additional_columns + columns_to_replace].copy()
+
+    return filtered_df
+
+

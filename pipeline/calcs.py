@@ -142,7 +142,7 @@ def calc_overall_pts(pro, s1, s2, s3, s4, s5, s6):
     ind_df.drop(columns=['index'], inplace=True)
 
     ind_df = ind_df.round(0)
-    ind_pts = add_team(ind_df, ath_ids)
+    ind_df = add_team(ind_df, ath_ids)
 
     # calc team pts
     team_df = combined_df.pivot_table(index='Team', columns='Stage', values='Total', aggfunc='sum', fill_value=0)

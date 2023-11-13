@@ -43,7 +43,6 @@ ind_pts, team_pts = calc_overall_pts(prologue, s1, s2a, s2b, s3, s4, s5, s6)
 orange_df = calc_overall_orange(prologue, s1, s2a, s2b, s3, s4, s5, s6, stages_complete)
 
 ind_pts = add_team(ind_pts, ath_ids)
-team_pts = add_team(team_pts, ath_ids)
 orange_df = add_team(orange_df, ath_ids)
 
 

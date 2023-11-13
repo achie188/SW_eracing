@@ -52,7 +52,7 @@ zwift_ids = get_zwift_ids(stage_values, stages)
 
 handicaps.drop(columns=['Zwift_id'], inplace=True)
 handicaps['#'] = handicaps.index + 1
-handicaps = handicaps[['#', '#Name', 'Weight', 'Bike', 'Wheels', 'New Weight', 'Adjustment']]
+handicaps = handicaps[['#', 'Name', 'Weight', 'Bike', 'Wheels', 'New Weight', 'Adjustment']]
 handicaps.replace({None: '', 0: '', 'None': '', np.nan: ''}, inplace=True)
 handicaps = add_team(handicaps, ath_ids)
 

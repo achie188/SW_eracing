@@ -291,7 +291,7 @@ with tab2:
 
         with col2:
             st.markdown('''
-                        1. Overview
+                        #### 1. Overview
                         
             1.1. There will be 5 weeks of action. Each week will have one or two races. Details of what each week will entail will be released in good time before each week.
                                 

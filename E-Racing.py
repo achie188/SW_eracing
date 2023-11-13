@@ -125,7 +125,7 @@ with tab2:
 
         with col1:
             st.subheader('Stage 1 Results')
-            st.dataframe(s1, height=1500, hide_index=True)
+            st.dataframe(s1, height=2000, hide_index=True)
 
         with col2:
             st.markdown('''

@@ -119,7 +119,6 @@ with tab1:
             st.dataframe(ind_pts, height = int(35.2*(ind_pts.shape[0]+1)), hide_index=True)
 
         with col2:
-            st.subheader('Points Rules')
             st.markdown('''
                          #### 5. THE POINTS SYSTEM EXPLAINED
                         5.1. Each week there will be a points pot, all of which will be distributed out across three different categories (Finishing position, Intermediate sprints, KOM points). The categories are explained below. Each different category will have a % of the points pot allocated to it, which may be different each week.
@@ -166,7 +165,6 @@ with tab1:
             st.subheader('Teams Series Standings')
             st.dataframe(team_pts, hide_index=True)
         with col2:
-            st.subheader('Points Rules')
             st.markdown('''
                          #### 5. THE POINTS SYSTEM EXPLAINED
                         5.1. Each week there will be a points pot, all of which will be distributed out across three different categories (Finishing position, Intermediate sprints, KOM points). The categories are explained below. Each different category will have a % of the points pot allocated to it, which may be different each week.

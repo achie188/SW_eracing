@@ -117,7 +117,7 @@ with tab1:
         st.dataframe(ind_pts, height = int(35.2*(ind_pts.shape[0]+1)), hide_index=True)
 
     with tab12:
-        col1, col2 = st.columns(2)
+        col1, col2 = st.columns([2,3])
         with col1:
             st.subheader('Teams Series Standings')
             st.dataframe(team_pts, hide_index=True)
@@ -168,7 +168,7 @@ with tab1:
                         )
             
     with tab13:
-        col1, col2 = st.columns(2)
+        col1, col2 = st.columns([2,3])
         with col1:
             st.subheader('Orange Jersey Race')
             st.dataframe(orange_df, height = int(35.2*(orange_df.shape[0]+1)), hide_index=True)

@@ -129,8 +129,8 @@ def calc_overall_pts(pro, s1, s2a, s2b, s3, s4, s5, s6):
     # calc team pts
     team_df = combined_df.pivot_table(index='Team', columns='Stage', values='Total', aggfunc='sum', fill_value=0)
     team_df.reset_index(inplace=True)
-    team_df['Total'] = team_df.sum(axis=1)
-    team_df = team_df.sort_values(by='Total', ascending=False)
+    numeric_columns = ind_df.select_dtypes(include=[np.number]).columns
+    team_df['Total'] = team_df[numeric_columns].sum(axis=1)
 
     team_df = team_df.loc[team_df['Total'] != 0]
 

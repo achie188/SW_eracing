@@ -301,7 +301,9 @@ with tab1:
                         
             Handicaps based laregly off the end of last year’s season. And everyone always says “but I’m not as fit as I was then!” but that’s the case for everyone. So they are being kept like that, unless there’s some significant thing (eg broken leg) which might mean the handicap might change. 
 
-            After each round, handicaps are again fiercely fought over by the captains, with adjustments made to riders weights and bikes. And even then, Teo will still usually win.
+            After each round, handicaps are again fiercely fought over by the captains, with adjustments made to riders weights and bikes. 
+                        
+            And even then, Teo will still usually win.
             ''')
 
 with tab2:

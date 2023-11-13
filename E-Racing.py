@@ -533,7 +533,7 @@ And the final spot went to Alex Hadcock. A talented climber, but a neo-pro and t
 Only time will tell how delicious those chips will be.''')
         
         with col2:
-            st.subheader('Lego Boots Team')
+            st.subheader('Team Lego Boots')
             st.dataframe(lego_boots, height = int(35.2*(lego_boots.shape[0]+1)), hide_index=True)
 
     with tab43:
@@ -543,7 +543,7 @@ Only time will tell how delicious those chips will be.''')
             st.write('')
 
         with col2:
-            st.subheader('ABS Team')
+            st.subheader('Team ABS')
             st.dataframe(amazon, height = int(35.2*(amazon.shape[0]+1)), hide_index=True)
 
     with tab44:

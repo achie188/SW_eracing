@@ -483,7 +483,6 @@ with tab4:
 
     with tab42:
         col1, col2 = st.columns(2)
-        
         with col1:
             st.subheader('Lego pours millions into doomed vanity project')
             st.write('''Sunday 5th November 2023 Legoland
@@ -509,7 +508,6 @@ Only time will tell how delicious those chips will be.''')
         with col2:
             st.subheader('Lego Boots Team')
             st.dataframe(lego_boots, height = int(35.2*(lego_boots.shape[0]+1)), hide_index=True)
-
 
     with tab43:
         col1, col2 = st.columns(2)

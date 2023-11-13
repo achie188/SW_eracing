@@ -252,13 +252,8 @@ with tab1:
             ##### 7. Category 2: KOM Points
             7.1. These may be awarded on certain races but not necessarily every race. 
                     
-            7.2. The points allocated will be determined on a race by race basis, as it will depend on the severity of the climb it relates to. 
-            
-            ##### 8. Category 3: Intermediate Sprint points
-            8.1. The points allocated will be determined on a race by race basis. 
-                    
-            8.2. Details of the intermediate sprints and KOM will be made clear in advance of the relevant race.        
-                        ''')
+            7.2. The points allocated will be determined on a race by race basis, as it will depend on the severity of the climb it relates to.      
+            ''')
 
 
     with tab15:
@@ -277,11 +272,6 @@ with tab1:
             4.3. If a designated climber is chosen, then any KOM points that that rider acquires are doubled. And any finish line points (on stages that are classified as hill top finishes) that that rider acquires are increased by 20%. 
                     
             4.4. A rider may only be a designated sprinter or designated climber once. (For example, if a rider is the designated climber in week 1, they will not be allowed to be the designated climber or the designated sprinter for any other races). 
-            
-            ##### 7. Category 2: KOM Points
-            7.1. These may be awarded on certain races but not necessarily every race. 
-                    
-            7.2. The points allocated will be determined on a race by race basis, as it will depend on the severity of the climb it relates to. 
             
             ##### 8. Category 3: Intermediate Sprint points
             8.1. The points allocated will be determined on a race by race basis. 

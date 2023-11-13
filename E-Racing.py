@@ -45,7 +45,7 @@ orange_df = calc_overall_orange(prologue, s1, s2a, s2b, s3, s4, s5, s6, stages_c
 ind_pts = add_team(ind_pts, ath_ids)
 orange_df = add_team(orange_df, ath_ids)
 
-ind_pts = ind_pts.style.apply(highlight_team, subset=['Team'], axis=0)
+# ind_pts = ind_pts.style.apply(highlight_team, subset=['Team'], axis=0)
 
 prologue = final_format(prologue)
 s1 = final_format(s1)

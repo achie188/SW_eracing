@@ -25,7 +25,7 @@ def format_results(res, ath_ids):
     df = df.rename(columns={'position': '#'})
     df = df.rename(columns={'heartRateInBpm': 'HR'})
     df = df.rename(columns={'powerOutputInWatts': 'Watts'})
-    df = df.rename(columns={'powerInWattsPerKg': 'Watts/Kg'}).round(2)
+    df = df.rename(columns={'powerInWattsPerKg': 'W/Kg'}).round(2)
     df = df.rename(columns={'liveTimeGapToLeaderInSeconds': 'Gap'})
     df = df.rename(columns={'completionTimeInSeconds': 'Time_secs'})
     df = df.rename(columns={'distanceInMeters': 'Distance'}).round(1)

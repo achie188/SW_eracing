@@ -543,7 +543,7 @@ Only time will tell how delicious those chips will be.''')
             st.write('')
 
         with col2:
-            st.subheader('Amazon Team')
+            st.subheader('ABS Team')
             st.dataframe(amazon, height = int(35.2*(amazon.shape[0]+1)), hide_index=True)
 
     with tab44:
@@ -575,7 +575,7 @@ Team Tesla Thames Water also announced an exciting partnership with Scott bikes 
 With the 2023 Zwift Championships on the horizon, Team Tesla Thames Water's journey promises to be a thrilling blend of competition and commitment to the environment, as they ride towards a future where sport and sustainability go hand in hand.''')
 
         with col2:
-            st.subheader('Tesla Thames Water Team')
+            st.subheader('Team Tesla Thames Water')
             st.dataframe(tesla, height = int(35.2*(tesla.shape[0]+1)), hide_index=True)
 
     with tab45:
@@ -595,5 +595,5 @@ The team welcoms fresh faces, including Davyd Greenish, who excitedly declared, 
 This partnership not only breathes new life into the Greens but also signifies a unique fusion of goals – AstraZeneca's commitment to Watopian diseases and the resilience and determination of the once-feared Evil Greens. It's a story of renewal and hope, anchored by the experienced, the determined, and the newcomers, all propelled forward by a shared mission to make a meaningful impact in the e-racing world.''')
         
         with col2:
-            st.subheader('AstraZenaca Team')
+            st.subheader('The Evil Greens')
             st.dataframe(astrazen, height = int(35.2*(astrazen.shape[0]+1)), hide_index=True)

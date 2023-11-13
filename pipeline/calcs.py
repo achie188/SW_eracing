@@ -90,6 +90,8 @@ def get_stage(stage, stage_num, ath_ids, orange_df=prologue):
 
         push_gsheet(f_df_o_pts, stage_num)
         stage_res = pull_gsheet(stage_num)
+        stage_res['KOM'] = pd.to_numeric(stage_res['KOM'], errors='coerce')
+        stage_res['Int. S'] = pd.to_numeric(stage_res['Int. S'], errors='coerce')
 
     return stage_res, orange_df
 
@@ -150,7 +152,7 @@ def calc_overall_pts(pro, s1, s2, s3, s4, s5, s6):
     team_df = team_df.round(0)
 
     # calc KOM pts
-    kom_df = combined_df.pivot_table(index='Team', columns='Stage', values='KOM', aggfunc='sum', fill_value=0)
+    kom_df = combined_df.pivot_table(index='Name', columns='Stage', values='KOM', aggfunc='sum', fill_value=0)
     kom_df.reset_index(inplace=True)
     numeric_columns = kom_df.select_dtypes(include=[np.number]).columns
     kom_df['Total'] = kom_df[numeric_columns].sum(axis=1)
@@ -169,7 +171,7 @@ def calc_overall_pts(pro, s1, s2, s3, s4, s5, s6):
     kom_df = kom_df.round(0)
 
     # calc sprinter pts
-    sprinter_df = combined_df.pivot_table(index='Team', columns='Stage', values='KOM', aggfunc='sum', fill_value=0)
+    sprinter_df = combined_df.pivot_table(index='Name', columns='Stage', values='Int. S', aggfunc='sum', fill_value=0)
     sprinter_df.reset_index(inplace=True)
     numeric_columns = sprinter_df.select_dtypes(include=[np.number]).columns
     sprinter_df['Total'] = sprinter_df[numeric_columns].sum(axis=1)

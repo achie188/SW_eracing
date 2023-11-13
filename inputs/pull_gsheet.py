@@ -19,7 +19,7 @@ gc = gspread.authorize(credentials)
 sh =  gc.open("SW_E-Racing_23")
 
 
-def pull_ids(sheet1, sheet2, sheet3, sheet4):
+def pull_ids(sheet1, sheet2, sheet3, sheet4, sheet5):
     wks = sh.worksheet(sheet1)
     df1 = pd.DataFrame(wks.get_all_records())
 
@@ -32,7 +32,10 @@ def pull_ids(sheet1, sheet2, sheet3, sheet4):
     wks = sh.worksheet(sheet4)
     df4 = pd.DataFrame(wks.get_all_records())
 
-    return df1, df2, df3, df4
+    wks = sh.worksheet(sheet5)
+    df5 = pd.DataFrame(wks.get_all_records())
+
+    return df1, df2, df3, df4, df5
 
 
 def pull_gsheet(sheet):

@@ -4,6 +4,7 @@ from streamlit_autorefresh import st_autorefresh
 import sys
 import os
 import time
+import numpy as np
 
 sys.path.append('/Users/achie188/Library/CloudStorage/GitHub/Personal/SW_eracing')
 
@@ -49,6 +50,8 @@ else:
 stage_values = ['Stage_1', 'Stage_2', 'Stage_3', 'Stage_4', 'Stage_5', 'Stage_6']
 zwift_ids = get_zwift_ids(stage_values, stages)
 handicaps.drop(columns=['Zwift_id'], inplace=True)
+handicaps.replace({None: '', 0: '', 'None': '', np.nan: ''}, inplace=True)
+handicaps = add_team(handicaps, ath_ids)
 
 prologue = add_team(prologue, ath_ids)
 

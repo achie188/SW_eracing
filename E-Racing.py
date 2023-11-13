@@ -113,7 +113,7 @@ with tab1:
 
     with tab11:
         st.subheader('Individual Series Standings')
-        st.dataframe(ind_pts, height=1500, hide_index=True)
+        st.dataframe(ind_pts, height = int(35.2*(ind_pts.shape[0]+1)), hide_index=True)
 
     with tab12:
         st.subheader('Teams Series Standings')

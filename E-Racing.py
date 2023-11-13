@@ -211,7 +211,6 @@ with tab1:
             st.subheader('Orange Jersey Race')
             st.dataframe(orange_df, height = int(35.2*(orange_df.shape[0]+1)), hide_index=True)
         with col2:
-            st.subheader('Orange Jersey Rules')
             st.markdown('''
                         #### 11. Orange jersey competition
             11.1. Points available at the end of each week (starting after the conclusion of Week 1 - Ie. No points awarded after the Prologue) for rider’s position in Orange jersey leaderboard. A rider must have finished a race to be awarded any points. 

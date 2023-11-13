@@ -292,7 +292,7 @@ with tab1:
             st.markdown('''
             #### Handicapping System
             
-            Handicaps are always the most fiercely debated part of the Sexy Walrus E-Racing series, and it a hot topic of debate between the captains. Largely over whether Teo should have 50 extra kg added, or just 45.
+            Handicaps are always the most fiercely argued part of the Sexy Walrus E-Racing series, and it a hot topic of debate between the captains. Largely over whether Teo should have 50 extra kg added, or just 45.
             
             They are designed to make the racing as even as possible, penalising the strongest riders with worse bikes and extra weight. And even then Teo usually still wins.
                         

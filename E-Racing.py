@@ -12,7 +12,7 @@ from pipeline.calcs import get_stage, calc_overall_pts, calc_overall_orange, han
 
 
 
-interval=5 * 1000
+interval=240 * 1000
 
 stages_complete = ['Prologue', 'Stage 1']
 

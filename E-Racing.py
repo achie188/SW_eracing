@@ -121,7 +121,7 @@ with tab2:
         st.dataframe(prologue, height=1500, hide_index=True)
 
     with tab22:
-        col1, col2 = st.columns([5,2])
+        col1, col2 = st.columns([5,3])
 
         with col1:
             st.subheader('Stage 1 Results')

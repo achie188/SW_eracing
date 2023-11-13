@@ -127,6 +127,8 @@ def calc_overall_pts(pro, s1, s2a, s2b, s3, s4, s5, s6):
     ind_df = ind_df.reindex(columns=column_order)
     ind_df.drop(columns=['index'], inplace=True)
 
+    ind_df = ind_df.round(0)
+
 
 
     # calc team pts
@@ -145,6 +147,8 @@ def calc_overall_pts(pro, s1, s2a, s2b, s3, s4, s5, s6):
     column_order = ['#'] + other_columns[0:]
     team_df = team_df.reindex(columns=column_order)
     team_df.drop(columns=['index'], inplace=True)  
+
+    team_df = team_df.round(0)
 
     return ind_df, team_df
 

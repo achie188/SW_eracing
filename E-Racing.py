@@ -129,7 +129,26 @@ with tab2:
 
         with col2:
             st.markdown('''
-                        #### Race Report''')
+                        #### Race Report - Tesla Thames Water
+                        
+                        Go go go. George Dix is flying at the front of the race. His team behind them. They look amazing in their Amazon Prime blue jerseys. Dixy is so angry you can tell by looking at his electronic avatar. Why the hell are they going so fast.
+
+                        Meanwhile the Tesla Thames Water team with sponsors hell bent on rehabilitating their reputation look formidable in our red T jerseys! Looking comfortable we were all present and corrrect with Scottie up in the break feeding us live information on Chris Monk’s state of mind. 
+
+                        We appproached Mount doom looming in the distance like a bunch of super charged hobbits who have got to get back to the shire in time for Old Gaffer Gamgee’s mutton eating competition.
+
+                        The sprint came and went with no one on our team clear where the sprint was and our main sprinter Edwin unable to hear the rest of us which led to a comical if not frustrating 3 mins of people shouting into the wind and Ed smith sprinting at anything he could see.
+
+                        Anyway the real quiz came along pretty sharpish and the pack was set. About half way some bastard launched themselves and the pack was split and only one TTW was in the front group, me. Scottie was quickly gobbled up and spat out and up ahead Chris Monk continued to forge on in his skin tight orange jersey. 
+
+                        We reached the top and toppled over the edge. I found myself in a group of 2 chasing Tom and Chris up ahead. I worked as hard as I could to stave off any chance of the group behind catching and James Warman sat neatly behind like Frodo to my Sam. We were catching Chris but would run out of road and so we were fighting for 3rd place. Just like in the books at the last minute Frodo snuck past Sam and took the win. 
+
+                        The remainder of the TTWs fellowship rolled in happily as a group bruised but in no way beaten. 
+
+                        The old truism was muttered over comms..
+                        ‘The winners of week 1 have never won the season!’ 
+
+                        Someone belched loudly''')
 
 with tab4:
     tab41, tab42, tab43, tab44, tab45 = st.tabs(['Walrus E-Racing', 'Lego Boots', 'Amazon Beaconsfield Services', 'Tesla Thames Water', 'AstraZenaca Trailfinders'])

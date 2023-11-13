@@ -84,7 +84,7 @@ def calc_points(stage, stage_num, pts):
 
 
 def get_stage(stage, stage_num, ath_ids, orange_df=prologue):
-    if stage == '':
+    if stage == '' or pd.isna(stage):
         return None, orange_df
     else:
         df = pull_zwift(stage)

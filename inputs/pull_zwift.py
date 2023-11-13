@@ -10,6 +10,8 @@ def pull_zwift(event_id):
     if event_id == '':
         return None
     
+    event_id = event_id.astype(int)
+
     url = "https://us-or-rly101.zwift.com/relay/race/events/" + str(event_id) + "/placement?from=1&to=50&chipTime=true"
 
     payload = {}

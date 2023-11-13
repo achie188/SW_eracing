@@ -3,35 +3,44 @@ import streamlit as st
 from streamlit_autorefresh import st_autorefresh
 import sys
 import os
+import time
 
 sys.path.append('/Users/achie188/Library/CloudStorage/GitHub/Personal/SW_eracing')
 
 from inputs.pull_zwift import pull_zwift
 from inputs.pull_gsheet import pull_ids
-from inputs.helpers import save_csv
+from inputs.helpers import save_csv, load_csv
 from pipeline.formatting import add_team, get_zwift_ids, final_format
 from pipeline.calcs import get_stage, calc_overall_pts, calc_overall_orange
 
 location = os.getcwd()
 
 
-#interval=60 * 1000
+interval=240 * 1000
 
 stages_complete = ['Prologue', 'Stage 1']
-
-
-#Get ids
-stages, ath_ids, prologue, pts = pull_ids("Stage_ids", "Athlete_ids", "Prologue", "Points")
 
 stage_path = location + r'/inputs/raceinfo/stages.csv'
 athlete_path = location + r'/inputs/raceinfo/athletes.csv'
 prologue_path = location + r'/inputs/raceinfo/prologue.csv'
 pts_path = location + r'/inputs/raceinfo/points.csv'
 
-save_csv(stages, stage_path)
-save_csv(ath_ids, athlete_path)
-save_csv(prologue, prologue_path)
-save_csv(pts, pts_path)
+#Get ids
+current_time = time.localtime()
+
+if (current_time.tm_min >= 1 and current_time.tm_min <= 5):
+    stages, ath_ids, prologue, pts = pull_ids("Stage_ids", "Athlete_ids", "Prologue", "Points")
+    
+    save_csv(stages, stage_path)
+    save_csv(ath_ids, athlete_path)
+    save_csv(prologue, prologue_path)
+    save_csv(pts, pts_path)
+
+else:
+    stages = load_csv(stage_path)
+    ath_ids = load_csv(athlete_path)
+    prologue = load_csv(prologue_path)
+    pts = load_csv(pts_path)
 
 
 stage_values = ['Stage_1', 'Stage_2', 'Stage_3', 'Stage_4', 'Stage_5', 'Stage_6']

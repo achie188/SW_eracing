@@ -30,7 +30,7 @@ current_time = time.localtime()
 
 if (current_time.tm_min >= 1 and current_time.tm_min <= 5):
     stages, ath_ids, prologue, pts = pull_ids("Stage_ids", "Athlete_ids", "Prologue", "Points")
-    
+
     save_csv(stages, stage_path)
     save_csv(ath_ids, athlete_path)
     save_csv(prologue, prologue_path)
@@ -318,10 +318,10 @@ Only time will tell how delicious those chips will be.''')
         st.write('')
 
     with tab44:
-        st.subheader('FOR IMMEDIATE RELEASE')
-        st.write('''London, UK, November 4, 2023
-
-Tesla and Thames Water Unite in Cycling Endeavor for the Greater Good
+        st.subheader('Tesla and Thames Water Unite in Cycling Endeavor for the Greater Good')
+        st.write('''FOR IMMEDIATE RELEASE
+                 
+                 London, UK, November 4, 2023
 
 In a groundbreaking collaboration that defies expectations, Tesla, the pioneering electric car company, and Thames Water, the UK's leading water utility provider, have joined forces to propel the world of professional cycling into a new era.
 

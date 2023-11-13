@@ -86,12 +86,24 @@ st.write("The below shows the results and current standings of the Sexy Walrus E
 tab1, tab2, tab3, tab4 = st.tabs(["Championship", "All Results", "LIVE NOW", "About"])
 
 
+
+
+                                                    ###############################
+                                                    ######## LIVE DATA TAB ########
+                                                    ###############################
+
 with tab3:
     if live is not None and not live.empty:
         st.dataframe(live, height=2000, hide_index=True)
     else:
         st.write("No live data right now.")
 
+
+
+
+                                                    ###############################
+                                                    ###### CHAMPIONSHIP TAB #######
+                                                    ###############################
 
 with tab1:
     tab11, tab12, tab13, tab14, tab15, tab16 = st.tabs(['Individual', 'Teams', 'Orange', 'KOM', 'Sprinter', 'Handicaps'])
@@ -284,6 +296,14 @@ with tab1:
             And even then, Teo will still usually win.
             ''')
 
+
+
+
+                                                ###############################
+                                                ######### RESULTS TAB #########
+                                                ###############################
+
+
 with tab2:
     tab21, tab22, tab23, tab24, tab25, tab26 = st.tabs(["Prologue", "Stage 1", "Stage 2", "Stage 3", "Stage 4", "Stage 5"])
 
@@ -373,6 +393,13 @@ with tab2:
                         Lego Boots – with the race director in their ranks – were unstoppable tonight and deserve real credit. With their big budget and unlimited supply of baby oil, they’ve cemented their reputation as the bookie’s favourites.  Foley, Tesla captain Humphreys, and Amazon debutant Warmachine – were all up there at the business end…but they couldn’t quite get hold of those slippery Boots out front. 
 
                         It'll be a restless night for the AZ Trailfinders there’s no doubt about it. But we’re only in week 1. And as the old saying goes, you can’t lose it in week 1. Can you?''')
+
+
+
+
+                                                ###############################
+                                                ########## ABOUT TAB ##########
+                                                ###############################
 
 with tab4:
     tab41, tab42, tab43, tab44, tab45 = st.tabs(['Walrus E-Racing', 'Lego Boots', 'Amazon Beaconsfield Services', 'Tesla Thames Water', 'AstraZenaca Trailfinders'])

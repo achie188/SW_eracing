@@ -110,9 +110,11 @@ def teams_slice(df, team, handicaps, columns_to_replace):
     filtered_df.drop(columns=['#_y', 'Team_y'], inplace=True)
     filtered_df = filtered_df.rename(columns={'#_x': '#', 'Team_x': 'Team'})
     
-    additional_columns = ['#', 'Name', 'Weight', 'New Weight', 'Adjustment', 'Bike']
+    add_columns1 = ['#', 'Name', 'Weight', 'New Weight', 'Adjustment', 'Bike']
 
-    filtered_df = filtered_df[additional_columns + columns_to_replace].copy()
+    add_columns2 = ['Total']
+
+    filtered_df = filtered_df[add_columns1 + columns_to_replace + add_columns2].copy()
 
     # sum_columns = ['#', 'Weight']
     # columns_to_sum = sum_columns + columns_to_replace

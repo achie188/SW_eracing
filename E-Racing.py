@@ -405,7 +405,7 @@ with tab4:
     tab41, tab42, tab43, tab44, tab45 = st.tabs(['Walrus E-Racing', 'Lego Boots', 'Amazon Beaconsfield Services', 'Tesla Thames Water', 'AstraZenaca Trailfinders'])
 
     with tab41:
-        st.subheader('Sexy Walrus E-Racing League 2023')
+        st.subheader('Sexy Walrus E-Racing League Rules 2023')
         st.markdown('''
             #### 1. Overview
                         
@@ -422,9 +422,9 @@ with tab4:
 
             #### 2. How To Win?
 
-            2.1. The league will be won by the team that amasses the most points over the course of the season. 
+            2.1. The league will be won by the team that wins. This is usually achieved by amassing the most points over the course of the season, but other options are available. 
                     
-            2.2. See later on in this document for a summary of how the points system works.
+            2.2. See later on in the rules for a summary of how the points system works.
             
             #### 3. Breakaways
             3.1. Some races will have a breakaway. This will work by 3 riders being chosen to form a breakaway. 

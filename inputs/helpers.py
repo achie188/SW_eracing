@@ -52,7 +52,10 @@ def load_json(file_path):
 def get_ids():
     current_time = time.localtime()
 
-    if (current_time.tm_min >= 0 and current_time.tm_min <= 5) or (current_time.tm_min >= 30 and current_time.tm_min <= 35):
+    if {(current_time.tm_min >= 0 and current_time.tm_min <= 4) or 
+    (current_time.tm_min >= 15 and current_time.tm_min <= 19) or 
+    (current_time.tm_min >= 30 and current_time.tm_min <= 34) or
+    (current_time.tm_min >= 45 and current_time.tm_min <= 49)}:
         stages, ath_ids, prologue, pts, handicaps = pull_ids("Stage_ids", "Athlete_ids", "Prologue", "Points", "Handicaps")
 
         prologue = add_team(prologue, ath_ids)

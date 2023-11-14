@@ -1,34 +1,35 @@
-Name,Zwift_id,Weight,Bike,Wheels,New Weight,Adjustment
-R.Tyler,3061032,119,Free choice,Free choice,20kg balloons,
-B. Wilson,4399298,,Free choice,Free choice,17 kg balloons,Minus 2kg
-T. Mogford,2754772,84,Free choice,Free choice,13 kg balloons,Minus 2kg
-D. Thompson,4755354,86,Free choice,Free choice,12 kg balloons,
-N. Foley,2887595,,Free choice,Free choice,10 kg balloons,Plus 2kg
-L. Felton,2011624,55,Free choice,Free choice,9 kg balloons,
+Name,Zwift_id,True Weight,Bike,Wheels,New Weight,W1 Adj.
+R.Tyler,3061032,120,Free choice,Free choice,20kg balloons,
+B. Wilson,4399298,54,Free choice,Free choice,17 kg balloons,Minus 2kg
+T. Mogford,2754772,85,Free choice,Free choice,13 kg balloons,Minus 2kg
+D. Thompson,4755354,85,Free choice,Free choice,12 kg balloons,
+N. Foley,2887595,86,Free choice,Free choice,10 kg balloons,Plus 2kg
+L. Felton,2011624,51,Free choice,Free choice,9 kg balloons,
 L. Lagnado,2850268,102,Free choice,Free choice,5 kg balloons ,Minus 2kg
-A. Haddock,,,Free choice,Free choice,4 kg balloons ,Minus 1kg
-J. Whitecross,6071052,,Free choice,Free choice,4 kg balloons ,Minus 1kg
-D. Greenish,,,Free choice,Free choice,4 kg balloons ,Minus 4kg
-S. Kapila,6084412,,Free choice,Free choice,3 kg balloons ,
-E. Haddock,,,Free choice,Free choice,3 kg balloons ,
-C. Monk,392660,73,Free choice,Free choice,2 kg balloons,Plus 3kg
-J. Warman ,5954018,,Free choice,Free choice,-,
-T. File,2856855,75,Free choice,Free choice,-,
-G. Humphreys,328191,82,Free choice,Free choice,Plus 1kg,
-D. Singh,2475657,70,Steel bike,Classic,-,
-A. (Scottie) Neil,3280258,70,Steel bike,Classic,-,Minus 1kg
-N. Sharpe,2600608,73,Gravel,-,-,Plus 2kg
-T. Fleming,,82,Gravel,-,-,
-M. Crowe,,,Gravel,-,-,
-J. Peters,,70,Gravel,-,-,
-B. Smith,,77,Gravel,-,-,Minus 4kg
-R.Lagnado,,83,Gravel,-,Plus 1kg,
-H. Courtier,1489654,85,Gravel,-,Plus 3kg,
+A. Haddock,A. Haddock,-,Free choice,Free choice,4 kg balloons ,Minus 1kg
+J. Whitecross,6071052,81,Free choice,Free choice,4 kg balloons ,Minus 1kg
+D. Greenish,D. Greenish,-,Free choice,Free choice,4 kg balloons ,Minus 4kg
+S. Kapila,6084412,66,Free choice,Free choice,3 kg balloons ,
+E. Haddock,E. Haddock,-,Free choice,Free choice,3 kg balloons ,
+J. Warman ,5954018,76,Free choice,Free choice,-,
+D. Singh,2475657,74,Free choice,Free choice,-,
+A. (Scottie) Neil,3280258,69,Free choice,Free choice,-,Minus 1kg
+C. Monk,392660,69,Steel bike,Classic,2 kg balloons,Plus 3kg
+T. File,2856855,73,Steel bike,Classic,-,
+G. Humphreys,328191,84,Steel bike,Classic,Plus 1kg,
+A. Layton ,,-,Gravel,-,2 kg balloons,
+N. Sharpe,2600608,68,Gravel,-,-,Plus 2kg
+T. Fleming,T. Fleming,-,Gravel,-,-,
+M. Crowe,M. Crowe,-,Gravel,-,-,
+J. Peters,J. Peters,-,Gravel,-,-,
+B. Smith,B. Smith,-,Gravel,-,-,Minus 4kg
+R.Lagnado,R.Lagnado,-,Gravel,-,Plus 1kg,
+H. Courtier,1489654,84,Gravel,-,Plus 3kg,
 R. France,4338461,78,Gravel,-,Plus 3kg,
 G. Acheson,87919,71,Gravel,-,Plus 3kg,
-E. Smith,1221195,85,Gravel,-,Plus 4kg,
-C. Graley ,2953217,68,Gravel,-,Plus 4kg,
-O. Dammone,,77,Gravel,-,Plus 5kg,
-G. Dix,297307,85,MTB,-,Plus 1kg,Plus 1kg
+E. Smith,1221195,84,Gravel,-,Plus 4kg,
+C. Graley ,2953217,69,Gravel,-,Plus 4kg,
+O. Dammone,O. Dammone,-,Gravel,-,Plus 5kg,
+G. Dix,297307,84,MTB,-,Plus 1kg,Plus 1kg
 E. Wetbeak,199310,75,MTB,-,Plus 5kg,
-T. Lopez,1574358,106,MTB,-,Plus 8kg,
+T. Lopez,1574358,104,MTB,-,Plus 8kg,

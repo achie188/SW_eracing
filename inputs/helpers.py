@@ -70,6 +70,4 @@ def get_ids():
         pts = load_csv(pts_path)
         handicaps = load_csv(handicaps_path)
 
-        prologue = add_team(prologue, ath_ids)
-
     return stages, ath_ids, prologue, pts, handicaps

@@ -156,6 +156,11 @@ def calc_overall_pts(pro, s1, s2, s3, s4, s5, s6):
     team_df.reset_index(inplace=True)
     team_df['#'] = team_df.index + 1
 
+    team_df.loc[team_df['Team'] == 'Tesla', 'Team'] = 'Tesla Thames Water'
+    team_df.loc[team_df['Team'] == 'ABS', 'Team'] = 'Amazon Beaconsfield Services'
+    team_df.loc[team_df['Team'] == 'AZT', 'Team'] = 'AstraZenaca Trailfinders'
+    team_df.loc[team_df['Team'] == 'Lego', 'Team'] = 'Lego Boots'
+
     other_columns = [col for col in team_df.columns if col != '#']
     column_order = ['#'] + other_columns[0:]
     team_df = team_df.reindex(columns=column_order)

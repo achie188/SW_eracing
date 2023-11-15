@@ -109,11 +109,12 @@ def get_stage(stage, stage_num, ath_ids, gsheet="No", orange_df=prologue):
                 push_gsheet(f_df_o_pts, stage_num)
                 stage_res = pull_gsheet(stage_num)
 
-                stage_res['KOM'] = stage_res['KOM'].astype('int64')
-                stage_res['Int. S'] = stage_res['Int. S'].astype('int64')
-                stage_res['DS/DC'] = stage_res['DS/DC'].astype('int64')
-                stage_res['Report'] = stage_res['Report'].astype('int64')
-                stage_res['MAR'] = stage_res['MAR'].astype('int64')
+                columns_to_process = ['KOM', 'Int. S', 'DS/DC', 'Report', 'MAR']
+
+                for column in columns_to_process:
+                    stage_res[column] = pd.to_numeric(stage_res[column], errors='coerce')
+                    stage_res[column].fillna(0, inplace=True)
+                    stage_res[column] = stage_res[column].astype('int64')
 
                 path = live_race_path + stage_num + '.csv'
                 save_csv(stage_res, path )

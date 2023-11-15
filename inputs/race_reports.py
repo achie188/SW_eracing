@@ -67,10 +67,10 @@ def race_reports():
     '''
 
     s2_abs = '''
-    Twas a balmy night in the Highlands 
-    The lads and the lassies lined up on their steeds 
-    A breakaway let loose like a trio of stallions 
-    Left the rest of the pack on their their knees 
+    Twas a balmy night in the Highlands  
+    The lads and the lassies lined up on their steeds  
+    A breakaway let loose like a trio of stallions  
+    Left the rest of the pack on their their knees  
 
     Wetbeak cried oot and the race was on 
     'cross rolling hills and past the old loch 

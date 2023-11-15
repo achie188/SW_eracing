@@ -282,6 +282,13 @@ with tab2:
             st.subheader('Stage 1 Results')
             st.dataframe(s1, height = int(35.2*(s1.shape[0]+1)), hide_index=True)
 
+    with tab23:
+        col1, col2 = st.columns([5,3])
+
+        with col1:
+            st.subheader('Stage 2 Results')
+            st.dataframe(s2, height = int(35.2*(s1.shape[0]+1)), hide_index=True)
+
         with col2:
             st.subheader('Race Reports')
             with st.expander("Team Tesla"):

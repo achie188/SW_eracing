@@ -92,7 +92,7 @@ st.subheader("Welcome to the Sexy Walrus E-Racing Series 2023! 👋")
 
 st.write("The below shows the results and current standings of the Sexy Walrus E-Racing Series👇 ")
 
-tab1, tab2, tab3, tab4 = st.tabs(["Championship", "All Results", "LIVE NOW", "About"])
+tab1, tab2, tab3, tab4 = st.tabs(["Championship", "All Results", "About", "LIVE NOW!"])
 
 
 

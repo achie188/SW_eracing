@@ -559,7 +559,6 @@ Only time will tell how delicious those chips will be.''')
             col11, col12 = st.columns([3,1])
             with col11:           
                 st.subheader('Amazon Beaconsfield Services')
-                st.write('''Sunday 5th November 2023 Legoland''')
             with col12:
                 st.image(amazon_image, width = 150)
 

@@ -113,6 +113,7 @@ def get_stage(stage, stage_num, ath_ids, gsheet="No", orange_df=prologue):
                 save_csv(stage_res, path )
             else:
                 stage_res = load_csv(path)
+                stage_res.replace({None: '', 0: '', 'None': '', np.nan: ''}, inplace=True)
 
 
 

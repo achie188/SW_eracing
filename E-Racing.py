@@ -524,13 +524,11 @@ with tab4:
             col11, col12 = st.columns([3,1])
             with col11:           
                 st.subheader('Lego pours millions into doomed vanity project')
-                
+                st.write('''Sunday 5th November 2023 Legoland''')
             with col12:
                 st.image(lego_image, width = 150)
             
-            st.write('''Sunday 5th November 2023 Legoland
-
-For years the top team at Lego have been considering a move into the world of pro cycling. And this year, they have finally taken the plunge, emptied their pockets, gathered up the scattered pennies, and spent them on a pro e-cycling outfit. 
+            st.write('''For years the top team at Lego have been considering a move into the world of pro cycling. And this year, they have finally taken the plunge, emptied their pockets, gathered up the scattered pennies, and spent them on a pro e-cycling outfit. 
 
 To do so they have teamed up with Boots. It feels like an odd combination, (and a few stories have circulated about how the CFO at Boots was taken out for a lobster lunch by a few Lego directors. It transpired the CFO was on the way out of the company anyway, got totally pissed, and ended up signing up to the agreement muttering “fuck it all” under his breath). 
 

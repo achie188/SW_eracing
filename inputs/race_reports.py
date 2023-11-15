@@ -1,8 +1,6 @@
 def race_reports():
     
     s1_azt = '''
-    #### Race Report - AstraZenaca
-
     A tough night for the Trailfinders.
 
     Camp was very upbeat leading up to the season opener. The new faces had settled in nicely and they’d put together a more than respectable set of prologue times. And 
@@ -24,8 +22,6 @@ def race_reports():
     '''
 
     s1_tesla = '''
-    #### Race Report - Tesla
-
     Go go go. George Dix is flying at the front of the race. His team behind them. They look amazing in their Amazon Prime blue jerseys. Dixy is so angry you can tell by 
     looking at his electronic avatar. Why the hell are they going so fast.
 

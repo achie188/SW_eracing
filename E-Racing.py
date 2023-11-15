@@ -520,7 +520,6 @@ with tab4:
     with tab42:
         col1, col2 = st.columns(2)
         with col1:
-
             col11, col12 = st.columns([3,1])
             with col11:           
                 st.subheader('Lego pours millions into doomed vanity project')
@@ -553,9 +552,12 @@ Only time will tell how delicious those chips will be.''')
     with tab43:
         col1, col2 = st.columns(2)
         with col1:
-            st.image(amazon_image, width = 150)
-            st.subheader('Amazon Beaconsfield Services')
-            st.write('')
+            col11, col12 = st.columns([3,1])
+            with col11:           
+                st.subheader('Amazon Beaconsfield Services')
+                st.write('''Sunday 5th November 2023 Legoland''')
+            with col12:
+                st.image(amazon_image, width = 150)
 
         with col2:
             st.subheader('Team Amazon Beaconsfield Services')
@@ -564,8 +566,12 @@ Only time will tell how delicious those chips will be.''')
     with tab44:
         col1, col2 = st.columns(2)
         with col1:
-            st.image(tesla_image, width = 150)
-            st.subheader('Tesla and Thames Water Unite in Cycling Endeavor for the Greater Good')
+            col11, col12 = st.columns([3,1])
+            with col11: 
+                st.subheader('Tesla and Thames Water Unite in Cycling Endeavor for the Greater Good')
+            with col12:
+                st.image(tesla_image, width = 150)
+                
             st.write('''FOR IMMEDIATE RELEASE
                  
 London, UK, November 4, 2023

@@ -335,7 +335,7 @@ with tab3:
             col11, col12 = st.columns([1,4])
 
             with col12:           
-                st.subheader('Lego pours millions into doomed vanity project')
+                st.subheader('Lego Pours Millions Into Doomed Vanity Project')
                 st.markdown('''
                             Sunday 5th November 2023 
                             
@@ -396,11 +396,11 @@ with tab3:
             col11, col12 = st.columns([1,4])
 
             with col12: 
-                st.subheader('The e-Pedlars Lancet - AstraZenaca Trailfinders Partnership')
+                st.subheader('The E-Pedlars Lancet - AstraZenaca Trailfinders Partnership')
                 st.markdown('''
                             By Penny Farthing
                          
-                            7/11/2023
+                            7th November 2023
                             ''')
             with col11:
                 st.image(azt_image, width = 150)

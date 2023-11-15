@@ -1,23 +1,23 @@
 def press_releases():
     
     lego_boots = '''                        
-        For years the top team at Lego have been considering a move into the world of pro cycling. And this year, they have finally taken the plunge, emptied their pockets, gathered up the scattered pennies, and spent them on a pro e-cycling outfit.
+    For years the top team at Lego have been considering a move into the world of pro cycling. And this year, they have finally taken the plunge, emptied their pockets, gathered up the scattered pennies, and spent them on a pro e-cycling outfit.
 
-        To do so they have teamed up with Boots. It feels like an odd combination, (and a few stories have circulated about how the CFO at Boots was taken out for a lobster lunch by a few Lego directors. It transpired the CFO was on the way out of the company anyway, got totally pissed, and ended up signing up to the agreement muttering “fuck it all” under his breath). 
+    To do so they have teamed up with Boots. It feels like an odd combination, (and a few stories have circulated about how the CFO at Boots was taken out for a lobster lunch by a few Lego directors. It transpired the CFO was on the way out of the company anyway, got totally pissed, and ended up signing up to the agreement muttering “fuck it all” under his breath). 
 
-        Despite the coming together of these two behemoths, Lego Boots have been struggling to raise the cash to entice one rider in particular: Bill Smith.  According to reliable sources, Bill was demanding an extortionate salary, and therefore a third title sponsor had to be found at short notice. Some big names were interested, but time was cripplingly short, and the best the Lego Boots partnership could do was P&O ferries, who gladly provided the extra cash to secure the services of the hardened professional Bill Smith (despite P&O knowing that P&O was bound to be left off the title name when used by Adam Blythe on GCN commentary). 
+    Despite the coming together of these two behemoths, Lego Boots have been struggling to raise the cash to entice one rider in particular: Bill Smith.  According to reliable sources, Bill was demanding an extortionate salary, and therefore a third title sponsor had to be found at short notice. Some big names were interested, but time was cripplingly short, and the best the Lego Boots partnership could do was P&O ferries, who gladly provided the extra cash to secure the services of the hardened professional Bill Smith (despite P&O knowing that P&O was bound to be left off the title name when used by Adam Blythe on GCN commentary). 
 
-        As part of Bill’s contract, he had demanded that he would need a full team to support him in his GC bid, and insisted it would be “all in for Bill”.  So what was needed was domestiques willing to turn themselves inside out, upside down, and over the hill and far away for Bill, week in, week out. 
+    As part of Bill’s contract, he had demanded that he would need a full team to support him in his GC bid, and insisted it would be “all in for Bill”.  So what was needed was domestiques willing to turn themselves inside out, upside down, and over the hill and far away for Bill, week in, week out. 
 
-        To do this, Lego Boots immediately crawled all over the decaying carcass of what was previously Routes Coffee TZA Draconi. And like a hungry vulture, they picked up nearly the whole squad that had previously been punching holes in walls for the ‘Al brothers’.  
+    To do this, Lego Boots immediately crawled all over the decaying carcass of what was previously Routes Coffee TZA Draconi. And like a hungry vulture, they picked up nearly the whole squad that had previously been punching holes in walls for the ‘Al brothers’.  
 
-        With contracts expired, and the wise heads of Al and Al now out the picture, Lizzy, Nic, Tom and Tom were happy to sign up to Lego Boots and look for new opportunities of their own. (Little did they know Bill Smith had his own designs as to what they would be allowed to do on the road.)
+    With contracts expired, and the wise heads of Al and Al now out the picture, Lizzy, Nic, Tom and Tom were happy to sign up to Lego Boots and look for new opportunities of their own. (Little did they know Bill Smith had his own designs as to what they would be allowed to do on the road.)
 
-        With a dwindling purse, Lego Boots still had spots in their rooster to fill. Wetbeak and Monk, a couple of older riders well past their peak, were brought on board. Largely because no other team would take them, and Lego Boots is paying them peanuts. 
+    With a dwindling purse, Lego Boots still had spots in their rooster to fill. Wetbeak and Monk, a couple of older riders well past their peak, were brought on board. Largely because no other team would take them, and Lego Boots is paying them peanuts. 
 
-        And the final spot went to Alex Hadcock. A talented climber, but a neo-pro and totally untested in the heated world of Walrus e-cycling. Some say this deal was a gamble, Lego Boots would say this deal was cheap as chips. 
+    And the final spot went to Alex Hadcock. A talented climber, but a neo-pro and totally untested in the heated world of Walrus e-cycling. Some say this deal was a gamble, Lego Boots would say this deal was cheap as chips. 
 
-        Only time will tell how delicious those chips will be.
+    Only time will tell how delicious those chips will be.
     '''
 
     tesla = '''                        
@@ -55,7 +55,7 @@ def press_releases():
     '''
 
     abs = '''     
-    Get ready for a cycling escapade like no other as Amazon and Beaconsfield Services, an unlikely yet captivating collaboration, plunge headlong into the realm of professional cycling. George Dix, the former maestro of the Evil Greens, takes the reins, leading a spirited squad backed by the e-commerce juggernaut and the local services heroes.
+    The cycling world was turned on its head this week as Amazon and Beaconsfield Services formed an unlikely yet captivating collaboration, plunging headlong into the realm of professional cycling. George Dix, the former maestro of the Evil Greens, takes the reins, leading a spirited squad backed by the e-commerce juggernaut and the local services heroes.
 
     Whispers abound about the genesis of this unexpected partnership, with a tantalizing suggestion that Jeff Bezos, Amazon's founder and one of the wealthiest individuals globally, found himself entangled in a brief but intense affair with a Beaconsfield cashier during a UK business sojourn a few months ago. While the exact details of this encounter remain shrouded in mystery, there are rumours of a Postman Pat fairground ride, a liquid lunch, and a pair of rubber bands. Legend has it that Bezos, quite literally caught with his pants down, brokered a deal, offering support for Beaconsfield Services' pro cycling aspirations in exchange for absolute confidentiality.
 

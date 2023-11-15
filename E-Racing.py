@@ -95,7 +95,7 @@ with col1:
     st.write("The below shows the results and current standings of the Sexy Walrus E-Racing Series👇 ")
 
 with col2:
-    st.image(sw_image, width = 150)
+    st.image(sw_image, width = 100)
 
 tab1, tab2, tab3, tab4 = st.tabs(["Championship", "All Results", "About", "LIVE NOW!"])
 

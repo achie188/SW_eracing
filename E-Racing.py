@@ -12,7 +12,7 @@ from inputs.helpers import get_ids
 from inputs.rules import rules
 from inputs.press_releases import press_releases
 from inputs.race_reports import race_reports
-from pipeline.formatting import get_zwift_ids, final_format, teams_slice
+from pipeline.formatting import get_zwift_ids, final_format, teams_slice, format_results
 from pipeline.calcs import get_stage, calc_overall_pts, calc_overall_orange, handicaps_format
 
 
@@ -64,6 +64,7 @@ s6 = final_format(s6)
 
 #Get live event
 live = pull_zwift(zwift_ids[1])
+live = format_results(live)
 
 #Team slices
 lego_boots = teams_slice(ind_pts, "Lego", handicaps, stages_complete)

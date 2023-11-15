@@ -5,7 +5,7 @@ def press_releases():
 
         To do so they have teamed up with Boots. It feels like an odd combination, (and a few stories have circulated about how the CFO at Boots was taken out for a lobster lunch by a few Lego directors. It transpired the CFO was on the way out of the company anyway, got totally pissed, and ended up signing up to the agreement muttering “fuck it all” under his breath). 
 
-        Despite the coming together of these two behemoths, Lego Boots have been struggling to raise the cash to entice one rider in particular: Bill Smith.  According to reliable sources, Bill was demanding an extortionate salary, and therefore a third title sponsor had to be found at short notice. Some big names were interested, but time was cripplingly short, and the best the Lego Boots partnership could do was P&O ferries, who gladly provided the extra cash to secure the services of the hardened professional Bill Smith,(despite P&O knowing that P&O was bound to be left off the title name when used by Adam Bylthe on GCN commentary). 
+        Despite the coming together of these two behemoths, Lego Boots have been struggling to raise the cash to entice one rider in particular: Bill Smith.  According to reliable sources, Bill was demanding an extortionate salary, and therefore a third title sponsor had to be found at short notice. Some big names were interested, but time was cripplingly short, and the best the Lego Boots partnership could do was P&O ferries, who gladly provided the extra cash to secure the services of the hardened professional Bill Smith (despite P&O knowing that P&O was bound to be left off the title name when used by Adam Blythe on GCN commentary). 
 
         As part of Bill’s contract, he had demanded that he would need a full team to support him in his GC bid, and insisted it would be “all in for Bill”.  So what was needed was domestiques willing to turn themselves inside out, upside down, and over the hill and far away for Bill, week in, week out. 
 
@@ -54,7 +54,12 @@ def press_releases():
     This partnership not only breathes new life into the Greens but also signifies a unique fusion of goals – AstraZeneca's commitment to Watopian diseases and the resilience and determination of the once-feared Evil Greens. It's a story of renewal and hope, anchored by the experienced, the determined, and the newcomers, all propelled forward by a shared mission to make a meaningful impact in the e-racing world.
     '''
 
-    abs = '''                        
+    abs = '''     
+    Prepare for a ride like no other as Amazon and Beaconsfield Services, an odd but enticing collaboration, dive headfirst into the world of professional cycling. George Dix, former Evil Greens extraordinaire, leads the charge, backed by a motley crew sponsored by the e-commerce giant and the local services superheroes.
+
+    Rumours circulate about how this unexpected union was forged, with the suggestion that Jeff Bozos - founder of Amazon and one of the richest people in the world - had a short, but intense fling with a Beaconsfield cashier during a UK business trip several months ago. The precise details of the encounter are not known, but they are believed to have involved a Postman Pat fairground ride, a liquid lunch and a pair of rubber bands. Bozos was reportedly caught - quite literally - with his pants down and offered to support Beaconsfield Services bid for a pro cycling team in return for confidentiality.
+
+    Beaconsfield Services, now armed with a formidable purse, signed Dix and newcomers Warman, Graley and Thompson in the first week of the team’s creation. Seasoned pro Henry Courtier was coaxed from retirement after Prime agreed to cover the team’s attempt at glory as part of their upcoming documentary on the Sexy Walrus E-Racing series.                    
     '''
 
     return lego_boots, tesla, azt, abs

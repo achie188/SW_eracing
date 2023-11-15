@@ -65,12 +65,15 @@ s6 = final_format(s6)
 #Get live event
 live = pull_zwift(zwift_ids[1])
 live = format_results(live, ath_ids)
+live = final_format(live)
+
 
 #Team slices
 lego_boots = teams_slice(ind_pts, "Lego", handicaps, stages_complete)
 amazon = teams_slice(ind_pts, "ABS", handicaps, stages_complete)
 tesla = teams_slice(ind_pts, "Tesla", handicaps, stages_complete)
 astrazen = teams_slice(ind_pts, "AZT", handicaps, stages_complete)
+
 
 #Get images
 lego_image = Image.open(location + '/inputs/raceinfo/lego.png')

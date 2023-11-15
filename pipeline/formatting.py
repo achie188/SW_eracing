@@ -45,11 +45,8 @@ def add_team(df, ath_ids):
     ath_ids = ath_ids[['Ed_Name', 'Team']]
 
     df = pd.merge(df, ath_ids, left_on='Name', right_on='Ed_Name', how='inner')
-
-    # Get the column names excluding the 'column_name' you want to move
     other_columns = [col for col in df.columns if col != 'Team']
 
-    # Create the new column order putting 'column_name' as the second column
     column_order = other_columns[:2] + ['Team'] + other_columns[2:]
     df = df.reindex(columns=column_order)
 
@@ -95,7 +92,7 @@ def final_format(df):
         if all(col in df.columns for col in columns_to_convert):
             df[columns_to_convert] = df[columns_to_convert].apply(pd.to_numeric, errors='coerce').round(0)
             df[columns_to_convert] = df[columns_to_convert].round(0)
-
+            df.replace({None: '', 0: '', 'None': '', np.nan: ''}, inplace=True)
         return df
     
 

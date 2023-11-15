@@ -362,9 +362,13 @@ with tab3:
 
             with col11:
                 st.image(amazon_image, width = 150)
-
+                st.markdown('''
+                            10th November 2023 
+                            
+                            Beaconsfield
+                            ''')
             st.markdown(abs_pr)
-            
+
         with col2:
             st.subheader('Team Amazon Beaconsfield Services')
             st.dataframe(amazon, height = int(35.2*(amazon.shape[0]+1)), hide_index=True)

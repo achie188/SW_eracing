@@ -50,7 +50,7 @@ def orange(orange_df, new_stage):
     if orange_df is None:
         orange_df = prologue
     
-    combined_df = pd.merge(orange_df, new_stage, on='Name', suffixes=('_orange', '_new_stage'))
+    combined_df = pd.merge(orange_df, new_stage, on='Name', suffixes=('_orange', '_new_stage'), how='outer')
 
     #fill non finishing times
     # Calculate the fastest and slowest times for new stage

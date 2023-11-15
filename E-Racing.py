@@ -64,7 +64,7 @@ s6 = final_format(s6)
 
 #Get live event
 live = pull_zwift(zwift_ids[1])
-live = format_results(live)
+live = format_results(live, ath_ids)
 
 #Team slices
 lego_boots = teams_slice(ind_pts, "Lego", handicaps, stages_complete)

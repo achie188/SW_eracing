@@ -90,8 +90,8 @@ def final_format(df):
         columns_to_convert = ['KOM', 'Int. S', 'DS/DC', 'Report', 'MAR']
 
         if all(col in df.columns for col in columns_to_convert):
-            df[columns_to_convert] = df[columns_to_convert].apply(pd.to_numeric, errors='coerce').round(0)
-            df.replace({np.nan: ''}, inplace=True)
+            df[columns_to_convert] = df[columns_to_convert].apply(pd.to_numeric).round(0)
+            
         return df
     
 

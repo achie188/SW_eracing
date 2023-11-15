@@ -261,7 +261,7 @@ def calc_overall_orange(pro, s1, s2, s3, s4, s5, s6, columns_to_replace):
 def handicaps_format(df):
     df.drop(columns=['Zwift_id'], inplace=True)
     df['#'] = df.index + 1
-    df = df[['#', 'Name', 'True Weight', 'Bike', 'Wheels', 'New Weight', 'W1 Adj.']]
+    df = df[['#', 'Name', 'True Weight', 'Race Weight', 'Bike']]
     df.replace({None: '', 0: '', 'None': '', np.nan: ''}, inplace=True)
     df = add_team(df, ath_ids)
 

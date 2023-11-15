@@ -66,5 +66,36 @@ def race_reports():
     new man on the scene - Lego Jesus Nick Foley. I manged to get 3rd spot just pipping Dixy and Shyam placed nicely behind somewhere.
     '''
 
+    s2_abs = '''
+    Twas a balmy night in the Highlands
+    The lads and the lassies lined up on their steeds
+    A breakaway let loose like a trio of stallions
+    Left the rest of the pack on their their knees
 
-    return s1_azt, s1_tesla, s2_tesla
+    Wetbeak cried oot and the race was on
+    'cross rolling hills and past the old loch
+    But the breakway was steadfast and powerful
+    Warman driving the front, thighs of rock
+
+    Tween lap 2 and lap 3 he shed his deadweight foe
+    Would he stay away? It felt though he might
+    But with the climb up the Brae looming ahead
+    The brave laddie finally conceded the fight
+
+    The victory haggis went to House Lopez
+    That dastardly team knows no bounds
+    The neeps and the tatties taken by Tesla, Amazon & Lego
+    And the rest of us thrown to the hounds
+
+    But let's not forget about Warman
+    The braveheart, he fought to the end
+    Rolled over the line only few seconds down
+    Now his legs have a week to mend
+
+    And on that note, see yous next week
+    I'm sure you'll be back for more
+    There may nae be haggis, or Saltires, or midges
+    But there certainly will be war
+    '''
+
+    return s1_azt, s1_tesla, s2_tesla, s2_abs

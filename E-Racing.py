@@ -549,17 +549,18 @@ Only time will tell how delicious those chips will be.''')
     with tab43:
         col1, col2 = st.columns(2)
         with col1:
+            st.image(amazon_image, width = 150)
             st.subheader('Amazon Beaconsfield Services')
             st.write('')
 
         with col2:
             st.subheader('Team Amazon Beaconsfield Services')
             st.dataframe(amazon, height = int(35.2*(amazon.shape[0]+1)), hide_index=True)
-            st.image(amazon_image, width = 150)
 
     with tab44:
         col1, col2 = st.columns(2)
         with col1:
+            st.image(tesla_image, width = 150)
             st.subheader('Tesla and Thames Water Unite in Cycling Endeavor for the Greater Good')
             st.write('''FOR IMMEDIATE RELEASE
                  
@@ -592,6 +593,7 @@ With the 2023 Zwift Championships on the horizon, Team Tesla Thames Water's jour
     with tab45:
         col1, col2 = st.columns(2)
         with col1:
+            st.image(azt_image, width = 150)
             st.subheader('The e-Pedlars Lancet 7/11/2023')
             st.write('''By Penny Farthing
 

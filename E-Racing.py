@@ -602,11 +602,16 @@ With the 2023 Zwift Championships on the horizon, Team Tesla Thames Water's jour
     with tab45:
         col1, col2 = st.columns(2)
         with col1:
-            st.image(azt_image, width = 150)
-            st.subheader('The e-Pedlars Lancet 7/11/2023')
-            st.write('''By Penny Farthing
+            col11, col12 = st.columns([3,1])
+            with col11: 
+                st.subheader('The e-Pedlars Lancet')
+                st.write('''By Penny Farthing
+                         
+7/11/2023''')
+            with col12:
+                st.image(azt_image, width = 150)
 
-In a surprising twist in the world of SW eracing, the remnants of the infamous Evil Greens have found a new lease of life through a partnership between AstraZeneca and Trailfinders. This unexpected alliance was driven by a unique vision: AstraZeneca's aspiration to invest more in Watopian diseases whilst supporting washed up Greens' bruiser, Teo Lopez.
+            st.write('''In a surprising twist in the world of SW eracing, the remnants of the infamous Evil Greens have found a new lease of life through a partnership between AstraZeneca and Trailfinders. This unexpected alliance was driven by a unique vision: AstraZeneca's aspiration to invest more in Watopian diseases whilst supporting washed up Greens' bruiser, Teo Lopez.
 
 Now captain Lopez had endured a challenging summer, having been attacked by a swarm of extremely venomous Watopian feather beetles, on a late season training ride. His personal journey resonated with AstraZeneca's mission, and the addition of Trailfinders was perfect for this new, intrepid, outfit.
 

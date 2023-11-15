@@ -90,6 +90,9 @@ def final_format(df):
         df = df.rename(columns={'Time_nice': 'Time'})
         df.replace({None: '', 0: '', 'None': '', np.nan: ''}, inplace=True)
 
+        df[['KOM', 'Int. S', 'DS/DC', 'Report', 'MAR']] = df[['KOM', 'Int. S', 'DS/DC', 'Report', 'MAR']].apply(pd.to_numeric, errors='coerce')
+        df[['KOM', 'Int. S', 'DS/DC', 'Report', 'MAR']] = df[['KOM', 'Int. S', 'DS/DC', 'Report', 'MAR']].round(0)
+
         return df
     
 

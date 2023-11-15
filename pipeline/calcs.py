@@ -78,6 +78,8 @@ def orange(orange_df, new_stage):
 
 def calc_points(stage, stage_num, pts):
 
+    pts = load_csv(pts_path)
+
     columns_to_keep = ["#", stage_num]
     pts.drop(pts.columns.difference(columns_to_keep), axis=1, inplace=True)
     pts = pts.rename(columns={stage_num : 'Points'})

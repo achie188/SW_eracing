@@ -646,7 +646,8 @@ Only time will tell how delicious those chips will be.''')
                 st.subheader('Tesla and Thames Water Unite in Cycling Endeavor for the Greater Good')
                 st.markdown('''FOR IMMEDIATE RELEASE
                          
-                            London, UK, November 4, 2023''')
+                            London, UK, November 4, 2023
+                            ''')
             with col12:
                 st.image(tesla_image, width = 150)
 

@@ -520,7 +520,7 @@ with tab4:
     with tab42:
         col1, col2 = st.columns(2)
         with col1:
-            st.image(lego_image, width = 150, caption='Lego pours millions into doomed vanity project')
+            st.image(lego_image, width = 150)
             st.subheader('Lego pours millions into doomed vanity project')
             st.write('''Sunday 5th November 2023 Legoland
 

@@ -400,12 +400,12 @@ with tab3:
         col1, col2 = st.columns(2)
 
         with col1:
-            col11, col12 = st.columns([3,1])
+            col11, col12 = st.columns([1,4])
 
-            with col11:           
+            with col12:           
                 st.subheader('Amazon Beaconsfield Services')
 
-            with col12:
+            with col11:
                 st.image(amazon_image, width = 150)
 
         with col2:
@@ -416,16 +416,16 @@ with tab3:
         col1, col2 = st.columns(2)
 
         with col1:
-            col11, col12 = st.columns([3,1])
+            col11, col12 = st.columns([1,4])
 
-            with col11: 
+            with col12: 
                 st.subheader('Tesla and Thames Water Unite in Cycling Endeavor for the Greater Good')
                 st.markdown('''
                             FOR IMMEDIATE RELEASE
                          
                             London, UK, November 4, 2023
                             ''')
-            with col12:
+            with col11:
                 st.image(tesla_image, width = 150)
 
             st.markdown('''
@@ -458,16 +458,16 @@ with tab3:
         col1, col2 = st.columns(2)
 
         with col1:
-            col11, col12 = st.columns([3,1])
+            col11, col12 = st.columns([1,4])
 
-            with col11: 
+            with col12: 
                 st.subheader('The e-Pedlars Lancet - AstraZenaca Trailfinders Partnership')
                 st.markdown('''
                             By Penny Farthing
                          
                             7/11/2023
                             ''')
-            with col12:
+            with col11:
                 st.image(azt_image, width = 150)
 
             st.markdown('''

@@ -554,7 +554,7 @@ Only time will tell how delicious those chips will be.''')
         with col2:
             st.subheader('Team Amazon Beaconsfield Services')
             st.dataframe(amazon, height = int(35.2*(amazon.shape[0]+1)), hide_index=True)
-            st.image(amazon_image)
+            st.image(amazon_image, width = 50)
 
     with tab44:
         col1, col2 = st.columns(2)

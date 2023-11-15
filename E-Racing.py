@@ -101,7 +101,7 @@ tab1, tab2, tab3, tab4 = st.tabs(["Championship", "All Results", "LIVE NOW", "Ab
                                                     ######## LIVE DATA TAB ########
                                                     ###############################
 
-with tab3:
+with tab4:
     if live is not None and not live.empty:
         st.dataframe(live, height=2000, hide_index=True)
     else:
@@ -410,7 +410,7 @@ with tab2:
                                                 ########## ABOUT TAB ##########
                                                 ###############################
 
-with tab4:
+with tab3:
     tab41, tab42, tab43, tab44, tab45 = st.tabs(['Walrus E-Racing', 'Lego Boots', 'Amazon Beaconsfield Services', 'Tesla Thames Water', 'AstraZenaca Trailfinders'])
 
     with tab41:

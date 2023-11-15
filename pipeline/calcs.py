@@ -262,7 +262,7 @@ def handicaps_format(df):
     df.drop(columns=['Zwift_id'], inplace=True)
     df['#'] = df.index + 1
     df = df[['#', 'Name', 'True Weight', 'Race Weight', 'Bike']]
-    df = df['True Weight', 'Race Weight'].round(1)]]
+    df = df['True Weight', 'Race Weight'].round(1)
     df.replace({None: '', 0: '', 'None': '', np.nan: ''}, inplace=True)
     df = add_team(df, ath_ids)
 

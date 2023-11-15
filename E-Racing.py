@@ -244,27 +244,29 @@ with tab1:
             st.subheader('Orange Jersey Race')
             st.dataframe(orange_df, height = int(35.2*(orange_df.shape[0]+1)), hide_index=True)
         with col2:
-            st.markdown('''
-                        #### Orange jersey competition
-            11.1. Points available at the end of each week (starting after the conclusion of Week 1 - Ie. No points awarded after the Prologue) for rider’s position in Orange jersey leaderboard. A rider must have finished a race to be awarded any points. 
-                    
-            11.2. Points available at the end of the season for the top 10 in the orange jersey leaderboard. 11.3. See Schedules 1 and 2 below for the points available. 
-                    
-            11.4. The Orange Jersey leaderboard tracks overall time over each stage. (Otherwise known as General Classification.) 
-                    
-            11.5. If a rider does not start, or does not finish, a stage, then their time taken will be the greater of (i) 5 minutes slower than the fastest finisher for that stage, and (ii) 30 seconds slower than the slowest finisher on that stage. 
-                    
-            ##### Orange passes 
-            11.6. Each team will have 6 Orange Passes. A team can use an Orange Pass on any given stage for any rider that has either: 
-            - (i) not started that stage, or 
-            - (ii) has had a technical problem meaning that they could not complete that stage. 
-                    
-            11.7. Where an Orange Pass is used, instead of calculating their time as per 11.5 above that rider will receive the slower of: 
-            - (i) the same time as the second slowest rider in their team; and 
-            - (ii) 90s slower than the rider who finishes first in that race. 
-                    
-            11.8. If a rider uses an Orange Pass, they will not receive any Orange Jeresy points for that week, except for the final week, in which case that rider will receive points for their final finishing position (if they so qualify).
-            ''')
+            st.subheader('Relevant Rules')
+            with st.expander("Orange Jersey Competition"):
+                st.markdown('''
+                            #### Orange Jersey Competition
+                11.1. Points available at the end of each week (starting after the conclusion of Week 1 - Ie. No points awarded after the Prologue) for rider’s position in Orange jersey leaderboard. A rider must have finished a race to be awarded any points. 
+                        
+                11.2. Points available at the end of the season for the top 10 in the orange jersey leaderboard. 11.3. See Schedules 1 and 2 below for the points available. 
+                        
+                11.4. The Orange Jersey leaderboard tracks overall time over each stage. (Otherwise known as General Classification.) 
+                        
+                11.5. If a rider does not start, or does not finish, a stage, then their time taken will be the greater of (i) 5 minutes slower than the fastest finisher for that stage, and (ii) 30 seconds slower than the slowest finisher on that stage. 
+                        
+                ##### Orange passes 
+                11.6. Each team will have 6 Orange Passes. A team can use an Orange Pass on any given stage for any rider that has either: 
+                - (i) not started that stage, or 
+                - (ii) has had a technical problem meaning that they could not complete that stage. 
+                        
+                11.7. Where an Orange Pass is used, instead of calculating their time as per 11.5 above that rider will receive the slower of: 
+                - (i) the same time as the second slowest rider in their team; and 
+                - (ii) 90s slower than the rider who finishes first in that race. 
+                        
+                11.8. If a rider uses an Orange Pass, they will not receive any Orange Jeresy points for that week, except for the final week, in which case that rider will receive points for their final finishing position (if they so qualify).
+                ''')
 
     with tab14:
         col1, col2 = st.columns([2,3])
@@ -272,21 +274,25 @@ with tab1:
             st.subheader('Polka Dot Jersey')
             st.dataframe(kom_pts, height = int(35.2*(kom_pts.shape[0]+1)), hide_index=True)
         with col2:
-            st.markdown('''
-            #### Designated Sprinter/Climber
-            4.1. For each race (other than the TTT), each team will be able to designate either a sprinter, or a climber. They must declare their designated sprinter/climber publicly at least 30 minutes before the start of the stage. 
-                    
-            4.2. If a designated sprinter is chosen, then any intermediate sprint points that that rider acquires are doubled. And any finish line points (on stages that are classified as sprint finishes) that that rider acquires are increased by 20%. 
-                    
-            4.3. If a designated climber is chosen, then any KOM points that that rider acquires are doubled. And any finish line points (on stages that are classified as hill top finishes) that that rider acquires are increased by 20%. 
-                    
-            4.4. A rider may only be a designated sprinter or designated climber once. (For example, if a rider is the designated climber in week 1, they will not be allowed to be the designated climber or the designated sprinter for any other races). 
-            
-            ##### Category 2: KOM Points
-            7.1. These may be awarded on certain races but not necessarily every race. 
-                    
-            7.2. The points allocated will be determined on a race by race basis, as it will depend on the severity of the climb it relates to.      
-            ''')
+            st.subheader('Relevant Rules')
+            with st.expander("Designated Sprinter/Climber"):
+                st.markdown('''
+                #### Designated Sprinter/Climber
+                4.1. For each race (other than the TTT), each team will be able to designate either a sprinter, or a climber. They must declare their designated sprinter/climber publicly at least 30 minutes before the start of the stage. 
+                        
+                4.2. If a designated sprinter is chosen, then any intermediate sprint points that that rider acquires are doubled. And any finish line points (on stages that are classified as sprint finishes) that that rider acquires are increased by 20%. 
+                        
+                4.3. If a designated climber is chosen, then any KOM points that that rider acquires are doubled. And any finish line points (on stages that are classified as hill top finishes) that that rider acquires are increased by 20%. 
+                        
+                4.4. A rider may only be a designated sprinter or designated climber once. (For example, if a rider is the designated climber in week 1, they will not be allowed to be the designated climber or the designated sprinter for any other races). 
+                ''')
+            with st.expander("Category 2: KOM Points"):
+                st.markdown('''
+                ##### Category 2: KOM Points
+                7.1. These may be awarded on certain races but not necessarily every race. 
+                        
+                7.2. The points allocated will be determined on a race by race basis, as it will depend on the severity of the climb it relates to.      
+                ''')
 
 
     with tab15:
@@ -296,21 +302,25 @@ with tab1:
             st.dataframe(sprinter_pts, height = int(35.2*(sprinter_pts.shape[0]+1)), hide_index=True)
 
         with col2:
-            st.markdown('''
-            #### Designated Sprinter/Climber
-            4.1. For each race (other than the TTT), each team will be able to designate either a sprinter, or a climber. They must declare their designated sprinter/climber publicly at least 30 minutes before the start of the stage. 
-                    
-            4.2. If a designated sprinter is chosen, then any intermediate sprint points that that rider acquires are doubled. And any finish line points (on stages that are classified as sprint finishes) that that rider acquires are increased by 20%. 
-                    
-            4.3. If a designated climber is chosen, then any KOM points that that rider acquires are doubled. And any finish line points (on stages that are classified as hill top finishes) that that rider acquires are increased by 20%. 
-                    
-            4.4. A rider may only be a designated sprinter or designated climber once. (For example, if a rider is the designated climber in week 1, they will not be allowed to be the designated climber or the designated sprinter for any other races). 
-            
-            ##### Category 3: Intermediate Sprint points
-            8.1. The points allocated will be determined on a race by race basis. 
-                    
-            8.2. Details of the intermediate sprints and KOM will be made clear in advance of the relevant race.        
-                        ''')
+            st.subheader('Relevant Rules')
+            with st.expander("Designated Sprinter/Climber"):
+                st.markdown('''
+                #### Designated Sprinter/Climber
+                4.1. For each race (other than the TTT), each team will be able to designate either a sprinter, or a climber. They must declare their designated sprinter/climber publicly at least 30 minutes before the start of the stage. 
+                        
+                4.2. If a designated sprinter is chosen, then any intermediate sprint points that that rider acquires are doubled. And any finish line points (on stages that are classified as sprint finishes) that that rider acquires are increased by 20%. 
+                        
+                4.3. If a designated climber is chosen, then any KOM points that that rider acquires are doubled. And any finish line points (on stages that are classified as hill top finishes) that that rider acquires are increased by 20%. 
+                        
+                4.4. A rider may only be a designated sprinter or designated climber once. (For example, if a rider is the designated climber in week 1, they will not be allowed to be the designated climber or the designated sprinter for any other races). 
+                ''')
+            with st.expander("Category 3: Intermediate Sprint Points"):
+                st.markdown('''                
+                ##### Category 3: Intermediate Sprint Points
+                8.1. The points allocated will be determined on a race by race basis. 
+                        
+                8.2. Details of the intermediate sprints and KOM will be made clear in advance of the relevant race.        
+                ''')
 
     with tab16:
         col1, col2 = st.columns(2)
@@ -319,7 +329,9 @@ with tab1:
             st.dataframe(handicaps, height= int(35.2*(handicaps.shape[0]+1)), hide_index=True)
         
         with col2:
-            st.markdown('''
+            st.subheader('Relevant Rules')
+            with st.expander("Handicapping System"):
+                st.markdown('''
             #### Handicapping System
             
             Handicaps are always the most fiercely argued part of the Sexy Walrus E-Racing series, and is a hot topic of debate between the captains. Largely over whether Teo should have 50 extra kg added, or just 45.
@@ -352,39 +364,43 @@ with tab2:
             st.dataframe(prologue, height = int(35.2*(prologue.shape[0]+1)), hide_index=True)
 
         with col2:
-            st.markdown('''
-                        #### Overview
+            st.subheader('Relevant Rules')
+            with st.expander("Overview"):
+                st.markdown('''#### Overview
                         
-            1.1. There will be 5 weeks of action. Each week will have one or two races. Details of what each week will entail will be released in good time before each week.
+                1.1. There will be 5 weeks of action. Each week will have one or two races. Details of what each week will entail will be released in good time before each week.
+                                    
+                1.2. Here is a summary of what is in store:  
                                 
-            1.2. Here is a summary of what is in store:  
-                            
-            - Prologue: Individual time trial. 7.3km. Done on handicapped bikes. Route is the start of Road to Ruins, ending on the climb at a virtual banner. (Keen eyes will spot this is the same prologue as last year. This allows some fine tuning of handicaps prior to the real racing. 
-            - Weeks 1, 2, 3 and 4: classic Zwift racing. 30-45 mins. Each week the course will be chosen by a different team. 
-            - Team Time Trial: Circa 40-45 min race. The time for this TTT is TBC. 
-            - Week 5: a longer race on an attritional course, serving as the grand finale. (Circa 55 mins). 
-                                
-            1.3. There will be organised breakaways for weeks 1 to 4. There will also be ‘designated sprinters’ or ‘designated climbers’ for these weeks. And the usual orange jersey competition will be happening.
-            
-            #### Breakaways
-            3.1. Some races will have a breakaway. This will work by 3 riders being chosen to form a breakaway. 
-                    
-            3.2. There will be 4 races which will feature a Break. For each of these 4 races, each of 3 teams will select a rider (in secret) to be in the break. Therefore one team will miss out on the break each time. 
-                    
-            3.3. The 3 person breakaway will then set off a set time interval before the main bunch. 
-                    
-            3.4. The team that will miss the breakaway will be decided randomly. But each team will only miss out on 1 breakaway during the season. 
-                 
-            #### Designated Sprinter/Climber
-            4.1. For each race (other than the TTT), each team will be able to designate either a sprinter, or a climber. They must declare their designated sprinter/climber publicly at least 30 minutes before the start of the stage. 
-                    
-            4.2. If a designated sprinter is chosen, then any intermediate sprint points that that rider acquires are doubled. And any finish line points (on stages that are classified as sprint finishes) that that rider acquires are increased by 20%. 
-                    
-            4.3. If a designated climber is chosen, then any KOM points that that rider acquires are doubled. And any finish line points (on stages that are classified as hill top finishes) that that rider acquires are increased by 20%. 
-                    
-            4.4. A rider may only be a designated sprinter or designated climber once. (For example, if a rider is the designated climber in week 1, they will not be allowed to be the designated climber or the designated sprinter for any other races). 
-            
-                        ''')
+                - Prologue: Individual time trial. 7.3km. Done on handicapped bikes. Route is the start of Road to Ruins, ending on the climb at a virtual banner. (Keen eyes will spot this is the same prologue as last year. This allows some fine tuning of handicaps prior to the real racing. 
+                - Weeks 1, 2, 3 and 4: classic Zwift racing. 30-45 mins. Each week the course will be chosen by a different team. 
+                - Team Time Trial: Circa 40-45 min race. The time for this TTT is TBC. 
+                - Week 5: a longer race on an attritional course, serving as the grand finale. (Circa 55 mins). 
+                                    
+                1.3. There will be organised breakaways for weeks 1 to 4. There will also be ‘designated sprinters’ or ‘designated climbers’ for these weeks. And the usual orange jersey competition will be happening.
+                ''')
+            with st.expander("Breakaways"):
+                st.markdown('''
+                            #### Breakaways
+                3.1. Some races will have a breakaway. This will work by 3 riders being chosen to form a breakaway. 
+                        
+                3.2. There will be 4 races which will feature a Break. For each of these 4 races, each of 3 teams will select a rider (in secret) to be in the break. Therefore one team will miss out on the break each time. 
+                        
+                3.3. The 3 person breakaway will then set off a set time interval before the main bunch. 
+                        
+                3.4. The team that will miss the breakaway will be decided randomly. But each team will only miss out on 1 breakaway during the season. 
+                ''')
+            with st.expander("Designated Sprinter/Climber"):
+                st.markdown('''                    
+                #### Designated Sprinter/Climber
+                4.1. For each race (other than the TTT), each team will be able to designate either a sprinter, or a climber. They must declare their designated sprinter/climber publicly at least 30 minutes before the start of the stage. 
+                        
+                4.2. If a designated sprinter is chosen, then any intermediate sprint points that that rider acquires are doubled. And any finish line points (on stages that are classified as sprint finishes) that that rider acquires are increased by 20%. 
+                        
+                4.3. If a designated climber is chosen, then any KOM points that that rider acquires are doubled. And any finish line points (on stages that are classified as hill top finishes) that that rider acquires are increased by 20%. 
+                        
+                4.4. A rider may only be a designated sprinter or designated climber once. (For example, if a rider is the designated climber in week 1, they will not be allowed to be the designated climber or the designated sprinter for any other races). 
+                ''')
 
     with tab22:
         col1, col2 = st.columns([5,3])

@@ -87,11 +87,11 @@ def final_format(df):
         df.drop(columns=['Time_secs', 'Stage'], inplace=True)
         df = df.rename(columns={'Time_nice': 'Time'})
 
-        # columns_to_convert = ['KOM', 'Int. S', 'DS/DC', 'Report', 'MAR']
+        columns_to_convert = ['KOM', 'Int. S', 'DS/DC', 'Report', 'MAR']
 
-        # if all(col in df.columns for col in columns_to_convert):
-        #     df[columns_to_convert] = df[columns_to_convert].apply(pd.to_numeric).round(0)
-        #     df.replace({np.nan: ''}, inplace=True)
+        if all(col in df.columns for col in columns_to_convert):
+            df[columns_to_convert] = df[columns_to_convert].apply(pd.to_numeric).round(0)
+            df.replace({np.nan: ''}, inplace=True)
         return df
     
 

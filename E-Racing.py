@@ -521,7 +521,7 @@ with tab4:
         col1, col2 = st.columns(2)
         with col1:
 
-            col11, col12 = st.columns([1,3])
+            col11, col12 = st.columns([3,1])
             with col11:           
                 st.subheader('Lego pours millions into doomed vanity project')
                 

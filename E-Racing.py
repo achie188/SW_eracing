@@ -361,9 +361,9 @@ with tab3:
         col1, col2 = st.columns(2)
 
         with col1:
-            col11, col12 = st.columns([3,1])
+            col11, col12 = st.columns([1,3])
 
-            with col11:           
+            with col12:           
                 st.subheader('Lego pours millions into doomed vanity project')
                 st.markdown('''
                             Sunday 5th November 2023 Legoland
@@ -371,7 +371,7 @@ with tab3:
                             For years the top team at Lego have been considering a move into the world of pro cycling. And this year, they have finally taken the plunge, emptied their pockets, gathered up the scattered pennies, and spent them on a pro e-cycling outfit.
                             ''')
                 
-            with col12:
+            with col11:
                 st.image(lego_image, width = 150)
             
             st.markdown('''

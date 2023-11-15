@@ -4,7 +4,7 @@ import os
 
 from inputs.pull_gsheet import pull_gsheet, push_gsheet
 from inputs.pull_zwift import pull_zwift
-from inputs.helpers import load_csv
+from inputs.helpers import load_csv, save_csv
 from pipeline.formatting import format_results, format_mmss, add_team
 
 location = os.getcwd()

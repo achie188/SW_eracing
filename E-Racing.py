@@ -17,7 +17,7 @@ from pipeline.calcs import get_stage, calc_overall_pts, calc_overall_orange, han
 
 
 
-interval=7 * 1000
+refresh_interval = 7
 
 stages_complete = ['Prologue', 'Stage 1']
 
@@ -78,7 +78,7 @@ st.set_page_config(
     layout="wide"
 )
 
-st_autorefresh(interval, limit=1000)
+st_autorefresh(refresh_interval*1000, limit=1000)
 
 st.markdown("""
         <style>

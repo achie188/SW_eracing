@@ -644,7 +644,8 @@ Only time will tell how delicious those chips will be.''')
             col11, col12 = st.columns([3,1])
             with col11: 
                 st.subheader('Tesla and Thames Water Unite in Cycling Endeavor for the Greater Good')
-                st.markdown('''FOR IMMEDIATE RELEASE
+                st.markdown('''
+                            FOR IMMEDIATE RELEASE
                          
                             London, UK, November 4, 2023
                             ''')

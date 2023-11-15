@@ -36,11 +36,11 @@ handicaps = handicaps_format(handicaps)
 #Get text
 r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, handicaps_rules = rules()
 lego_pr, tesla_pr, azt_pr, abs_pr = press_releases()
-s1_azt, s1_tesla = race_reports()
+s1_azt, s1_tesla, s2_tesla = race_reports()
 
 #Get stage data
 s1, orange_df = get_stage(zwift_ids[0], "Stage_1", ath_ids, "No")
-s2, orange_df = get_stage(zwift_ids[1], "Stage_2", ath_ids, "No", orange_df, )
+s2, orange_df = get_stage(zwift_ids[1], "Stage_2", ath_ids, "Yes", orange_df, )
 s3, orange_df = get_stage(zwift_ids[2], "Stage_3", ath_ids, "No", orange_df)
 s4, orange_df = get_stage(zwift_ids[3], "Stage_4", ath_ids, "No", orange_df)
 s5, orange_df = get_stage(zwift_ids[4], "Stage_5", ath_ids, "No", orange_df)
@@ -300,6 +300,11 @@ with tab2:
         with col1:
             st.subheader('Stage 2 Results')
             st.dataframe(s2, height = int(35.2*(s2.shape[0]+1)), hide_index=True)
+
+        with col2:
+            st.subheader('Race Reports')
+            with st.expander("Team Tesla"):
+                st.markdown(s2_tesla)
 
     with tab24:
         col1, col2 = st.columns([5,3])

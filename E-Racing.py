@@ -70,6 +70,7 @@ lego_image = Image.open(location + '/inputs/raceinfo/lego.png')
 amazon_image = Image.open(location + '/inputs/raceinfo/amazon.png')
 azt_image = Image.open(location + '/inputs/raceinfo/astrazenaca.png')
 tesla_image = Image.open(location + '/inputs/raceinfo/tesla.png')
+sw_image = Image.open(location + '/inputs/raceinfo/SW-logo.png')
 
 
 # Set up Streamlit app
@@ -88,9 +89,13 @@ st.markdown("""
         </style>
         """, unsafe_allow_html=True)
 
-st.subheader("Welcome to the Sexy Walrus E-Racing Series 2023! 👋")
+col1, col2 = st.columns(2)
+with col1:
+    st.subheader("Welcome to the Sexy Walrus E-Racing Series 2023! 👋")
+    st.write("The below shows the results and current standings of the Sexy Walrus E-Racing Series👇 ")
 
-st.write("The below shows the results and current standings of the Sexy Walrus E-Racing Series👇 ")
+with col2:
+    st.image(sw_image, width = 150)
 
 tab1, tab2, tab3, tab4 = st.tabs(["Championship", "All Results", "About", "LIVE NOW!"])
 

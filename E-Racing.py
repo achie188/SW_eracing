@@ -604,7 +604,7 @@ With the 2023 Zwift Championships on the horizon, Team Tesla Thames Water's jour
         with col1:
             col11, col12 = st.columns([3,1])
             with col11: 
-                st.subheader('The e-Pedlars Lancet')
+                st.subheader('The e-Pedlars Lancet - AstraZenaca Trailfinders Partnership')
                 st.write('''By Penny Farthing
                          
 7/11/2023''')

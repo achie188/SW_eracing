@@ -371,7 +371,8 @@ with tab2:
             st.dataframe(s1, height = int(35.2*(s1.shape[0]+1)), hide_index=True)
 
         with col2:
-            with st.expander("Race Report - Tesla"):
+            st.subheader('Race Reports')
+            with st.expander("Team Tesla"):
                 st.markdown('''
                             #### Race Report - Tesla
                             
@@ -393,7 +394,7 @@ with tab2:
                             ‘The winners of week 1 have never won the season!’ 
 
                             Someone belched loudly''')
-            with st.expander("Race Report - AstraZenaca"):
+            with st.expander("Team AstraZenaca"):
                 st.markdown('''
                             #### Race Report - AstraZenaca
                             

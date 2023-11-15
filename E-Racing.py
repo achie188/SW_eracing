@@ -521,11 +521,11 @@ with tab4:
         col1, col2 = st.columns(2)
         with col1:
 
-            col1, col2 = st.columns([1,3])
-            with col1:           
+            col11, col12 = st.columns([1,3])
+            with col11:           
                 st.subheader('Lego pours millions into doomed vanity project')
                 
-            with col2:
+            with col12:
                 st.image(lego_image, width = 150)
             
             st.write('''Sunday 5th November 2023 Legoland

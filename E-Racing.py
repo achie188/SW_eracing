@@ -134,54 +134,19 @@ with tab1:
             with st.expander("5. THE POINTS SYSTEM EXPLAINED"):
                 st.markdown(r5)
             with st.expander("6. Category 1: Finishing Position Points"):
-                st.markdown('''                
-                            ##### 6. Category 1: Finishing Position Points
-                            6.1. These points will be awarded to the riders on a % of the category pot basis (Ie. a % of the allocated Finishing Position %) . Whereby the higher the finishing position, the higher % of the pot you receive. See Schedule 3 for the percentage distributions. 
-                                    
-                            6.2. As an example, if you come first you would get 10% of the pot. But if you came 21st you would get 2.1% of the pot. 
-                                    
-                            6.3. However, if there are fewer than 40 riders racing, then not all the pot will be distributed out (as the lower placings will now not be filled), leaving a ‘remainder’ amount. 
-                                    
-                            6.4. This ‘remainder’ (whatever it may be) will be reallocated to the riders equally amongst all riders that raced.
-                            ''')
+                st.markdown(r6)
             with st.expander("7. Category 2: KOM Points"):
-                st.markdown(''' 
-                            ##### 7. Category 2: KOM Points
-                            7.1. These may be awarded on certain races but not necessarily every race. 
-                                    
-                            7.2. The points allocated will be determined on a race by race basis, as it will depend on the severity of the climb it relates to. 
-                            ''')
+                st.markdown(r7)
             with st.expander("8. Category 3: Intermediate Sprint Points"):
-                st.markdown('''                             
-                            ##### 8. Category 3: Intermediate Sprint Points
-                            8.1. The points allocated will be determined on a race by race basis. 
-                                    
-                            8.2. Details of the intermediate sprints and KOM will be made clear in advance of the relevant race. 
-                            ''')
+                st.markdown(r8)
             with st.expander("9. Most Aggressive Rider"):
-                st.markdown('''                              
-                            #### 9. Most Aggressive Rider
-                            9.1. Twenty points available each week to the most aggressive rider, as chosen by agreement by team leaders. (Things that might win you this award are activities such as going on a wild hopeless attack that is doomed to fail, and inevitably does fail.) 
-                                    
-                            9.2. Only one MAR per night 
-                                    
-                            9.3. Most aggressive rider over the course of the season will be awarded 100 points after the conclusion of the final week’s race. 
-                            ''')
+                st.markdown(r9)
             with st.expander("10. Race Reports"):
-                st.markdown('''                              
-                            #### 10. Race Reports
-                            Twenty points will be awarded to the team of any rider that submits a race report after each week, that is deemed to be ‘up to snuff’ by agreement of the team captains. 
-                            ''')
+                st.markdown(r10)
             with st.expander("12. Quibbling"):
-                st.markdown('''            
-                            #### 12. Quibbling
-                            Any quibbling of any nature by any of the riders or wider team members may result in a fine up to €1,500 and/or a rider being given last place for the race or stage to which the quibbling relates. 
-                            ''')       
+                st.markdown(r12)       
             with st.expander("13. Director’s Decision"):
-                st.markdown('''           
-                            #### 13. Director’s Decision
-                            A race director’s decision, no matter how erratic, inconsistent or unlawful, shall be binding, final and shall not be quibbled with. In case of any quibbling, see Rule 12. 
-                            ''')
+                st.markdown(r13)
     with tab12:
         col1, col2 = st.columns([2,3])
         with col1:

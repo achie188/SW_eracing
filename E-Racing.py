@@ -5,9 +5,6 @@ import sys
 import os
 from PIL import Image
 
-
-location = os.getcwd()
-
 sys.path.append('/Users/achie188/Library/CloudStorage/GitHub/Personal/SW_eracing')
 
 from inputs.pull_zwift import pull_zwift
@@ -17,10 +14,13 @@ from pipeline.formatting import get_zwift_ids, final_format, teams_slice
 from pipeline.calcs import get_stage, calc_overall_pts, calc_overall_orange, handicaps_format
 
 
-
+# Manual overrides
 refresh_interval = 300
-
 stages_complete = ['Prologue', 'Stage 1']
+
+
+
+location = os.getcwd()
 
 
 #Get ids
@@ -31,7 +31,8 @@ zwift_ids = get_zwift_ids(stage_values, stages)
 
 handicaps = handicaps_format(handicaps)
 
-r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13 = rules()
+r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, handicaps_rules = rules()
+
 
 #Get stage data
 s1, orange_df = get_stage(zwift_ids[0], "Stage_1", ath_ids)
@@ -60,18 +61,20 @@ s6 = final_format(s6)
 #Get live event
 live = pull_zwift(zwift_ids[1])
 
-
+#Team slices
 lego_boots = teams_slice(ind_pts, "Lego", handicaps, stages_complete)
 amazon = teams_slice(ind_pts, "ABS", handicaps, stages_complete)
 tesla = teams_slice(ind_pts, "Tesla", handicaps, stages_complete)
 astrazen = teams_slice(ind_pts, "AZT", handicaps, stages_complete)
 
-
+#Get images
 lego_image = Image.open(location + '/inputs/raceinfo/lego.png')
 amazon_image = Image.open(location + '/inputs/raceinfo/amazon.png')
 azt_image = Image.open(location + '/inputs/raceinfo/astrazenaca.png')
 tesla_image = Image.open(location + '/inputs/raceinfo/tesla.png')
 sw_image = Image.open(location + '/inputs/raceinfo/SW-logo.png')
+
+
 
 
 # Set up Streamlit app
@@ -125,6 +128,7 @@ with tab1:
 
     with tab11:
         col1, col2 = st.columns([2,3])
+
         with col1:
             st.subheader('Individual Series Standings')
             st.dataframe(ind_pts, height = int(35.2*(ind_pts.shape[0]+1)), hide_index=True)
@@ -147,11 +151,14 @@ with tab1:
                 st.markdown(r12)       
             with st.expander("13. Director’s Decision"):
                 st.markdown(r13)
+
     with tab12:
         col1, col2 = st.columns([2,3])
+
         with col1:
             st.subheader('Teams Series Standings')
             st.dataframe(team_pts, hide_index=True)
+
         with col2:
             st.subheader('Relevant Rules')
             with st.expander("5. THE POINTS SYSTEM EXPLAINED"):
@@ -165,32 +172,49 @@ with tab1:
             with st.expander("9. Most Aggressive Rider"):
                 st.markdown(r9)
             with st.expander("10. Race Reports"):
-                st.markdown(r10)         
+                st.markdown(r10)
+            with st.expander("12. Quibbling"):
+                st.markdown(r12)       
+            with st.expander("13. Director’s Decision"):
+                st.markdown(r13)    
+
     with tab13:
         col1, col2 = st.columns([2,3])
+
         with col1:
             st.subheader('Orange Jersey Race')
             st.dataframe(orange_df, height = int(35.2*(orange_df.shape[0]+1)), hide_index=True)
+
         with col2:
             st.subheader('Relevant Rules')
             with st.expander("11. Orange Jersey Competition"):
                 st.markdown(r11)
+            with st.expander("12. Quibbling"):
+                st.markdown(r12)       
+            with st.expander("13. Director’s Decision"):
+                st.markdown(r13)
 
     with tab14:
         col1, col2 = st.columns([2,3])
+
         with col1:
             st.subheader('Polka Dot Jersey')
             st.dataframe(kom_pts, height = int(35.2*(kom_pts.shape[0]+1)), hide_index=True)
+
         with col2:
             st.subheader('Relevant Rules')
             with st.expander("4. Designated Sprinter/Climber"):
                 st.markdown(r4)
             with st.expander("7. Category 2: KOM Points"):
                 st.markdown(r7)
-
+            with st.expander("12. Quibbling"):
+                st.markdown(r12)       
+            with st.expander("13. Director’s Decision"):
+                st.markdown(r13)
 
     with tab15:
         col1, col2 = st.columns([2,3])
+
         with col1:
             st.subheader('Ciclamino Jersey')
             st.dataframe(sprinter_pts, height = int(35.2*(sprinter_pts.shape[0]+1)), hide_index=True)
@@ -201,9 +225,14 @@ with tab1:
                 st.markdown(r4)
             with st.expander("8. Category 3: Intermediate Sprint Points"):
                 st.markdown(r8)
+            with st.expander("12. Quibbling"):
+                st.markdown(r12)       
+            with st.expander("13. Director’s Decision"):
+                st.markdown(r13)
 
     with tab16:
         col1, col2 = st.columns([2,3])
+
         with col1: 
             st.subheader('Handicaps')
             st.dataframe(handicaps, height= int(35.2*(handicaps.shape[0]+1)), hide_index=True)
@@ -211,20 +240,11 @@ with tab1:
         with col2:
             st.subheader('Relevant Rules')
             with st.expander("Handicapping System"):
-                st.markdown('''
-                            #### Handicapping System
-                            
-                            Handicaps are always the most fiercely argued part of the Sexy Walrus E-Racing series, and is a hot topic of debate between the captains. Largely over whether Teo should have 50 extra kg added, or just 45.
-                            
-                            They are designed to make the racing as even as possible, penalising the strongest riders with worse bikes and extra weight. And even then Teo usually still wins.
-                                        
-                            Handicaps based largely off the end of last year’s season. And everyone always says “but I’m not as fit as I was then!” but that’s the case for everyone. So they are being kept like that, unless there’s some significant thing (eg broken leg) which might mean the handicap might change. 
-
-                            After each round, handicaps are again fiercely fought over by the captains, with adjustments made to riders weights and bikes. 
-                                        
-                            And even then, Teo will still usually win.
-                            ''')
-
+                st.markdown(handicaps_rules)
+            with st.expander("12. Quibbling"):
+                st.markdown(r12)       
+            with st.expander("13. Director’s Decision"):
+                st.markdown(r13)
 
 
 
@@ -251,6 +271,10 @@ with tab2:
                 st.markdown(r3)
             with st.expander("4. Designated Sprinter/Climber"):
                 st.markdown(r4)
+            with st.expander("12. Quibbling"):
+                st.markdown(r12)       
+            with st.expander("13. Director’s Decision"):
+                st.markdown(r13)
 
     with tab22:
         col1, col2 = st.columns([5,3])
@@ -340,8 +364,10 @@ with tab3:
 
     with tab42:
         col1, col2 = st.columns(2)
+
         with col1:
             col11, col12 = st.columns([3,1])
+
             with col11:           
                 st.subheader('Lego pours millions into doomed vanity project')
                 st.markdown('''
@@ -349,6 +375,7 @@ with tab3:
                          
                             For years the top team at Lego have been considering a move into the world of pro cycling. And this year, they have finally taken the plunge, emptied their pockets, gathered up the scattered pennies, and spent them on a pro e-cycling outfit.
                             ''')
+                
             with col12:
                 st.image(lego_image, width = 150)
             
@@ -376,10 +403,13 @@ with tab3:
 
     with tab43:
         col1, col2 = st.columns(2)
+
         with col1:
             col11, col12 = st.columns([3,1])
+
             with col11:           
                 st.subheader('Amazon Beaconsfield Services')
+
             with col12:
                 st.image(amazon_image, width = 150)
 
@@ -389,8 +419,10 @@ with tab3:
 
     with tab44:
         col1, col2 = st.columns(2)
+
         with col1:
             col11, col12 = st.columns([3,1])
+
             with col11: 
                 st.subheader('Tesla and Thames Water Unite in Cycling Endeavor for the Greater Good')
                 st.markdown('''
@@ -429,8 +461,10 @@ with tab3:
 
     with tab45:
         col1, col2 = st.columns(2)
+
         with col1:
             col11, col12 = st.columns([3,1])
+            
             with col11: 
                 st.subheader('The e-Pedlars Lancet - AstraZenaca Trailfinders Partnership')
                 st.markdown('''

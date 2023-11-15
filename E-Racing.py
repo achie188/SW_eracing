@@ -520,8 +520,13 @@ with tab4:
     with tab42:
         col1, col2 = st.columns(2)
         with col1:
-            st.image(lego_image, width = 150)
-            st.subheader('Lego pours millions into doomed vanity project')
+
+            col1, col2 = st.columns([1,3])
+            with col1:           
+                st.image(lego_image, width = 150)
+            with col2:
+                st.subheader('Lego pours millions into doomed vanity project')
+            
             st.write('''Sunday 5th November 2023 Legoland
 
 For years the top team at Lego have been considering a move into the world of pro cycling. And this year, they have finally taken the plunge, emptied their pockets, gathered up the scattered pennies, and spent them on a pro e-cycling outfit. 

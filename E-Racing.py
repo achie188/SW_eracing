@@ -688,7 +688,8 @@ with tab3:
             col11, col12 = st.columns([3,1])
             with col11: 
                 st.subheader('The e-Pedlars Lancet - AstraZenaca Trailfinders Partnership')
-                st.markdown('''By Penny Farthing
+                st.markdown('''
+                            By Penny Farthing
                          
                             7/11/2023
                             ''')

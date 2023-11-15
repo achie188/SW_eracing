@@ -210,11 +210,9 @@ def calc_overall_pts(pro, s1, s2, s3, s4, s5, s6):
     other_columns = [col for col in kom_df.columns if col != '#']
     column_order = ['#'] + other_columns[0:]
     kom_df = kom_df.reindex(columns=column_order)
-    kom_df.drop(columns=['index'], inplace=True)  
+    kom_df.drop(columns=['index', 'Prologue'], inplace=True)  
 
     kom_df = kom_df.round(0)
-
-    kom_df.replace({np.nan: '', 0: ''}, inplace=True)
 
     # calc sprinter pts
     sprinter_df = combined_df.pivot_table(index='Name', columns='Stage', values='Int. S', aggfunc='sum', fill_value=0)
@@ -231,11 +229,9 @@ def calc_overall_pts(pro, s1, s2, s3, s4, s5, s6):
     other_columns = [col for col in sprinter_df.columns if col != '#']
     column_order = ['#'] + other_columns[0:]
     sprinter_df = sprinter_df.reindex(columns=column_order)
-    sprinter_df.drop(columns=['index'], inplace=True)  
+    sprinter_df.drop(columns=['index', 'Prologue'], inplace=True)  
 
     sprinter_df = sprinter_df.round(0)
-
-    sprinter_df.replace({np.nan: '', 0: ''}, inplace=True)
 
     return ind_df, team_df, kom_df, sprinter_df
 

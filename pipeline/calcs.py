@@ -106,8 +106,8 @@ def get_stage(stage, stage_num, ath_ids, orange_df=prologue):
         if (current_time.tm_sec >= 0 and current_time.tm_sec <= 10):
             push_gsheet(f_df_o_pts, stage_num)
             stage_res = pull_gsheet(stage_num)
-            stage_res['KOM'] = pd.to_numeric(stage_res['KOM'], errors='coerce')
-            stage_res['Int. S'] = pd.to_numeric(stage_res['Int. S'], errors='coerce')
+            # stage_res['KOM'] = pd.to_numeric(stage_res['KOM'], errors='coerce')
+            # stage_res['Int. S'] = pd.to_numeric(stage_res['Int. S'], errors='coerce')
 
             save_csv(stage_res, live_race_path)
         else:

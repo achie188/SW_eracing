@@ -55,11 +55,13 @@ def press_releases():
     '''
 
     abs = '''     
-    Prepare for a ride like no other as Amazon and Beaconsfield Services, an odd but enticing collaboration, dive headfirst into the world of professional cycling. George Dix, former Evil Greens extraordinaire, leads the charge, backed by a motley crew sponsored by the e-commerce giant and the local services superheroes.
+    Get ready for a cycling escapade like no other as Amazon and Beaconsfield Services, an unlikely yet captivating collaboration, plunge headlong into the realm of professional cycling. George Dix, the former maestro of the Evil Greens, takes the reins, leading a spirited squad backed by the e-commerce juggernaut and the local services heroes.
 
-    Rumours circulate about how this unexpected union was forged, with the suggestion that Jeff Bozos - founder of Amazon and one of the richest people in the world - had a short, but intense fling with a Beaconsfield cashier during a UK business trip several months ago. The precise details of the encounter are not known, but they are believed to have involved a Postman Pat fairground ride, a liquid lunch and a pair of rubber bands. Bozos was reportedly caught - quite literally - with his pants down and offered to support Beaconsfield Services bid for a pro cycling team in return for confidentiality.
+    Whispers abound about the genesis of this unexpected partnership, with a tantalizing suggestion that Jeff Bezos, Amazon's founder and one of the wealthiest individuals globally, found himself entangled in a brief but intense affair with a Beaconsfield cashier during a UK business sojourn a few months ago. While the exact details of this encounter remain shrouded in mystery, there are rumours of a Postman Pat fairground ride, a liquid lunch, and a pair of rubber bands. Legend has it that Bezos, quite literally caught with his pants down, brokered a deal, offering support for Beaconsfield Services' pro cycling aspirations in exchange for absolute confidentiality.
 
-    Beaconsfield Services, now armed with a formidable purse, signed Dix and newcomers Warman, Graley and Thompson in the first week of the team’s creation. Seasoned pro Henry Courtier was coaxed from retirement after Prime agreed to cover the team’s attempt at glory as part of their upcoming documentary on the Sexy Walrus E-Racing series.                    
+    Now armed with a formidable purse, Beaconsfield Services wasted no time in assembling a stellar lineup. George Dix, along with new recruits Warman, Graley, and Thompson, inked deals within the inaugural week of the team's inception. The seasoned pro, Henry Courtier, was lured out of retirement after Prime committed to spotlighting the team's quest for glory as part of the upcoming documentary on the Sexy Walrus E-Racing series - Spandex and Shenanigans.
+
+    As the wheels of Team Amazon Beaconsfield start turning, the cycling world awaits the promise of this extraordinary team and their scandalous charm.
     '''
 
     return lego_boots, tesla, azt, abs

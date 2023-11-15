@@ -337,7 +337,9 @@ with tab3:
             with col12:           
                 st.subheader('Lego pours millions into doomed vanity project')
                 st.markdown('''
-                            Sunday 5th November 2023 Legoland
+                            Sunday 5th November 2023 
+                            
+                            Legoland
                             ''')
                 
             with col11:

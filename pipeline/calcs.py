@@ -134,6 +134,8 @@ def calc_overall_pts(pro, s1, s2, s3, s4, s5, s6):
     all_dataframes = [pro, s1, s2, s3, s4, s5, s6]
     combined_df = pd.concat(all_dataframes, ignore_index=True)
     combined_df['Total'] = pd.to_numeric(combined_df['Total'], errors='coerce')
+    combined_df['KOM'] = pd.to_numeric(combined_df['KOM'], errors='coerce')
+    combined_df['Int. S'] = pd.to_numeric(combined_df['Int. S'], errors='coerce')
     combined_df['Total'].fillna(0, inplace=True)
 
 

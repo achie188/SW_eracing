@@ -73,4 +73,6 @@ def get_ids():
         pts = load_csv(pts_path)
         handicaps = load_csv(handicaps_path)
 
+    handicaps[['True Weight', 'Race Weight']] = handicaps[['True Weight', 'Race Weight']].apply(pd.to_numeric, errors='coerce')
+
     return stages, ath_ids, prologue, pts, handicaps

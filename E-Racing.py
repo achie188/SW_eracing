@@ -569,14 +569,13 @@ Only time will tell how delicious those chips will be.''')
             col11, col12 = st.columns([3,1])
             with col11: 
                 st.subheader('Tesla and Thames Water Unite in Cycling Endeavor for the Greater Good')
+                st.write('''FOR IMMEDIATE RELEASE
+                         
+London, UK, November 4, 2023''')
             with col12:
                 st.image(tesla_image, width = 150)
-                
-            st.write('''FOR IMMEDIATE RELEASE
-                 
-London, UK, November 4, 2023
 
-In a groundbreaking collaboration that defies expectations, Tesla, the pioneering electric car company, and Thames Water, the UK's leading water utility provider, have joined forces to propel the world of professional cycling into a new era.
+            st.write('''In a groundbreaking collaboration that defies expectations, Tesla, the pioneering electric car company, and Thames Water, the UK's leading water utility provider, have joined forces to propel the world of professional cycling into a new era.
 
 The partnership was officially unveiled at a press conference attended by Elon Musk, the visionary CEO of Tesla, and Alastair Cochran, the forward-thinking CEO of Thames Water. Their announcement marks a significant moment in the history of cycling as the two seemingly unrelated giants pool their resources to launch a brand-new cycling team: Team Tesla Thames Water.
 

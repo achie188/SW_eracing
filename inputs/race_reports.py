@@ -54,7 +54,7 @@ def race_reports():
     '''
 
     s2_tesla = '''
-    They come thick and fast. Like home secretaries, prime ministers or next door’s cat. The races keep coming. This week the course was flat and a sprinters stage.. or was it. 
+    They come thick and fast. Like home secretaries, prime ministers or next door’s cat. The races keep coming. This week the course was flat and a sprinters stage ... or was it. 
     We had no idea. 
 
     Teo pulled a fast one again claiming he was a dead duck but he managed to stop and change bike, take a work call and yet once again proved that he’s the best sprinter in 
@@ -63,11 +63,11 @@ def race_reports():
     Lawrence Lagnado proved himself a worthy competitor picking up points. Poor old Ed Smith couldn't get his motor going and apologised profusely saying that he was just nervous 
     and this hasn't happened to him before. We said that it was ok and we could just cuddle. 
 
-    It all went off at some point later in the race.. before the KOM somewhere but I can't remember.. I was blind with sweat as my fan had moved and was neatly pointing at the 
-    other fan.. maybe that worked in some way. We still had men in the front but then the KOM came and I managed to surge forward and end up in a group with 2 others ahead of 
+    It all went off at some point later in the race ... before the KOM somewhere but I can't remember ... I was blind with sweat as my fan had moved and was neatly pointing directly 
+    at the other fan ... maybe that worked in some way. We still had men in the front but then the KOM came and I managed to surge forward and end up in a group with 2 others ahead of 
     a chasing pack. I thought about carrying on but my eyes as previously stated were in poor condtion and I couldn't see what gap we had. I could tell though that Shyam was in 
-    the pack behind honestly sticking to the wheels of the big guys... they caught us with a K to go and there was a shoot out amongst the usual suspects... Teo, Dixy and the 
-    new man on the scene... Lego Jesus Nick Foley. I manged to get 3rd spot just pipping Dixy and Shyam placed nicely behind somewhere.
+    the pack behind honestly sticking to the wheels of the big guys. They caught us with a km to go and there was a shoot out amongst the usual suspects. Teo, Dixy and the 
+    new man on the scene - Lego Jesus Nick Foley. I manged to get 3rd spot just pipping Dixy and Shyam placed nicely behind somewhere.
     '''
 
 

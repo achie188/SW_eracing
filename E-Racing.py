@@ -359,14 +359,15 @@ with tab3:
 
             with col12:           
                 st.subheader('Amazon Beaconsfield Services')
-
-            with col11:
-                st.image(amazon_image, width = 150)
                 st.markdown('''
                             10th November 2023 
                             
                             Beaconsfield
                             ''')
+                
+            with col11:
+                st.image(amazon_image, width = 150)
+
             st.markdown(abs_pr)
 
         with col2:

@@ -89,7 +89,7 @@ st.markdown("""
         </style>
         """, unsafe_allow_html=True)
 
-col1, col2 = st.columns([1, 10])
+col1, col2 = st.columns([1, 15])
 with col1:
     st.image(sw_image, width = 100)
 with col2:

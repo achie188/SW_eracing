@@ -65,7 +65,8 @@ s6 = final_format(s6)
 #Get live event
 live = pull_zwift(zwift_ids[1])
 live = format_results(live, ath_ids)
-live = final_format(live)
+live.drop(columns=['Time_secs'], inplace=True)
+live = live.rename(columns={'Time_nice': 'Time'})
 
 
 #Team slices

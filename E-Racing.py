@@ -289,9 +289,9 @@ with tab2:
 
         with col2:
             st.subheader('Race Reports')
-            with st.expander("Team Tesla"):
+            with st.expander("Team Tesla - George Humphreys"):
                 st.markdown(s1_tesla)
-            with st.expander("Team AstraZenaca"):
+            with st.expander("Team AstraZenaca - Teo Lopez"):
                 st.markdown(s1_azt)
 
     with tab23:
@@ -303,7 +303,7 @@ with tab2:
 
         with col2:
             st.subheader('Race Reports')
-            with st.expander("Team Tesla"):
+            with st.expander("Team Tesla - George Humphreys"):
                 st.markdown(s2_tesla)
 
     with tab24:

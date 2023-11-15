@@ -117,13 +117,13 @@ def rules():
     '''     
 
     r12_quibble = '''           
-    #### 12. Quibbling
-    Any quibbling of any nature by any of the riders or wider team members may result in a fine up to €1,500 and/or a rider being given last place for the race or stage to which the quibbling relates. 
+    #### 12. QUIBBLING
+    Any quibbling of any kind and of any nature by any of the riders or wider team members and their extended families may result in a fine up to €1,500 and/or a rider being given last place for the race or stage to which the quibbling relates. 
     ''' 
 
     r13_dd = '''           
     #### 13. Director’s Decision
-    A race director’s decision, no matter how erratic, inconsistent or unlawful, shall be binding, final and shall not be quibbled with. In case of any quibbling, see Rule 12. 
+    A race director’s decision, no matter how erratic, inconsistent, unfair or unlawful, shall be binding, final and shall not be quibbled with. In the case of any quibbling, see Rule 12. 
     '''
 
     handicaps = '''

@@ -12,6 +12,7 @@ sys.path.append('/Users/achie188/Library/CloudStorage/GitHub/Personal/SW_eracing
 
 from inputs.pull_zwift import pull_zwift
 from inputs.helpers import get_ids
+from inputs.rules import rules
 from pipeline.formatting import get_zwift_ids, final_format, teams_slice
 from pipeline.calcs import get_stage, calc_overall_pts, calc_overall_orange, handicaps_format
 
@@ -30,7 +31,7 @@ zwift_ids = get_zwift_ids(stage_values, stages)
 
 handicaps = handicaps_format(handicaps)
 
-
+r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13 = rules()
 
 #Get stage data
 s1, orange_df = get_stage(zwift_ids[0], "Stage_1", ath_ids)
@@ -131,15 +132,7 @@ with tab1:
         with col2:
             st.subheader('Relevant Rules')
             with st.expander("5. THE POINTS SYSTEM EXPLAINED"):
-                st.markdown('''
-                            #### 5. THE POINTS SYSTEM EXPLAINED
-                            5.1. Each week there will be a points pot, all of which will be distributed out across three different categories (Finishing position, Intermediate sprints, KOM points). The categories are explained below. Each different category will have a % of the points pot allocated to it, which may be different each week.
-                            For example, a race that had points solely for finishing position would have 100% of the points for the ‘Finishing Position’ category, and 0% for the other categories. A race that was all about intermediate sprinting might have 70% of the points pot allocated to the ‘intermediate sprints’ category, and 30% allocated to finishing position. 
-                                    
-                            5.2. The prologue will have 500 points available in the points pot. Weeks 1 through to and including week 5 will have 1,000 points in the pot. And the final week will have 2,000 points. 
-                                    
-                            5.3. In addition to the above (Ie outside of the points pots), further points are available for the Orange Jersey, most aggressive rider, and race reports (see below). 
-                            ''')
+                st.markdown(r5)
             with st.expander("6. Category 1: Finishing Position Points"):
                 st.markdown('''                
                             ##### 6. Category 1: Finishing Position Points

@@ -91,8 +91,8 @@ def final_format(df):
 
         if all(col in df.columns for col in columns_to_convert):
             df[columns_to_convert] = df[columns_to_convert].apply(pd.to_numeric, errors='coerce').round(0)
-            df[columns_to_convert] = df[columns_to_convert].round(0)
             df.replace({None: '', 0: '', 'None': '', np.nan: ''}, inplace=True)
+            df[columns_to_convert] = df[columns_to_convert].round(0)
         return df
     
 

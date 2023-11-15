@@ -279,4 +279,6 @@ def handicaps_format(df):
     df.replace({None: '', 0: '', 'None': '', np.nan: ''}, inplace=True)
     df = add_team(df, ath_ids)
 
+    df[['True Weight', 'Race Weight']] = df[['True Weight', 'Race Weight']].apply(pd.to_numeric, errors='coerce')
+
     return df

@@ -247,10 +247,10 @@ with tab1:
 
 
 
+
                                                 ###############################
                                                 ######### RESULTS TAB #########
                                                 ###############################
-
 
 with tab2:
     tab21, tab22, tab23, tab24, tab25, tab26 = st.tabs(["Prologue", "Stage 1", "Stage 2", "Stage 3", "Stage 4", "Stage 5"])

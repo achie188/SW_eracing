@@ -69,7 +69,7 @@ def orange(orange_df, new_stage):
     df = pd.merge(combined_df, pts, left_on='#', right_on='#', how='inner')
 
     orange_df = df[['Name', 'Total']]
-    orange_df = orange_df.rename(columns={'Total' : 'Time'})
+    orange_df = orange_df.rename(columns={'Total' : 'Time_secs'})
 
     df = df[['Name', 'Orange']]
 

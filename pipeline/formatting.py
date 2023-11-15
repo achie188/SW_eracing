@@ -5,7 +5,8 @@ import numpy as np
 
 #Format mm:ss
 def format_mmss(seconds):
-    if np.isnan(seconds):
+
+    if seconds is None or np.isnan(seconds):
         return '0:00'
     elif seconds < 600:  # Less than 10 minutes
         return '{:01d}:{:02d}'.format(int(seconds // 60), int(seconds % 60))  # M:SS format

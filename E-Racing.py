@@ -2,6 +2,11 @@ import pandas as pd
 import streamlit as st
 from streamlit_autorefresh import st_autorefresh
 import sys
+import os
+from PIL import Image
+
+
+location = os.getcwd()
 
 sys.path.append('/Users/achie188/Library/CloudStorage/GitHub/Personal/SW_eracing')
 
@@ -61,6 +66,10 @@ tesla = teams_slice(ind_pts, "Tesla", handicaps, stages_complete)
 astrazen = teams_slice(ind_pts, "AZT", handicaps, stages_complete)
 
 
+lego_image = Image.open(location + '/inputs/raceinfo/lego.png')
+amazon_image = Image.open(location + '/inputs/raceinfo/amazon.png')
+azt_image = Image.open(location + '/inputs/raceinfo/astrazenaca.png')
+tesla_image = Image.open(location + '/inputs/raceinfo/tesla.png')
 
 
 # Set up Streamlit app
@@ -545,6 +554,7 @@ Only time will tell how delicious those chips will be.''')
         with col2:
             st.subheader('Team Amazon Beaconsfield Services')
             st.dataframe(amazon, height = int(35.2*(amazon.shape[0]+1)), hide_index=True)
+            st.image(amazon_image)
 
     with tab44:
         col1, col2 = st.columns(2)

@@ -526,8 +526,7 @@ with tab4:
                 st.subheader('Lego pours millions into doomed vanity project')
                 st.write('''Sunday 5th November 2023 Legoland
                          
-                For years the top team at Lego have been considering a move into the world of pro cycling. And this year, they have finally taken the plunge, emptied their pockets, gathered up the scattered pennies, and spent them on a pro e-cycling outfit.
-                         ''')
+For years the top team at Lego have been considering a move into the world of pro cycling. And this year, they have finally taken the plunge, emptied their pockets, gathered up the scattered pennies, and spent them on a pro e-cycling outfit.''')
             with col12:
                 st.image(lego_image, width = 150)
             

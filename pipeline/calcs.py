@@ -105,15 +105,12 @@ def get_stage(stage, stage_num, ath_ids, orange_df=prologue):
             f_df_o_pts = pd.merge(f_df_pts, f_df_o, left_on='Name', right_on='Name', how='inner')
             # f_df_o_pts.drop(columns=['#'], inplace=True   )
 
-        if (current_time.tm_sec >= 30 and current_time.tm_sec <= 36):
+        
             push_gsheet(f_df_o_pts, stage_num)
             stage_res = pull_gsheet(stage_num)
             # stage_res['KOM'] = pd.to_numeric(stage_res['KOM'], errors='coerce')
             # stage_res['Int. S'] = pd.to_numeric(stage_res['Int. S'], errors='coerce')
 
-            save_csv(stage_res, live_race_path)
-        else:
-            stage_res = load_csv(live_race_path)
 
 
     return stage_res, orange_df

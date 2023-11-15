@@ -282,6 +282,13 @@ with tab2:
             st.subheader('Stage 1 Results')
             st.dataframe(s1, height = int(35.2*(s1.shape[0]+1)), hide_index=True)
 
+        with col2:
+            st.subheader('Race Reports')
+            with st.expander("Team Tesla"):
+                st.markdown(s1_tesla)
+            with st.expander("Team AstraZenaca"):
+                st.markdown(s1_azt)
+
     with tab23:
         col1, col2 = st.columns([5,3])
 
@@ -294,28 +301,23 @@ with tab2:
 
         with col1:
             st.subheader('Stage 3 Results')
-            st.dataframe(s3, height = int(35.2*(s3.shape[0]+1)), hide_index=True)
+            # st.dataframe(s3, height = int(35.2*(s3.shape[0]+1)), hide_index=True)
 
     with tab25:
         col1, col2 = st.columns([5,3])
 
         with col1:
             st.subheader('Stage 4 Results')
-            st.dataframe(s4, height = int(35.2*(s4.shape[0]+1)), hide_index=True)
+            # st.dataframe(s4, height = int(35.2*(s4.shape[0]+1)), hide_index=True)
 
     with tab26:
         col1, col2 = st.columns([5,3])
 
         with col1:
             st.subheader('Stage 5 Results')
-            st.dataframe(s5, height = int(35.2*(s5.shape[0]+1)), hide_index=True)
+            # st.dataframe(s5, height = int(35.2*(s5.shape[0]+1)), hide_index=True)
 
-        with col2:
-            st.subheader('Race Reports')
-            with st.expander("Team Tesla"):
-                st.markdown(s1_tesla)
-            with st.expander("Team AstraZenaca"):
-                st.markdown(s1_azt)
+
 
 
 

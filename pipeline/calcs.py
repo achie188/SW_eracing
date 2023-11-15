@@ -13,7 +13,7 @@ location = os.getcwd()
 prologue_path = location + r'/inputs/raceinfo/prologue.csv'
 pts_path = location + r'/inputs/raceinfo/points.csv'
 athlete_path = location + r'/inputs/raceinfo/athletes.csv'
-live_race_path = location + r'/inputs/raceinfo/live_race.csv'
+live_race_path = location + r'/inputs/raceinfo/'
 
 pts = load_csv(pts_path)
 prologue = load_csv(prologue_path)
@@ -89,7 +89,7 @@ def calc_points(stage, stage_num, pts):
     return df
 
 
-def get_stage(stage, stage_num, ath_ids, orange_df=prologue):
+def get_stage(stage, stage_num, ath_ids, gsheet="No", orange_df=prologue):
     if stage == '' or pd.isna(stage):
         return None, orange_df
     else:
@@ -98,18 +98,21 @@ def get_stage(stage, stage_num, ath_ids, orange_df=prologue):
         if df.empty:
             return None, orange_df
         else:
+            
+            path = live_race_path + stage_num + '.csv'
 
-            f_df = format_results(df, ath_ids)
-            f_df_o, orange_df = orange(orange_df, f_df)
-            f_df_pts = calc_points(f_df, stage_num, pts)
-            f_df_o_pts = pd.merge(f_df_pts, f_df_o, left_on='Name', right_on='Name', how='inner')
-            # f_df_o_pts.drop(columns=['#'], inplace=True   )
+            if gsheet == 'Yes':
+                f_df = format_results(df, ath_ids)
+                f_df_o, orange_df = orange(orange_df, f_df)
+                f_df_pts = calc_points(f_df, stage_num, pts)
+                f_df_o_pts = pd.merge(f_df_pts, f_df_o, left_on='Name', right_on='Name', how='inner')
+                push_gsheet(f_df_o_pts, stage_num)
+                stage_res = pull_gsheet(stage_num)
 
-        
-            push_gsheet(f_df_o_pts, stage_num)
-            stage_res = pull_gsheet(stage_num)
-            # stage_res['KOM'] = pd.to_numeric(stage_res['KOM'], errors='coerce')
-            # stage_res['Int. S'] = pd.to_numeric(stage_res['Int. S'], errors='coerce')
+                path = live_race_path + stage_num + '.csv'
+                save_csv(stage_res, path )
+            else:
+                stage_res = load_csv(path)
 
 
 

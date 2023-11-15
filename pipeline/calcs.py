@@ -113,8 +113,12 @@ def get_stage(stage, stage_num, ath_ids, gsheet="No", orange_df=prologue):
                 save_csv(stage_res, path )
             else:
                 stage_res = load_csv(path)
-                stage_res.replace({None: '', 0: '', 'None': '', np.nan: ''}, inplace=True)
-
+                
+            stage_res['KOM'] = stage_res['KOM'].astype('int64')
+            stage_res['Int. S'] = stage_res['Int. S'].astype('int64')
+            stage_res['DS/DC'] = stage_res['DS/DC'].astype('int64')
+            stage_res['Report'] = stage_res['Report'].astype('int64')
+            stage_res['MAR'] = stage_res['MAR'].astype('int64')
 
 
     return stage_res, orange_df

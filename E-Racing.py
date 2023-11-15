@@ -93,13 +93,12 @@ st.markdown("""
         </style>
         """, unsafe_allow_html=True)
 
-with st.container():
-    col1, col2 = st.columns([1, 15])
-    with col1:
-        st.image(sw_image, width = 100)
-    with col2:
-        st.subheader("Welcome to the Sexy Walrus E-Racing Series! 👋")
-        st.write("The below shows the results and current standings of the Sexy Walrus E-Racing Series👇 ")
+    # col1, col2 = st.columns([1, 15])
+    # with col1:
+    #     st.image(sw_image, width = 100)
+    # with col2:
+st.subheader("Welcome to the Sexy Walrus E-Racing Series! 👋")
+st.write("The below shows the results and current standings of the Sexy Walrus E-Racing Series👇 ")
 
 tab1, tab2, tab3, tab4 = st.tabs(["Championship", "All Results", "About", "LIVE NOW!"])
 
@@ -464,7 +463,7 @@ with tab3:
 
         with col1:
             col11, col12 = st.columns([3,1])
-            
+
             with col11: 
                 st.subheader('The e-Pedlars Lancet - AstraZenaca Trailfinders Partnership')
                 st.markdown('''

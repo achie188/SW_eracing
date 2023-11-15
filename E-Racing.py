@@ -26,7 +26,7 @@ location = os.getcwd()
 
 
 #Get ids
-stages, ath_ids, prologue, pts, handicaps = get_ids()
+stages, ath_ids, prologue, pts, handicaps = get_ids("No")
 
 stage_values = ['Stage_1', 'Stage_2', 'Stage_3', 'Stage_4', 'Stage_5', 'Stage_6']
 zwift_ids = get_zwift_ids(stage_values, stages)

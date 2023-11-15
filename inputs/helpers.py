@@ -49,10 +49,10 @@ def load_json(file_path):
         return None
     
 
-def get_ids():
+def get_ids(gsheets):
     current_time = time.localtime()
 
-    if (current_time.tm_min >= 0 and current_time.tm_min <= 6):
+    if gsheets == "Yes":
         stages, ath_ids, prologue, pts, handicaps = pull_ids("Stage_ids", "Athlete_ids", "Prologue", "Points", "Handicaps")
 
         prologue = add_team(prologue, ath_ids)

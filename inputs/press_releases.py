@@ -60,8 +60,6 @@ def press_releases():
     Whispers abound about the genesis of this unexpected partnership, with a tantalizing suggestion that Jeff Bezos, Amazon's founder and one of the wealthiest individuals globally, found himself entangled in a brief but intense affair with a Beaconsfield cashier during a UK business sojourn a few months ago. While the exact details of this encounter remain shrouded in mystery, there are rumours of a Postman Pat fairground ride, a liquid lunch, and a pair of rubber bands. Legend has it that Bezos, quite literally caught with his pants down, brokered a deal, offering support for Beaconsfield Services' pro cycling aspirations in exchange for absolute confidentiality.
 
     Now armed with a formidable purse, Beaconsfield Services wasted no time in assembling a stellar lineup. George Dix, along with new recruits Warman, Graley, and Thompson, inked deals within the inaugural week of the team's inception. The seasoned pro, Henry Courtier, was lured out of retirement after Prime committed to spotlighting the team's quest for glory as part of the upcoming documentary on the Sexy Walrus E-Racing series - Spandex and Shenanigans.
-
-    As the wheels of Team Amazon Beaconsfield start turning, the cycling world awaits the promise of this extraordinary team and their scandalous charm.
     '''
 
     return lego_boots, tesla, azt, abs

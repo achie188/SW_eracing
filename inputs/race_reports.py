@@ -98,4 +98,28 @@ def race_reports():
     But there certainly will be war  
     '''
 
-    return s1_azt, s1_tesla, s2_tesla, s2_abs
+    s2_azt = '''
+    After a tough opening week, Team AstraZeneca Trailfinders were under pressure from sponsors to perform, and perform they did. 
+
+    After a couple of k’s of chaos, with team captain Teo Lopez stopping for an early bike change, the Soon-to-become iconic striped jerseys had a strong presence at the 
+    front and controlled the pace nicely, letting Chris Monk occasionally shoot off the front to give his sponsors the exposure in the orange jersey and salute the lines 
+    of adoring fans.
+
+    The first sprint started nervously, no one wanting to go first until Teo thought 'bugger this for a bunch of bananas' and accelerated out of the pack causing pandemonium 
+    behind him as everyone scrambled in vain to reel him in. 
+
+    Everyone was a lot more prepared for the 2nd sprint and Teo was unable to stay away being pipped at the post by G Dix. However there were other positives for AZT with 
+    Nick Foley coming in 5th with the calm grace of an Oxford undergraduate popping out for a pint of milk. 
+
+    From that sprint the race really got going with the front end not slowing down and dropping anyone who had not been challenging for the sprint or who were foolish 
+    enough to think that they could easy off after the banner.
+    
+    Soon the front group were up and passed the KOM as if it wasn’t there, with Nick Foley hitting the summit in 2nd. Teo rode a superb captain’s ride leading out Nick, 
+    now a bona fide GC contender. Teo’s effort could be heard on discord with every pedal stroke accompanied by a pant and a growl while Nick sauntered along in his wake 
+    still looking for Cowley Road Co-Op. They crossed the line 1st and 2nd. The Captain taking the stage win and Nick securing 2nd in the GC a little over a minute behind 
+    Chris Monk. 
+
+    The Trailfinders are back!
+    '''   
+
+    return s1_azt, s1_tesla, s2_tesla, s2_abs, s2_azt

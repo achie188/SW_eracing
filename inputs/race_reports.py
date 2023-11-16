@@ -101,7 +101,7 @@ def race_reports():
     s2_azt = '''
     After a tough opening week, Team AstraZeneca Trailfinders were under pressure from sponsors to perform, and perform they did. 
 
-    After a couple of k’s of chaos, with team captain Teo Lopez stopping for an early bike change, the Soon-to-become iconic striped jerseys had a strong presence at the 
+    After a couple of k’s of chaos, with team captain Teo Lopez stopping for an early bike change, the soon-to-become iconic striped jerseys had a strong presence at the 
     front and controlled the pace nicely, letting Chris Monk occasionally shoot off the front to give his sponsors the exposure in the orange jersey and salute the lines 
     of adoring fans.
 

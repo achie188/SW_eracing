@@ -128,9 +128,9 @@ with tab4:
                                                     ###############################
 
 with tab1:
-    tab11, tab12, tab13, tab14, tab15, tab16 = st.tabs(['Individual', 'Teams', 'Orange', 'KOM', 'Sprinter', 'Handicaps'])
+    tab11, tab12, tab13, tab14, tab15, tab16 = st.tabs(['Teams', 'Individual', 'Orange', 'KOM', 'Sprinter', 'Handicaps'])
 
-    with tab11:
+    with tab12:
         col1, col2 = st.columns([2,3])
 
         with col1:
@@ -156,7 +156,7 @@ with tab1:
             with st.expander("13. Director’s Decision"):
                 st.markdown(r13)
 
-    with tab12:
+    with tab11:
         col1, col2 = st.columns([2,3])
 
         with col1:
@@ -309,8 +309,6 @@ with tab2:
                 st.markdown(s2_abs)
             with st.expander("Team AZT - Rich Tyler"):
                 st.markdown(s2_azt)
-
-                s2_azt
 
     with tab24:
         col1, col2 = st.columns([5,3])

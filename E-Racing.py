@@ -128,9 +128,9 @@ with tab4:
                                                     ###############################
 
 with tab1:
-    tab11, tab12, tab13, tab14, tab15, tab16 = st.tabs(['Teams', 'Individual', 'Orange', 'KOM', 'Sprinter', 'Handicaps'])
+    tab11, tab12, tab13, tab14, tab15, tab16 = st.tabs(['Teams', 'Orange', 'Individual', 'KOM', 'Sprinter', 'Handicaps'])
 
-    with tab12:
+    with tab13:
         col1, col2 = st.columns([2,3])
 
         with col1:
@@ -182,7 +182,7 @@ with tab1:
             with st.expander("13. Director’s Decision"):
                 st.markdown(r13)    
 
-    with tab13:
+    with tab12:
         col1, col2 = st.columns([2,3])
 
         with col1:

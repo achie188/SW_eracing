@@ -8,11 +8,13 @@ def format_mmss(seconds):
 
     if seconds is None or np.isnan(seconds):
         return '0:00'
-    elif seconds < 600:  # Less than 10 minutes
-        return '{:01d}:{:02d}'.format(int(seconds // 60), int(seconds % 60))  # M:SS format
-    else:
+    elif seconds < 3600:  # Less than 1 hour
         return '{:02d}:{:02d}'.format(int(seconds // 60), int(seconds % 60))  # MM:SS format
-
+    else:
+        hours = int(seconds // 3600)
+        minutes = int((seconds % 3600) // 60)
+        seconds_remainder = int(seconds % 60)
+        return '{:02d}:{:02d}:{:02d}'.format(hours, minutes, seconds_remainder) 
 
 def format_results(res, ath_ids):
 

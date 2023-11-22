@@ -14,7 +14,7 @@ def format_mmss(seconds):
         hours = int(seconds // 3600)
         minutes = int((seconds % 3600) // 60)
         seconds_remainder = int(seconds % 60)
-        return '{:02d}:{:02d}:{:02d}'.format(hours, minutes, seconds_remainder) 
+        return '{:01d}:{:02d}:{:02d}'.format(hours, minutes, seconds_remainder) 
 
 def format_results(res, ath_ids):
 

@@ -122,4 +122,20 @@ def race_reports():
     The Trailfinders are back!
     '''   
 
-    return s1_azt, s1_tesla, s2_tesla, s2_abs, s2_azt
+    s3_tesla = '''
+    It was a rushed start as the wife had gone out and left me to deal with the children and their stupid needs. But I made it in time and had just enough breath to brief 
+    the team - go hard, keep going and then do some more.
+
+    Teo had spent the week trying to gaslight the rest of us into thinking that this was a hilly stage. However his efforts were in vain as it was quite clear that it was 
+    in fact the flattest course one can do. 
+
+    So 35mins ahead of a tired bunch of Teslons chasing the break and then watching Teo storm the glory by a huge margin like Cav on the Champs Elise. And that’s exactly 
+    what happens of course. We tried our best and managed to pull in the break and compete for some sprints but it all played out exactly as we thought it would. 
+
+    Sadly though it seems that Chris Monk was the subject of a bizarre mid race police raid and managed to loose a good 30 seconds on GC, which is good news for the chasers.
+
+    Onto next week!
+    '''   
+
+
+    return s1_azt, s1_tesla, s2_tesla, s2_abs, s2_azt, s3_tesla

@@ -36,12 +36,12 @@ handicaps = handicaps_format(handicaps)
 #Get text
 r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, handicaps_rules = rules()
 lego_pr, tesla_pr, azt_pr, abs_pr = press_releases()
-s1_azt, s1_tesla, s2_tesla, s2_abs, s2_azt = race_reports()
+s1_azt, s1_tesla, s2_tesla, s2_abs, s2_azt, s3_tesla = race_reports()
 
 #Get stage data
 s1, orange_df = get_stage(zwift_ids[0], "Stage_1", ath_ids, "No")
 s2, orange_df = get_stage(zwift_ids[1], "Stage_2", ath_ids, "No", orange_df)
-s3, orange_df = get_stage(zwift_ids[2], "Stage_3", ath_ids, "No", orange_df)
+s3, orange_df = get_stage(zwift_ids[2], "Stage_3", ath_ids, "Yes", orange_df)
 s4, orange_df = get_stage(zwift_ids[3], "Stage_4", ath_ids, "No", orange_df)
 s5, orange_df = get_stage(zwift_ids[4], "Stage_5", ath_ids, "No", orange_df)
 s6, orange_df = get_stage(zwift_ids[5], "Stage_6", ath_ids, "No", orange_df)
@@ -63,7 +63,7 @@ s6 = final_format(s6)
 
 
 #Get live event
-live = pull_zwift(zwift_ids[1])
+live = pull_zwift(zwift_ids[2])
 live = format_results(live, ath_ids)
 live.drop(columns=['Time_secs'], inplace=True)
 live = live.rename(columns={'Time_nice': 'Time'})
@@ -315,7 +315,12 @@ with tab2:
 
         with col1:
             st.subheader('Stage 3 Results')
-            # st.dataframe(s3, height = int(35.2*(s3.shape[0]+1)), hide_index=True)
+            st.dataframe(s3, height = int(35.2*(s3.shape[0]+1)), hide_index=True)
+
+        with col2:
+            st.subheader('Race Reports')
+            with st.expander("Team Tesla - George Humphreys"):
+                st.markdown(s3_tesla)
 
     with tab25:
         col1, col2 = st.columns([5,3])

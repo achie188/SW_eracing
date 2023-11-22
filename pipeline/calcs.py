@@ -39,6 +39,7 @@ def replace_zeros(column):
 
     # Apply replacement value based on conditions
     fastest_time = np.nanmin(column_numeric)
+    slowest_time = np.nanmax(column_numeric)
     team_time = np.nanmax(column_numeric)
     replacement_value = max(fastest_time + 90, slowest_time + 30)
     

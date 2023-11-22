@@ -51,10 +51,11 @@ s6, orange_df = get_stage(zwift_ids[5], "Stage_6", ath_ids, "No", orange_df)
 
 #Orange Jersey
 orange_df = calc_overall_orange(prologue, s1, s2, s3, s4, s5, s6, stages_complete, orange_pass)
+
 orange_pts = pd.merge(orange_df, pts, left_on='#', right_on='#', how='inner')
 orange_pts2 = pd.merge(orange_df, orange_pts, left_on='Name', right_on='Name', how='outer')
 orange = orange_pts2[['Name', 'Orange']]
-orange_final = pd.merge(s3, orange[['Name', 'Orange']], on='Name', how='outer')
+orange_final = pd.merge(s3, orange[['Name', 'Orange']], on='Name', how='left')
 columns_to_drop = ['Orange_x', 'Total', 'KOM', 'Int. S', 'DS/DC', 'Report', 'MAR', 'Par.', 'Stage']
 orange_final = orange_final.drop(columns=columns_to_drop)
 orange_final = orange_final.rename(columns={'Orange_y': 'Orange'})

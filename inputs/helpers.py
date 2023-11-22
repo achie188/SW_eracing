@@ -13,6 +13,7 @@ athlete_path = location + r'/inputs/raceinfo/athletes.csv'
 prologue_path = location + r'/inputs/raceinfo/prologue.csv'
 pts_path = location + r'/inputs/raceinfo/points.csv'
 handicaps_path = location + r'/inputs/raceinfo/handicaps.csv'
+orange_pass_path = location + r'/inputs/raceinfo/orange_pass.csv'
 
 
 def load_csv(file_path):
@@ -53,7 +54,7 @@ def get_ids(gsheets):
     current_time = time.localtime()
 
     if gsheets == "Yes":
-        stages, ath_ids, prologue, pts, handicaps = pull_ids("Stage_ids", "Athlete_ids", "Prologue", "Points", "Handicaps")
+        stages, ath_ids, prologue, pts, handicaps, orange_pass = pull_ids("Stage_ids", "Athlete_ids", "Prologue", "Points", "Handicaps", "Orange_passes")
 
         prologue = add_team(prologue, ath_ids)
         
@@ -62,6 +63,7 @@ def get_ids(gsheets):
         save_csv(prologue, prologue_path)
         save_csv(pts, pts_path)
         save_csv(handicaps, handicaps_path)
+        save_csv(orange_pass, orange_pass_path)
 
     else:
         stages = load_csv(stage_path)
@@ -69,7 +71,8 @@ def get_ids(gsheets):
         prologue = load_csv(prologue_path)
         pts = load_csv(pts_path)
         handicaps = load_csv(handicaps_path)
+        orange_pass = load_csv(orange_pass_path)
 
     handicaps[['True Weight', 'Race Weight']] = handicaps[['True Weight', 'Race Weight']].apply(pd.to_numeric, errors='coerce')
 
-    return stages, ath_ids, prologue, pts, handicaps
+    return stages, ath_ids, prologue, pts, handicaps, orange_pass

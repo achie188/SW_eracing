@@ -26,7 +26,7 @@ location = os.getcwd()
 
 
 #Get ids
-stages, ath_ids, prologue, pts, handicaps = get_ids("Yes")
+stages, ath_ids, prologue, pts, handicaps, orange_pass = get_ids("Yes")
 
 stage_values = ['Stage_1', 'Stage_2', 'Stage_3', 'Stage_4', 'Stage_5', 'Stage_6']
 zwift_ids = get_zwift_ids(stage_values, stages)
@@ -49,7 +49,7 @@ s6, orange_df = get_stage(zwift_ids[5], "Stage_6", ath_ids, "No", orange_df)
 
 #Calc points
 ind_pts, team_pts, kom_pts, sprinter_pts = calc_overall_pts(prologue, s1, s2, s3, s4, s5, s6)
-orange_df = calc_overall_orange(prologue, s1, s2, s3, s4, s5, s6, stages_complete)
+orange_df = calc_overall_orange(prologue, s1, s2, s3, s4, s5, s6, stages_complete, orange_pass)
 
 
 #Final formatting

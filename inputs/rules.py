@@ -127,7 +127,7 @@ def rules():
     - (i) the same time as the second slowest rider in their team; and 
     - (ii) 90s slower than the rider who finishes first in that race. 
 
-    11.8. If a rider uses an Orange Pass, they will not receive any Orange Jeresy points for that week, except for the final week, in which case that rider will receive points 
+    11.8. If a rider uses an Orange Pass, they will not receive any Orange Jersey points for that week, except for the final week, in which case that rider will receive points 
     for their final finishing position (if they so qualify).
     '''     
 

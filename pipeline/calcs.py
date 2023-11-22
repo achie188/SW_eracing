@@ -2,6 +2,9 @@ import pandas as pd
 import numpy as np
 import os
 import time
+import sys
+
+sys.path.append('/Users/achie188/Library/CloudStorage/GitHub/Personal/SW_eracing')
 
 from inputs.pull_gsheet import pull_gsheet, push_gsheet
 from inputs.pull_zwift import pull_zwift
@@ -36,8 +39,8 @@ def replace_zeros(column):
 
     # Apply replacement value based on conditions
     fastest_time = np.nanmin(column_numeric)
-    slowest_time = np.nanmax(column_numeric)
-    replacement_value = max(fastest_time + 300, slowest_time + 30)
+    team_time = np.nanmax(column_numeric)
+    replacement_value = max(fastest_time + 90, slowest_time + 30)
     
     return np.where(np.isnan(column_numeric), replacement_value, column_numeric)
 
@@ -236,7 +239,7 @@ def calc_overall_pts(pro, s1, s2, s3, s4, s5, s6):
     return ind_df, team_df, kom_df, sprinter_df
 
 
-def calc_overall_orange(pro, s1, s2, s3, s4, s5, s6, columns_to_replace):
+def calc_overall_orange(pro, s1, s2, s3, s4, s5, s6, columns_to_replace, orange_pass):
 
     all_dataframes = [
         process_dataframe(pro, 'Prologue'),
@@ -255,10 +258,28 @@ def calc_overall_orange(pro, s1, s2, s3, s4, s5, s6, columns_to_replace):
     # calc times
     orange_df = combined_df.pivot_table(index='Name', columns='Stage', values='Time_secs', aggfunc='sum', fill_value=0)
     orange_df = orange_df.reset_index()
+
+    # merge with orange pass
+    orange_pass.columns = [col.replace('_', ' ') for col in orange_pass.columns]
+    columns_to_keep = ['Name'] + columns_to_replace
+    orange_pass = orange_pass[columns_to_keep]
+
+    orange_pass[columns_to_replace] = orange_pass[columns_to_replace].apply(pd.to_numeric, errors='coerce')
+    orange_pass[columns_to_replace] = orange_pass[columns_to_replace].fillna(0)
+
+    orange_df = pd.merge(orange_df, orange_pass, on='Name', how='outer', suffixes=('_df1', '_df2'))
+
+    for column in columns_to_replace:
+        orange_df[column] = orange_df[[column + '_df1', column + '_df2']].max(axis=1)
+
+    columns_to_drop = [column + '_df1' for column in columns_to_replace] + [column + '_df2' for column in columns_to_replace]
+    orange_df.drop(columns=columns_to_drop, inplace=True)
+
     numeric_columns = orange_df.select_dtypes(include=[np.number]).columns
+
     orange_df['Time_secs'] = orange_df[numeric_columns].sum(axis=1)
 
-    orange_df[columns_to_replace] = orange_df[columns_to_replace].apply(replace_zeros, axis=0)
+    orange_df = orange_df[~(orange_df[columns_to_replace] == 0).any(axis=1)]
 
     orange_df['Total'] = orange_df[columns_to_replace].sum(axis=1)
 

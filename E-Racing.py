@@ -59,7 +59,7 @@ columns_to_drop = ['Orange_x', 'Total', 'KOM', 'Int. S', 'DS/DC', 'Report', 'MAR
 orange_final = orange_final.drop(columns=columns_to_drop)
 orange_final = orange_final.rename(columns={'Orange_y': 'Orange'})
 push_gsheet(orange_final, "Stage_3")
-stage_res = pull_gsheet("Stage_3")
+s3 = pull_gsheet("Stage_3")
 
 
 #Calc points

@@ -93,7 +93,7 @@ st.set_page_config(
     layout="wide"
 )
 
-#st_autorefresh(refresh_interval*1000, limit=1000)
+st_autorefresh(refresh_interval*1000, limit=1000)
 
 st.markdown("""
         <style>

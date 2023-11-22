@@ -107,10 +107,10 @@ def get_stage(stage, stage_num, ath_ids, gsheet="No", orange_df=prologue):
 
             if gsheet == 'Yes':
                 f_df = format_results(df, ath_ids)
-                f_df_o, orange_df = orange(orange_df, f_df)
+                # f_df_o, orange_df = orange(orange_df, f_df)
                 f_df_pts = calc_points(f_df, stage_num, pts)
-                f_df_o_pts = pd.merge(f_df_pts, f_df_o, left_on='Name', right_on='Name', how='inner')
-                push_gsheet(f_df_o_pts, stage_num)
+                # f_df_o_pts = pd.merge(f_df_pts, f_df_o, left_on='Name', right_on='Name', how='inner')
+                push_gsheet(f_df_pts, stage_num)
                 stage_res = pull_gsheet(stage_num)
 
                 columns_to_process = ['KOM', 'Int. S', 'DS/DC', 'Report', 'MAR']

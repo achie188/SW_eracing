@@ -8,6 +8,7 @@ from PIL import Image
 sys.path.append('/Users/achie188/Library/CloudStorage/GitHub/Personal/SW_eracing')
 
 from inputs.pull_zwift import pull_zwift
+from inputs.pull_gsheet import pull_gsheet, push_gsheet
 from inputs.helpers import get_ids
 from inputs.rules import rules
 from inputs.press_releases import press_releases
@@ -47,9 +48,25 @@ s5, orange_df = get_stage(zwift_ids[4], "Stage_5", ath_ids, "No", orange_df)
 s6, orange_df = get_stage(zwift_ids[5], "Stage_6", ath_ids, "No", orange_df)
 
 
+
+#Orange Jersey
+orange_df = calc_overall_orange(prologue, s1, s2, s3, s4, s5, s6, stages_complete, orange_pass)
+orange_pts = pd.merge(orange_df, pts, left_on='#', right_on='#', how='inner')
+orange_pts2 = pd.merge(orange_df, orange_pts, left_on='Name', right_on='Name', how='outer')
+orange = orange_pts2[['Name', 'Orange']]
+orange_final = pd.merge(s3, orange[['Name', 'Orange']], on='Name', how='outer')
+columns_to_drop = ['Orange_x', 'Total', 'KOM', 'Int. S', 'DS/DC', 'Report', 'MAR', 'Par.', 'Stage']
+orange_final = orange_final.drop(columns=columns_to_drop)
+orange_final = orange_final.rename(columns={'Orange_y': 'Orange'})
+push_gsheet(orange_final, "Stage_3")
+stage_res = pull_gsheet("Stage_3")
+
+
 #Calc points
 ind_pts, team_pts, kom_pts, sprinter_pts = calc_overall_pts(prologue, s1, s2, s3, s4, s5, s6)
-orange_df = calc_overall_orange(prologue, s1, s2, s3, s4, s5, s6, stages_complete, orange_pass)
+
+
+
 
 
 #Final formatting

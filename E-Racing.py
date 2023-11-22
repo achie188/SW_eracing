@@ -316,7 +316,7 @@ with tab2:
 
         with col1:
             st.subheader('Stage 3 Results')
-            st.dataframe(s3, height = int(35.2*(s3.shape[0]+1)), hide_index=True)
+            #st.dataframe(s3, height = int(35.2*(s3.shape[0]+1)), hide_index=True)
 
         with col2:
             st.subheader('Race Reports')

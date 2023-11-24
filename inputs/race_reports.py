@@ -192,7 +192,7 @@ def race_reports():
 
     "SUSAN!?"
 
-    "It's Wetbeak Mr Lego Batman Sir. He is currently 8th in the Championship."
+    "It's Wetbeak Mr Lego Batman Sir. He's the missing Team Captain. He is currently 8th in the Championship."
 
     "8th. Fucking 8th. What is the fucking point in investing millions into a corrupt event if we pick the only straight shooter in the whole fucking gig?!"
 

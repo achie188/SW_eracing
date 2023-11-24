@@ -42,7 +42,7 @@ s1_azt, s1_tesla, s2_tesla, s2_abs, s2_azt, s3_tesla = race_reports()
 #Get stage data
 s1, orange_df = get_stage(zwift_ids[0], "Stage_1", ath_ids, "No")
 s2, orange_df = get_stage(zwift_ids[1], "Stage_2", ath_ids, "No", orange_df)
-s3, orange_df = get_stage(zwift_ids[2], "Stage_3", ath_ids, "No", orange_df)
+s3, orange_df = get_stage(zwift_ids[2], "Stage_3", ath_ids, "Yes", orange_df)
 s4, orange_df = get_stage(zwift_ids[3], "Stage_4", ath_ids, "No", orange_df)
 s5, orange_df = get_stage(zwift_ids[4], "Stage_5", ath_ids, "No", orange_df)
 s6, orange_df = get_stage(zwift_ids[5], "Stage_6", ath_ids, "No", orange_df)
@@ -52,16 +52,16 @@ s6, orange_df = get_stage(zwift_ids[5], "Stage_6", ath_ids, "No", orange_df)
 #Orange Jersey
 orange_df = calc_overall_orange(prologue, s1, s2, s3, s4, s5, s6, stages_complete, orange_pass)
 
-orange_pts = pd.merge(orange_df, pts, left_on='#', right_on='#', how='inner')
-orange_pts2 = pd.merge(orange_df, orange_pts, left_on='Name', right_on='Name', how='outer')
-orange = orange_pts2[['Name', 'Orange']]
-orange_final = pd.merge(s3, orange[['Name', 'Orange']], on='Name', how='left')
-columns_to_drop = ['Orange_x', 'Total', 'KOM', 'Int. S', 'DS/DC', 'Report', 'MAR', 'Par.', 'Stage']
-orange_final = orange_final.drop(columns=columns_to_drop)
-orange_final = orange_final.rename(columns={'Orange_y': 'Orange'})
+# orange_pts = pd.merge(orange_df, pts, left_on='#', right_on='#', how='inner')
+# orange_pts2 = pd.merge(orange_df, orange_pts, left_on='Name', right_on='Name', how='outer')
+# orange = orange_pts2[['Name', 'Orange']]
+# orange_final = pd.merge(s3, orange[['Name', 'Orange']], on='Name', how='left')
+# columns_to_drop = ['Orange_x', 'Total', 'KOM', 'Int. S', 'DS/DC', 'Report', 'MAR', 'Par.', 'Stage']
+# orange_final = orange_final.drop(columns=columns_to_drop)
+# orange_final = orange_final.rename(columns={'Orange_y': 'Orange'})
 
-push_gsheet(orange_final, "Stage_3")
-s3 = pull_gsheet("Stage_3")
+# push_gsheet(orange_final, "Stage_3")
+# s3 = pull_gsheet("Stage_3")
 
 
 #Calc points

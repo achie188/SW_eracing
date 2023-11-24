@@ -75,7 +75,13 @@ def orange(orange_df, new_stage):
     orange_df = df[['Name', 'Total']]
     orange_df = orange_df.rename(columns={'Total' : 'Time_secs'})
 
+    df = df.rename(columns={'Orange_y': 'Orange'})
+
+    if 'Orange_x' in df.columns:
+        df.drop(columns=['Orange_x'], inplace=True)
+        df = df.rename(columns={'Orange_y': 'Orange'})
     df = df[['Name', 'Orange']]
+    
 
     return df, orange_df
 
@@ -107,10 +113,10 @@ def get_stage(stage, stage_num, ath_ids, gsheet="No", orange_df=prologue):
 
             if gsheet == 'Yes':
                 f_df = format_results(df, ath_ids)
-                #f_df_o, orange_df = orange(orange_df, f_df)
+                f_df_o, orange_df = orange(orange_df, f_df)
                 f_df_pts = calc_points(f_df, stage_num, pts)
-                #f_df_o_pts = pd.merge(f_df_pts, f_df_o, left_on='Name', right_on='Name', how='inner')
-                push_gsheet(f_df_pts, stage_num)
+                f_df_o_pts = pd.merge(f_df_pts, f_df_o, left_on='Name', right_on='Name', how='inner')
+                push_gsheet(f_df_o_pts, stage_num)
                 stage_res = pull_gsheet(stage_num)
 
                 columns_to_process = ['KOM', 'Int. S', 'DS/DC', 'Report', 'MAR']
@@ -124,9 +130,9 @@ def get_stage(stage, stage_num, ath_ids, gsheet="No", orange_df=prologue):
                 save_csv(stage_res, path )
             else:
                 stage_res = load_csv(path)
-            
+                f_df_o, orange_df = orange(orange_df, stage_res)
 
-
+        
     return stage_res, orange_df
 
 

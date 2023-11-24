@@ -198,9 +198,9 @@ def race_reports():
 
     I didn't answer. It seemed like a rhetorical question. Lego Harry Potter spoke next.
 
-    "George Humphreys submits race reports before the events have even happened. Teo Lopez spends more time negotiating his weight handicap that looking after his own child. We have video survelliance from inside his own house of him nearly killing 
-    the baby whilst attempting to get ready for this weeks race whilst his wife was away. We are considering leaking this at some stage to his close family. But this is for us to 
-    deal with. Wetbeak, we expect more from you in future races. As Team Captain the buck stops with you."
+    "George Humphreys submits race reports before the events have even happened. Teo Lopez spends more time negotiating his weight handicap that looking after his own child. We have
+    video survelliance from inside his own house of him nearly killing the baby whilst attempting to get ready for this weeks race whilst his wife was away. We are considering 
+    leaking this at some stage to his close family. But this is for us to deal with. Wetbeak, we expect more from you in future races. As Team Captain the buck stops with you."
     
     The P&O ogre still didn’t stir. 
 

@@ -217,9 +217,10 @@ def race_reports():
     A silence floated around the room like a released balloon blowing gently on the wind. Until Lego Harry Potter popped it. 
 
     “Let me be clear, Wetbeak. We don’t pay for second place. And right now, you and your team are in second place.  I suggest you go away, and think of some plan as to how 
-    you’re going to defeat these Amazonians, these AstraZenecas, these Teslas, and all the mercenaries they can muster. We don’t care how you do it. Just get it done. Or else” 
+    you’re going to defeat these Amazonians, these AstraZenecas, these Teslas, and all the mercenaries they can muster. We don’t care how you do it. Just get it done. Or else. We
+    know where you live.” 
 
-    And at that, the Lego men got up, and walked away (not before turning their heads back around now, so their stern faces could continue to look at me as they left the room.).
+    And at that, the Lego men got up, and walked away (not before turning their heads back around now, so their stern faces could continue to look at me as they left the room).
     
     I sat, contemplating the meeting for a while. And smiled. I had a plan ...'''
 

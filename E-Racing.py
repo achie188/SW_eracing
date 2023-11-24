@@ -341,7 +341,7 @@ with tab2:
             st.subheader('Race Reports')
             with st.expander("Team Tesla - George Humphreys"):
                 st.markdown(s3_tesla)
-            with st.expander("Lego Boots P&O debrief meeting with sponsors - Ed Humphreys"):
+            with st.expander("Team Lego Boots P&O debrief meeting with sponsors - Ed Humphreys"):
                 st.markdown(s3_lego)
 
     with tab25:

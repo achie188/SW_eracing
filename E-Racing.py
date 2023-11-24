@@ -59,6 +59,7 @@ orange_final = pd.merge(s3, orange[['Name', 'Orange']], on='Name', how='left')
 columns_to_drop = ['Orange_x', 'Total', 'KOM', 'Int. S', 'DS/DC', 'Report', 'MAR', 'Par.', 'Stage']
 orange_final = orange_final.drop(columns=columns_to_drop)
 orange_final = orange_final.rename(columns={'Orange_y': 'Orange'})
+
 push_gsheet(orange_final, "Stage_3")
 s3 = pull_gsheet("Stage_3")
 

@@ -41,7 +41,7 @@ def replace_zeros(column):
     fastest_time = np.nanmin(column_numeric)
     slowest_time = np.nanmax(column_numeric)
     team_time = np.nanmax(column_numeric)
-    replacement_value = max(fastest_time + 90, slowest_time + 30)
+    replacement_value = max(fastest_time + 300, slowest_time + 30)
     
     return np.where(np.isnan(column_numeric), replacement_value, column_numeric)
 
@@ -107,9 +107,9 @@ def get_stage(stage, stage_num, ath_ids, gsheet="No", orange_df=prologue):
 
             if gsheet == 'Yes':
                 f_df = format_results(df, ath_ids)
-                # f_df_o, orange_df = orange(orange_df, f_df)
+                #f_df_o, orange_df = orange(orange_df, f_df)
                 f_df_pts = calc_points(f_df, stage_num, pts)
-                # f_df_o_pts = pd.merge(f_df_pts, f_df_o, left_on='Name', right_on='Name', how='inner')
+                #f_df_o_pts = pd.merge(f_df_pts, f_df_o, left_on='Name', right_on='Name', how='inner')
                 push_gsheet(f_df_pts, stage_num)
                 stage_res = pull_gsheet(stage_num)
 
@@ -260,18 +260,20 @@ def calc_overall_orange(pro, s1, s2, s3, s4, s5, s6, columns_to_replace, orange_
     orange_df = combined_df.pivot_table(index='Name', columns='Stage', values='Time_secs', aggfunc='sum', fill_value=0)
     orange_df = orange_df.reset_index()
 
+    orange_df[columns_to_replace] = orange_df[columns_to_replace].apply(replace_zeros, axis=0)
+
     # merge with orange pass
     orange_pass.columns = [col.replace('_', ' ') for col in orange_pass.columns]
     columns_to_keep = ['Name'] + columns_to_replace
     orange_pass = orange_pass[columns_to_keep]
 
     orange_pass[columns_to_replace] = orange_pass[columns_to_replace].apply(pd.to_numeric, errors='coerce')
-    orange_pass[columns_to_replace] = orange_pass[columns_to_replace].fillna(0)
+    orange_pass[columns_to_replace] = orange_pass[columns_to_replace].fillna(1000000)
 
     orange_df = pd.merge(orange_df, orange_pass, on='Name', how='outer', suffixes=('_df1', '_df2'))
 
     for column in columns_to_replace:
-        orange_df[column] = orange_df[[column + '_df1', column + '_df2']].max(axis=1)
+        orange_df[column] = orange_df[[column + '_df1', column + '_df2']].min(axis=1)
 
     columns_to_drop = [column + '_df1' for column in columns_to_replace] + [column + '_df2' for column in columns_to_replace]
     orange_df.drop(columns=columns_to_drop, inplace=True)

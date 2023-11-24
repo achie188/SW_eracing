@@ -137,5 +137,72 @@ def race_reports():
     Onto next week!
     '''   
 
+    s3_lego = '''
+    Notes from Lego Boots P&O debrief meeting with sponsors.
 
-    return s1_azt, s1_tesla, s2_tesla, s2_abs, s2_azt, s3_tesla
+    I was sat at the head of the table, but it didn’t feel like an honour. On the left flank sat the Boots executives: bespectacled, overweight, spotty and nervously 
+    smirking. On the right flank sat an enormous man in his late 40s.  He was in a fading blue suit, with sweat patches under the arms. He smelt abominable. And he was 
+    fast asleep. He was, of course, the CEO of P&O Ferries. 
+
+    Sat opposite me at the far end of the table sat Lego Batman. With Lego Ironman on his right and Lego Harry Potter on his left. The Lego men were not smiling. They 
+    never were. Whenever I met them, they always made sure their smiling faces were turned around facing backwards, so all I would ever see were their stern, frowning 
+    aces on the other side of their heads. 
+
+    Lego Batman stared at me for the longest of times, but it was Lego Harry Potter that spoke first.  
+
+    “So what the fucking fuck happened?”
+
+    “Well … I … thought it went rather well” I stammered. 
+
+    “We’re not paying for ‘rather well’” growled Lego Ironman. 
+
+    I ignored this, and carried on with my debrief. “Well it started well enough. We had someone in the break, and it looked like Tesla couldn’t give a toss whether it 
+    was brought back or not. To be honest, we thought Lizzy might make it all the way”
+
+    Lego Batman stood up at this point and screamed. “BUT SHE DIDN’T FUCKING MAKE IT DID SHE.” I hadn’t realised before quite how high pitched Lego Batman’s voice was. 
+    And how loud as well.
+
+    “FUCKING LAYTON DID. DIDN’T HE’” 
+
+    I was determined to stand up for me and my team. “Well, to be frank, sir,”
+
+    “CALL ME LEGO BATMAN SIR”
+
+    “Sorry. Well to be frank, Lego Batman Sir, we are fairly suspicious about the equipment that Layton is using. To be able to solo off to victory like that. Surely he’s 
+    got a motor in that bike somewhere.” 
+
+    There was a spluttering cough from somewhere. One of the Boots directors was shuffling papers, whilst another was vigorously flipping through massive sheets of graphs 
+    and numbers. Then a grunting sound manifested into a human voice. It was Susan, who had been placed in charge of the Boots investment in the team. “Be that as it may, and
+    investigations are continuing around that. We are monitoring the team captains extremely closely. George Dix is a suspicious character, clearly dodgy as fuck and would do anything 
+    to win. Mr Lopez spends more time negotiating his weight handicap that looking after his own child. We are working on flipping some informants in other teams and hope to be able
+    to take evidence to the SW Arbitration Council soon and enforce some penalties.” She continued, “But Andy Layton and his impressive equipment aside, you still didn’t finish on 
+    the podium did you?” 
+
+    A pause. 
+
+    “Not on the podium.  Not even in the top 5 …” 
+    
+    Lego Batman started repeatedly hammering on the table at this point. He hammered so hard his hand popped right off, and Lego Harry Potter had to scuttle off the corner 
+    of the room to retrieve it. 
+
+    The P&O ogre didn’t stir. 
+
+    My will was breaking, but I kept up my defences. “Well that may be the case, but Monky kept his Orange Jersey, despite missing out on the key break. And when the split 
+    happened, we actually had 4 riders on the good side of it, so at that stage we were feeling pretty good and things. And Bill Smith came in 6th in the end, and picked up 
+    all sorts of goodies in the intermediates.”
+
+    The mention of Bill awakened the repulsive P&O man. “Blarrgh.” He blurted, with a healthy amount of saliva overflowing down his chin. “Bloody good ride from Bill wasn’t 
+    it? Bloody good rider that Bill. Bloody good.” He fell fast asleep again. 
+
+    I felt I was softening up the Lego men now, so I continued. “And we didn’t know the other teams were bringing in some hired guns. Those Greenish brothers are wild animals, 
+    and Coote is clearly a hired thug. And where the fucking hell has this one called The Crow come from?!”
+
+    A silence floated around the room like a released balloon blowing gently on the wind. Until Lego Harry Potter popped it. 
+
+    “Let me be clear, Wetbeak. We don’t pay for second place. And right now, you and your team are in second place.  I suggest you go away, and think of some plan as to how 
+    you’re going to defeat these Amazonians, these AstraZenecas, these Teslas, and all the mercenaries they can muster. We don’t care how you do it. Just get it done. Or else” 
+
+    And at that, the Lego men got up, and walked away (not before turning their heads back around now, so their stern faces could continue to look at me as they left the room.).'''
+
+
+    return s1_azt, s1_tesla, s2_tesla, s2_abs, s2_azt, s3_tesla, s3_lego

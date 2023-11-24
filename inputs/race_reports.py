@@ -172,10 +172,11 @@ def race_reports():
     got a motor in that bike somewhere.” 
 
     There was a spluttering cough from somewhere. One of the Boots directors was shuffling papers, whilst another was vigorously flipping through massive sheets of graphs 
-    and numbers. Then a grunting sound manifested into a human voice. It was Susan, who had been placed in charge of the Boots investment in the team. “Be that as it may, and
-    investigations are continuing around that. We are monitoring the team captains extremely closely. George Dix is a suspicious character, clearly dodgy as fuck and would do anything 
-    to win. Mr Lopez spends more time negotiating his weight handicap that looking after his own child. We are working on flipping some informants in other teams and hope to be able
-    to take evidence to the SW Arbitration Council soon and enforce some penalties.” 
+    and numbers. Then a grunting sound manifested into a human voice. It was Susan, who had been placed in charge of the Boots investment in the team. 
+    
+    “Be that as it may, and investigations are continuing around that. We are monitoring the Team Captains extremely closely. George Dix is a suspicious character, clearly dodgy as 
+    fuck and will do anything to win. We are working on flipping some informants in other teams and hope to be able to take evidence to the SW Arbitration Council soon and enforce 
+    some penalties.” 
     
     She continued, “But Andy Layton and his impressive equipment aside, you still didn’t finish on the podium did you?” 
 
@@ -186,7 +187,24 @@ def race_reports():
     Lego Batman started repeatedly hammering on the table at this point. He hammered so hard his hand popped right off, and Lego Harry Potter had to scuttle off the corner 
     of the room to retrieve it. 
 
-    The P&O ogre didn’t stir. 
+    "Why do you think we sponsored a team in this event? This race is CLEARLY corrupt and ripe for opportunities. 3 of the 4 Team Captains are the top scoring individuals across the
+    series for fuck's sake. And where are you Wetbeak?"
+
+    "I don't have that information to hand Mr Lego Batman Sir."
+
+    "SUSAN!?"
+
+    "Wetbeak is currently 8th in the Championship Mr Lego Batman Sir."
+
+    "8th. Fucking 8th. What is the fucking point in investing millions into a corrupt event if we pick the only straight shooter in the whole fucking gig?!"
+
+    I didn't answer. It seemed like a rhetorical question. Lego Harry Potter spoke next.
+
+    "Teo Lopez spends more time negotiating his weight handicap that looking after his own child. We have video survelliance from inside his own house of him nearly killing 
+    the baby whilst attempting to get ready for this weeks race whilst his wife was away. We are considering leaking this at some stage to his close family. But this is for us to 
+    deal with. Wetbeak, we expect more from you in future races. As Team Captain the buck stops with you."
+    
+    The P&O ogre still didn’t stir. 
 
     My will was breaking, but I kept up my defences. “Well that may be the case, but Monky kept his Orange Jersey, despite missing out on the key break. And when the split 
     happened, we actually had 4 riders on the good side of it, so at that stage we were feeling pretty good and things. And Bill Smith came in 6th in the end, and picked up 

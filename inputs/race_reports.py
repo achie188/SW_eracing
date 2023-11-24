@@ -168,15 +168,16 @@ def race_reports():
 
     “CALL ME LEGO BATMAN SIR”
 
-    “Sorry. Well to be frank, Lego Batman Sir, we are fairly suspicious about the equipment that Layton is using. To be able to solo off to victory like that. Surely he’s 
+    “Sorry. Well to be frank, Mr Lego Batman Sir, we are fairly suspicious about the equipment that Layton is using. To be able to solo off to victory like that. Surely he’s 
     got a motor in that bike somewhere.” 
 
     There was a spluttering cough from somewhere. One of the Boots directors was shuffling papers, whilst another was vigorously flipping through massive sheets of graphs 
     and numbers. Then a grunting sound manifested into a human voice. It was Susan, who had been placed in charge of the Boots investment in the team. “Be that as it may, and
     investigations are continuing around that. We are monitoring the team captains extremely closely. George Dix is a suspicious character, clearly dodgy as fuck and would do anything 
     to win. Mr Lopez spends more time negotiating his weight handicap that looking after his own child. We are working on flipping some informants in other teams and hope to be able
-    to take evidence to the SW Arbitration Council soon and enforce some penalties.” She continued, “But Andy Layton and his impressive equipment aside, you still didn’t finish on 
-    the podium did you?” 
+    to take evidence to the SW Arbitration Council soon and enforce some penalties.” 
+    
+    She continued, “But Andy Layton and his impressive equipment aside, you still didn’t finish on the podium did you?” 
 
     A pause. 
 

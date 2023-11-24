@@ -138,8 +138,6 @@ def race_reports():
     '''   
 
     s3_lego = '''
-    Notes from Lego Boots P&O debrief meeting with sponsors.
-
     I was sat at the head of the table, but it didn’t feel like an honour. On the left flank sat the Boots executives: bespectacled, overweight, spotty and nervously 
     smirking. On the right flank sat an enormous man in his late 40s.  He was in a fading blue suit, with sweat patches under the arms. He smelt abominable. And he was 
     fast asleep. He was, of course, the CEO of P&O Ferries. 

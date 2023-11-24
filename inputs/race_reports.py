@@ -180,7 +180,7 @@ def race_reports():
 
     A pause. 
 
-    “Not on the podium.  Not even in the top 5 …” 
+    “Not on the podium.  Not even, in fact, in the top 5 …” 
     
     Lego Batman started repeatedly hammering on the table at this point. He hammered so hard his hand popped right off, and Lego Harry Potter had to scuttle off the corner 
     of the room to retrieve it. 

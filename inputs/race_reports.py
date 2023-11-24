@@ -185,14 +185,14 @@ def race_reports():
     Lego Batman started repeatedly hammering on the table at this point. He hammered so hard his hand popped right off, and Lego Harry Potter had to scuttle off the corner 
     of the room to retrieve it. 
 
-    "Why do you think we sponsored a team in this event? This race is CLEARLY corrupt and ripe for opportunities. 3 of the 4 Team Captains are the top scoring individuals across the
-    series for fuck's sake. And where are you Wetbeak?"
+    "Why do you think we sponsored a team in this event? This race is CLEARLY corrupt and ripe for opportunities. 3 of the Team Captains are the top scoring individuals across the
+    series for fuck's sake. It's worse than the Conservative Government. But Wetbeak, who do you think the only Captain missing is? I'll let you guess."
 
     "I don't have that information to hand Mr Lego Batman Sir."
 
     "SUSAN!?"
 
-    "Wetbeak is currently 8th in the Championship Mr Lego Batman Sir."
+    "It's Wetbeak Mr Lego Batman Sir. He is currently 8th in the Championship."
 
     "8th. Fucking 8th. What is the fucking point in investing millions into a corrupt event if we pick the only straight shooter in the whole fucking gig?!"
 

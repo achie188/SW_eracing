@@ -277,93 +277,93 @@ with tab1:
                                                 ######### RESULTS TAB #########
                                                 ###############################
 
-# with tab2:
-#     tab21, tab22, tab23, tab24, tab25, tab26, tab27 = st.tabs(["Prologue", "Stage 1", "Stage 2", "Stage 3", "TTT", "Stage 4", "Stage 5"])
+with tab2:
+    tab21, tab22, tab23, tab24, tab25, tab26, tab27 = st.tabs(["Prologue", "Stage 1", "Stage 2", "Stage 3", "TTT", "Stage 4", "Stage 5"])
 
-#     with tab21:
-#         col1, col2 = st.columns([3,5])
+    with tab21:
+        col1, col2 = st.columns([3,5])
         
-#         with col1:
-#             st.subheader('Prologue Results')
-#             st.dataframe(prologue, height = int(35.2*(prologue.shape[0]+1)), hide_index=True)
+        with col1:
+            st.subheader('Prologue Results')
+            st.dataframe(prologue, height = int(35.2*(prologue.shape[0]+1)), hide_index=True)
 
-#         with col2:
-#             st.subheader('Relevant Rules')
-#             with st.expander("1. Overview"):
-#                 st.markdown(r1)
-#             with st.expander("3. Breakaways"):
-#                 st.markdown(r3)
-#             with st.expander("4. Designated Sprinter/Climber"):
-#                 st.markdown(r4)
-#             with st.expander("12. Quibbling"):
-#                 st.markdown(r12)       
-#             with st.expander("13. Director’s Decision"):
-#                 st.markdown(r13)
+        with col2:
+            st.subheader('Relevant Rules')
+            with st.expander("1. Overview"):
+                st.markdown(r1)
+            with st.expander("3. Breakaways"):
+                st.markdown(r3)
+            with st.expander("4. Designated Sprinter/Climber"):
+                st.markdown(r4)
+            with st.expander("12. Quibbling"):
+                st.markdown(r12)       
+            with st.expander("13. Director’s Decision"):
+                st.markdown(r13)
 
-#     with tab22:
-#         col1, col2 = st.columns([5,3])
+    with tab22:
+        col1, col2 = st.columns([5,3])
 
-#         with col1:
-#             st.subheader('Stage 1 Results')
-#             st.dataframe(s1, height = int(35.2*(s1.shape[0]+1)), hide_index=True)
+        with col1:
+            st.subheader('Stage 1 Results')
+            st.dataframe(s1, height = int(35.2*(s1.shape[0]+1)), hide_index=True)
 
-#         with col2:
-#             st.subheader('Race Reports')
-#             with st.expander("Team Tesla - George Humphreys"):
-#                 st.markdown(s1_tesla)
-#             with st.expander("Team AstraZenaca - Teo Lopez"):
-#                 st.markdown(s1_azt)
+        with col2:
+            st.subheader('Race Reports')
+            with st.expander("Team Tesla - George Humphreys"):
+                st.markdown(s1_tesla)
+            with st.expander("Team AstraZenaca - Teo Lopez"):
+                st.markdown(s1_azt)
 
-#     with tab23:
-#         col1, col2 = st.columns([5,3])
+    with tab23:
+        col1, col2 = st.columns([5,3])
 
-#         with col1:
-#             st.subheader('Stage 2 Results')
-#             st.dataframe(s2, height = int(35.2*(s2.shape[0]+1)), hide_index=True)
+        with col1:
+            st.subheader('Stage 2 Results')
+            st.dataframe(s2, height = int(35.2*(s2.shape[0]+1)), hide_index=True)
 
-#         with col2:
-#             st.subheader('Race Reports')
-#             with st.expander("Team Tesla - George Humphreys"):
-#                 st.markdown(s2_tesla)
-#             with st.expander("Team ABS - Cameron Graley"):
-#                 st.markdown(s2_abs)
-#             with st.expander("Team AZT - Rich Tyler"):
-#                 st.markdown(s2_azt)
+        with col2:
+            st.subheader('Race Reports')
+            with st.expander("Team Tesla - George Humphreys"):
+                st.markdown(s2_tesla)
+            with st.expander("Team ABS - Cameron Graley"):
+                st.markdown(s2_abs)
+            with st.expander("Team AZT - Rich Tyler"):
+                st.markdown(s2_azt)
 
-#     with tab24:
-#         col1, col2 = st.columns([5,3])
+    with tab24:
+        col1, col2 = st.columns([5,3])
 
-#         with col1:
-#             st.subheader('Stage 3 Results')
-#             st.dataframe(s3, height = int(35.2*(s3.shape[0]+1)), hide_index=True)
+        with col1:
+            st.subheader('Stage 3 Results')
+            st.dataframe(s3, height = int(35.2*(s3.shape[0]+1)), hide_index=True)
 
-#         with col2:
-#             st.subheader('Race Reports')
-#             with st.expander("Team Tesla - George Humphreys"):
-#                 st.markdown(s3_tesla)
-#             with st.expander("Team Lego Boots P&O debrief meeting with sponsors - Ed Humphreys"):
-#                 st.markdown(s3_lego)
+        with col2:
+            st.subheader('Race Reports')
+            with st.expander("Team Tesla - George Humphreys"):
+                st.markdown(s3_tesla)
+            with st.expander("Team Lego Boots P&O debrief meeting with sponsors - Ed Humphreys"):
+                st.markdown(s3_lego)
 
-#     with tab25:
-#         col1, col2 = st.columns([5,3])
+    with tab25:
+        col1, col2 = st.columns([5,3])
 
-#         with col1:
-#             st.subheader('Team Time trial')
-#             # st.dataframe(s4, height = int(35.2*(s4.shape[0]+1)), hide_index=True)
+        with col1:
+            st.subheader('Team Time trial')
+            # st.dataframe(s4, height = int(35.2*(s4.shape[0]+1)), hide_index=True)
 
-#     with tab26:
-#         col1, col2 = st.columns([5,3])
+    with tab26:
+        col1, col2 = st.columns([5,3])
 
-#         with col1:
-#             st.subheader('Stage 4 Results')
-#             # st.dataframe(s4, height = int(35.2*(s4.shape[0]+1)), hide_index=True)
+        with col1:
+            st.subheader('Stage 4 Results')
+            # st.dataframe(s4, height = int(35.2*(s4.shape[0]+1)), hide_index=True)
 
-#     with tab27:
-#         col1, col2 = st.columns([5,3])
+    with tab27:
+        col1, col2 = st.columns([5,3])
 
-#         with col1:
-#             st.subheader('Stage 5 Results')
-#             # st.dataframe(s5, height = int(35.2*(s5.shape[0]+1)), hide_index=True)
+        with col1:
+            st.subheader('Stage 5 Results')
+            # st.dataframe(s5, height = int(35.2*(s5.shape[0]+1)), hide_index=True)
 
 
 

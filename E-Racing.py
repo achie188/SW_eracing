@@ -15,6 +15,7 @@ from inputs.press_releases import press_releases
 from inputs.race_reports import race_reports
 from pipeline.formatting import get_zwift_ids, final_format, teams_slice, format_results, format_mmss
 from pipeline.calcs import get_stage, calc_overall_pts, calc_overall_orange, handicaps_format
+from pipeline.ttt import get_ttt
 
 
 # Manual overrides
@@ -65,42 +66,13 @@ prologue = final_format(prologue)
 s1 = final_format(s1)
 s2 = final_format(s2)
 s3 = final_format(s3)
+ttt_ind, ttt_team = get_ttt
 s4 = final_format(s4)
 s5 = final_format(s5)
 s6 = final_format(s6)
 
 
 #Get live event
-zwift_ids = [3977847, 3977849, 3977853, 3977842]
-teams = ['Tesla', 'Amazon', 'AZT', 'Lego']
-
-dfs = []
-
-for i, team in zip(zwift_ids, teams):
-    df = pull_ttt(i)
-    df['Team'] = team
-    dfs.append(df)
-
-live = pd.concat(dfs, ignore_index=True)
-if not live.empty:
-    live = live.sort_values(by='Time', ascending=True).reset_index(drop=True)
-    live['Pos'] = live.index + 1
-
-    # furthest = live['Distance'].nlargest(4).iloc[-1]
-    # live['Diff'] = furthest - live['Distance']
-
-    
-    live = live[['Pos', 'Team', 'Name', 'Distance', 'W/Kg', 'Time']]
-
-    # Filter the DataFrame to keep only the 4th fastest time from each team
-    team_summary = live.groupby('Team').apply(lambda x: x.nsmallest(4, 'Time')).reset_index(drop=True)
-    team_summary = team_summary.groupby('Team').nth(3).reset_index()
-    team_summary = team_summary.sort_values(by='Time', ascending=True).reset_index(drop=True)
-    team_summary['Pos'] = team_summary.index + 1
-    team_summary = team_summary[['Pos', 'Team', 'Name', 'Distance', 'W/Kg', 'Time']]
-
-    live['Time'] = live['Time'].apply(format_mmss)
-    team_summary['Time'] = team_summary['Time'].apply(format_mmss)
 # if not live.empty:
 #     live = format_results(live, ath_ids)
 #     live.drop(columns=['Time_secs'], inplace=True)
@@ -376,7 +348,15 @@ with tab2:
 
         with col1:
             st.subheader('Team Time trial')
-            # st.dataframe(s4, height = int(35.2*(s4.shape[0]+1)), hide_index=True)
+            st.dataframe(ttt_team, height = int(35.2*(ttt_team.shape[0]+1)), hide_index=True)
+            st.dataframe(ttt_ind, height = int(35.2*(ttt_ind.shape[0]+1)), hide_index=True)
+
+        with col2:
+            st.subheader('Race Reports')
+            with st.expander("Team Tesla - George Humphreys"):
+                st.markdown(s3_tesla)
+            with st.expander("Team Lego Boots P&O debrief meeting with sponsors - Ed Humphreys"):
+                st.markdown(s3_lego)
 
     with tab26:
         col1, col2 = st.columns([5,3])

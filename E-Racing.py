@@ -82,13 +82,19 @@ s6 = final_format(s6)
 
 
 #Get live event
-ttt_tesla = pull_ttt('3960850')
-ttt_abs = pull_ttt('3894781')
-ttt_azt = pull_ttt('3960851')
-ttt_lego = pull_ttt('3966815')
+zwift_ids = [3960850, 3894781, 3960851, 3966815]
+teams = ['Tesla', 'Amazon', 'AZT', 'Lego']
 
-live = pd.concat([ttt_tesla, ttt_abs, ttt_azt, ttt_lego], ignore_index=True)
+dfs = []
+
+for i, team in zip(zwift_ids, teams):
+    df = pull_ttt(i)
+    df['Team'] = team
+    dfs.append(df)
+
+live = pd.concat(dfs, ignore_index=True)
 live = live.sort_values(by='Distance').reset_index(drop=True)
+
 
 # if not live.empty:
 #     live = format_results(live, ath_ids)
@@ -142,8 +148,8 @@ tab1, tab2, tab3, tab4 = st.tabs(["Championship", "All Results", "About", "LIVE 
                                                     ###############################
 
 with tab4:
-    if ttt_tesla is not None and not ttt_tesla.empty:
-        st.dataframe(ttt_tesla, height=2000, hide_index=True)
+    if live is not None and not live.empty:
+        st.dataframe(live, height=2000, hide_index=True)
     else:
         st.write("No live data right now.")
 

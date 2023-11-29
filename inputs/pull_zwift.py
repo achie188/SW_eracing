@@ -57,4 +57,6 @@ def pull_ttt(event_id):
     if not(race_data).empty:
         race_data.drop(columns=['powerOutputInWatts', 'liveTimeGapToLeaderInSeconds', 'speedInKmHours', 'powerupUsed', 'jerseyHash', 'location', 'countryCodeAlpha2Code', 'crossingStartingLineGap', 'rideOnsCounter', 'arrivalAtInSeconds', 'groupNumber'], inplace=True)
 
+    race_data = race_data.rename(columns={'distanceInMeters': 'Distance'}).round(1)
+
     return race_data

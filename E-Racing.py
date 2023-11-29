@@ -7,7 +7,6 @@ from PIL import Image
 
 sys.path.append('/Users/achie188/Library/CloudStorage/GitHub/Personal/SW_eracing')
 
-from inputs.pull_zwift import pull_zwift, pull_ttt
 from inputs.pull_gsheet import pull_gsheet, push_gsheet
 from inputs.helpers import get_ids
 from inputs.rules import rules
@@ -15,7 +14,7 @@ from inputs.press_releases import press_releases
 from inputs.race_reports import race_reports
 from pipeline.formatting import get_zwift_ids, final_format, teams_slice, format_results, format_mmss
 from pipeline.calcs import get_stage, calc_overall_pts, calc_overall_orange, handicaps_format
-from pipeline.ttt import get_ttt
+from pipeline.ttt import sort_ttt
 
 
 # Manual overrides
@@ -44,6 +43,9 @@ s1_azt, s1_tesla, s2_tesla, s2_abs, s2_azt, s3_tesla, s3_lego = race_reports()
 s1, orange_df = get_stage(zwift_ids[0], "Stage_1", ath_ids, "No")
 s2, orange_df = get_stage(zwift_ids[1], "Stage_2", ath_ids, "No", orange_df)
 s3, orange_df = get_stage(zwift_ids[2], "Stage_3", ath_ids, "No", orange_df)
+
+ttt_ind, ttt_team, orange_df = sort_ttt(orange_df, ath_ids, "Yes")
+
 s4, orange_df = get_stage(zwift_ids[3], "Stage_4", ath_ids, "No", orange_df)
 s5, orange_df = get_stage(zwift_ids[4], "Stage_5", ath_ids, "No", orange_df)
 s6, orange_df = get_stage(zwift_ids[5], "Stage_6", ath_ids, "No", orange_df)
@@ -66,7 +68,9 @@ prologue = final_format(prologue)
 s1 = final_format(s1)
 s2 = final_format(s2)
 s3 = final_format(s3)
-ttt_ind, ttt_team = get_ttt()
+
+ttt = final_format(ttt_ind)
+
 s4 = final_format(s4)
 s5 = final_format(s5)
 s6 = final_format(s6)
@@ -349,14 +353,14 @@ with tab2:
         with col1:
             st.subheader('Team Time trial')
             st.dataframe(ttt_team, height = int(35.2*(ttt_team.shape[0]+1)), hide_index=True)
-            st.dataframe(ttt_ind, height = int(35.2*(ttt_ind.shape[0]+1)), hide_index=True)
+            st.dataframe(ttt, height = int(35.2*(ttt_ind.shape[0]+1)), hide_index=True)
 
         with col2:
             st.subheader('Race Reports')
-            with st.expander("Team Tesla - George Humphreys"):
-                st.markdown(s3_tesla)
-            with st.expander("Team Lego Boots P&O debrief meeting with sponsors - Ed Humphreys"):
-                st.markdown(s3_lego)
+            # with st.expander("Team Tesla - George Humphreys"):
+            #     st.markdown(s3_tesla)
+            # with st.expander("Team Lego Boots P&O debrief meeting with sponsors - Ed Humphreys"):
+            #     st.markdown(s3_lego)
 
     with tab26:
         col1, col2 = st.columns([5,3])

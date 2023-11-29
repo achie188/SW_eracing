@@ -18,7 +18,7 @@ from pipeline.ttt import sort_ttt
 
 
 # Manual overrides
-refresh_interval = 60
+refresh_interval = 300
 stages_complete = ['Prologue', 'Stage 1', 'Stage 2', 'Stage 3', 'TTT']
 
 
@@ -27,7 +27,7 @@ location = os.getcwd()
 
 
 #Get ids
-stages, ath_ids, prologue, pts, handicaps, orange_pass = get_ids("No")
+stages, ath_ids, prologue, pts, handicaps, orange_pass = get_ids("Yes")
 
 stage_values = ['Stage_1', 'Stage_2', 'Stage_3', 'Stage_4', 'Stage_5', 'Stage_6']
 zwift_ids = get_zwift_ids(stage_values, stages)

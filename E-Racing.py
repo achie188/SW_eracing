@@ -96,7 +96,7 @@ live = pd.concat(dfs, ignore_index=True)
 live = live.sort_values(by='Distance', ascending=False).reset_index(drop=True)
 live['Pos'] = live.index + 1
 
-furthest = live['Distance'].max()
+furthest = live['Distance'].nlargest(4).iloc[-1]
 live['Diff'] = furthest - live['Distance']
 
 live['Time'] = live['Time'].apply(format_mmss)

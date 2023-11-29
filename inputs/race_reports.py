@@ -231,17 +231,22 @@ def race_reports():
 
     We had a day’s worth of WhatsApp’s to discuss tactics. There were two clear camps. 
 
-    In one, we had the method proposed by Teo. Short hard turns. On off on off. That’s how the pros do it. Max watts for 30 seconds - blow your balls off then rest at the back afterwards. It’s the fastest way. 
+    In one, we had the method proposed by Teo. Short hard turns. On off on off. That’s how the pros do it. Max watts for 30 seconds - blow your balls off then rest at the 
+    back afterwards. It’s the fastest way. 
 
-    In the other we had Graeme. Measured. Calculating.  But not a purist. Not racing with his heart. Graeme thought we should take longer less extreme pulls. Suggesting that the key lay in smooth hand-overs and not dropping any riders unnecessarily . It might not be the fastest way for pros. But were we Zwift pros? Maybe we were!? 
+    In the other we had Graeme. Measured. Calculating.  But not a purist. Not racing with his heart. Graeme thought we should take longer less extreme pulls. Suggesting that 
+    the key lay in smooth hand-overs and not dropping any riders unnecessarily. It might not be the fastest way for pros. But were we Zwift pros? Maybe we were!? 
 
     Well after a long day of WhatsApp’s, one camp was clearly going to win out. Which one though? Short and hard. Or long and smooth. How do you like it?
 
-    It’s just it wasn’t at all clear which camp we were all in with the clock ticking over to one minute to lift off. George Dix asked on discord what our tactics were? No one knew. Graeme didn’t even seem to be there. Bill had downgraded himself to the B team, so were we setting out with only 3 riders and 0 tactics? 
+    It’s just it wasn’t at all clear which camp we were all in with the clock ticking down to one minute to lift off. George Dix asked on discord what our tactics were? No one 
+    knew. Graeme didn’t even seem to be there. Bill had downgraded himself to the B team, so were we setting out with only 3 riders and 0 tactics? 
 
-    That’s when Andy piped up. Hi boys. “Hi Andy, what are you doing here?” Just watching? “Great. Might be a bit of a boring watch though, a time trial?” He didn’t seem to mind. I imagine he had a few beers to liven things up.  He was probably in the bath. 
+    That’s when Andy piped up. "Hi boys." “Hi Andy, what are you doing here?” "Just watching?" “Great. Might be a bit of a boring watch though, a time trial?” He didn’t seem to mind. 
+    I imagine he had a few beers to liven things up.  He was probably in the bath. 
 
-    In the remaining seconds before we departed, I suggested Teo take the first pull, but not go mad, as it was best to get together first. And not blow anyone’s balls off before we really began. 
+    In the remaining seconds before we departed, I suggested Teo take the first pull, but not go mad, as it was best to get together first. And not blow anyone’s balls off 
+    before we really began. 
 
     What a glorious pen we were in. Such a nice pen. 
 
@@ -249,35 +254,43 @@ def race_reports():
 
     Oh look! There’s Bill! We’ve got 4 men. Great. Oh and there’s Graeme! 5! Banzai!! 
 
-    Oh Christ. What’s happening. Why is he going so fast. I’m being dropped. I’m off the back. Christ. We’re 4 seconds in and I’m being dropped. Why are they going so fast!? 600 watts. This is Madness!!! 
+    Oh Christ. What’s happening? Why is he going so fast? I’m being dropped. I’m off the back. Christ. We’re 4 seconds in and I’m being dropped. Why are they going so fast!? 
+    600 watts. This is madness!!! 
 
     Teo was on the front. 
 
-    It was clear from the gun which camp we were in. Teo’s camp. Maybe everyone knew it but me all along. But it was clear now. That’s for sure. He set off so fast 2 or 3 of us were immediately dropped. I worked hard to close the gap just in time for Teo to pull off and the mad hatter himself to take to the front. George was reading from the same hymn sheet alright. 
+    It was clear from the gun which camp we were in. Teo’s camp. Maybe everyone knew it but me all along. But it was clear now. That’s for sure. He'd set off so fast 2 or 3 of 
+    us were immediately dropped. I worked hard to close the gap just in time for Teo to pull off and the Mad Hatter George Dix himself to take to the front. George was reading from the 
+    same hymn sheet alright. 
 
     This was just as we approached the first hill. George dropped a feather and hit the afterburners like he was fleeing a crime scene. What the fuck was going on!? 
 
-    At this stage we had two riders up front (Teo and the mad hatter). Then I was about 50m back in 3rd place, Bill was dangling about 10m behind me and Graeme was another 50m off the back. 
+    At this stage we had two riders up front (Teo and George). Then I was about 50m back in 3rd place, Bill was dangling about 10m behind me and Graeme was another 
+    50m off the back. 
 
     Maybe this was better watching for Andy than I had thought. 
 
-    At was at this point that Maddy walked in to get some eggs out of the freezer. Afterwards she reported that she came in and heard me shouting this at the ipad. 
+    At was at this point that Maddy walked in to get some eggs out of the freezer. Afterwards she reported that she came in and heard me shouting this at the iPad. 
 
     “What? No, we need to slow down. Stop pedalling. You have to stop pedalling. Stop it. Stop pedalling now. Stop it now. I can see you. You’re still pedalling. Stop it.”
 
     This didn’t feel like it was going well. 
 
-    But things improved. We slowed down and Graeme got back on. But unfortunately now Graeme was in a real strop. Which was justifiable as the risks he had highlighted in the balls-out-Teo approach had roosted within a minute of the start.  
+    But things improved. We slowed down and Graeme got back on. But unfortunately now Graeme was in a real strop. Which was justifiable as all the risks he had highlighted in the 
+    balls-out-Teo approach had come home to roost within a minute of the start.  
 
-    Graeme hung on for a bit, but by about 6km in, Graeme was clearly fundamentally against the whole approach taken by the team, and couldn’t snap out of his sulk and climbed into the virtual team car to shout at the DS and argue about terminating his contract early. 
+    Graeme hung on for a bit, but by about 6km in, Graeme was clearly fundamentally against the whole approach taken by the team, and couldn’t snap out of his sulk and climbed 
+    into the virtual team car to shout at the DS and argue about terminating his contract early. 
 
-    (It brought to my mind that time Rohan Dennis stopped riding and then hide from his own team during a race, so his team had to go around asking the other teams if anyone had seen him.)
+    (It brought to my mind that time Rohan Dennis stopped riding and then hide from his own team during a race, so his team had to go around asking the other teams if anyone had 
+    seen him.)
 
     It was a shame to lose Graeme so early. But really, it was amazing G got out of the pen at all without a technical failure so really it was a plus. 
 
-    We cracked on and started to get the hang of it. Tough course - always up or down so very difficult to get any rhythm. But by half way round we were getting the hang of it a bit. And towards the end we hand a neat little line of 4 most of the time. 
+    We cracked on and started to get the hang of it. Tough course - always up or down so very difficult to get any rhythm. But by half way round we were getting the hang of it 
+    a bit. And towards the end we hand a neat little line of 4 most of the time. 
 
-    I started to take real pride in nailing my hand overs. If only dad could see me now. 
+    I started to take real pride in nailing my hand overs. If only Dad could see me now. 
 
     We were only a few kms out and Bill was dying. So he took a couple of hero pulls to send us on our way, and the remaining 3 of us took it to the line. 
 
@@ -290,20 +303,26 @@ def race_reports():
     ttt_azt = '''
     The Team Trial. Always a pivotal week in the e-racing calendar. Historically, the winner of the TTT takes the crown at the end of the series… 
 
-    AZT were quietly confident. We’d put in a solid test run the previous evening and had almost a full roster at their disposable. New signing Gilroy was full of youthful exuberance and even the addition of a ruthless 19kg backpack couldn’t curb his enthusiasm. “Gilly’s up!!” – bellowing over the comms. 
+    AZT were quietly confident. We’d put in a solid test run the previous evening and had almost a full roster at their disposable. New signing Gilroy was full of youthful 
+    exuberance and even the addition of a ruthless 19kg backpack couldn’t curb his enthusiasm. “Gilly’s up!!” – bellowing over the comms. 
 
     We had a clear race plan and set off with real intent. Getting up to speed seamlessly and rolling through the line with consummate ease – but were we going fast enough? 
-    It was at that point we noticed a 9th man in the line – Alex H, dressed in Lego Black – pulling hard at the front….before promptly evaporating. Alex has always identified as a Trailfinder and his cameo didn’t go unnoticed by the sponsors.
+    It was at that point we noticed a 9th man in the line – Alex H, dressed in Lego Black – pulling hard at the front….before promptly evaporating. Alex has always identified 
+    as a Trailfinder and his cameo didn’t go unnoticed by the sponsors.
 
-    We remained calm and remained focus. VC Tyler was on a particularly good day, doing regular, strong, hard turns at the front and marshalling those around him. But were we going fast enough?
+    We remained calm and remained focus. VC Tyler was on a particularly good day, doing regular, strong, hard turns at the front and marshalling those around him. But were we 
+    going fast enough?
     Our Huwy certainly was – catapulting off the front through the IM sprint to pick up the juicy bonuses. 
 
     Half way through, and it felt like we’d been out there all evening already. But we were all still together and morale was high. But were we going fast enough?
-    It was soon after that that Gilroy’s enthusiasm and 19kg ball and chain finally got the better of him, and with a final “Gilroyyyyyyyyyyy” he was left to lick his wounds. A most honourable effort for his debut on Zwift. 
+    It was soon after that that Gilroy’s enthusiasm and 19kg ball and chain finally got the better of him, and with a final “Gilroyyyyyyyyyyy” he was left to lick his wounds. 
+    A most honourable effort for his debut on Zwift. 
 
-    We approached the KOM and knew we were in danger – with an average team weight of close to 100kg it always threatened to be our downfall. Beth eased off to have a crack at the segment and the remaining bloat of AZT hippopotamuses laboured up the climb. We’d get them on the descent though, that’s for sure!! But were we going fast enough?
+    We approached the KOM and knew we were in danger – with an average team weight of close to 100kg it always threatened to be our downfall. Beth eased off to have a crack at 
+    the segment and the remaining bloat of AZT hippopotamuses laboured up the climb. We’d get them on the descent though, that’s for sure!! But were we going fast enough?
 
-    6 through the KOM checkpoint and we hurtled down the other side. When a hippopotamus is angry, it can be a very dangerous beast…and that climb had made us very angry. We thundered home over the last 5km, in what had felt like a thoroughly well executed race. But did we go fast enough?
+    6 through the KOM checkpoint and we hurtled down the other side. When a hippopotamus is angry, it can be a very dangerous beast…and that climb had made us very angry. We 
+    thundered home over the last 5km, in what had felt like a thoroughly well executed race. But did we go fast enough?
 
     3rd plaice for the hippos on the night – they couldn’t have given any more. The Amazonian juggernaut rolls on. The winner of the TTT always takes the crown they say…'''
 

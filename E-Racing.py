@@ -102,6 +102,12 @@ live['Diff'] = furthest - live['Distance']
 live['Time'] = live['Time'].apply(format_mmss)
 live = live[['Pos', 'Team', 'Name', 'Distance', 'Diff', 'W/Kg', 'Time']]
 
+# Filter the DataFrame to keep only the 4th fastest time from each team
+team_summary = live.groupby('Team').apply(lambda x: x.nlargest(4, 'Distance')).reset_index(drop=True)
+team_summary = team_summary.groupby('Team').nth(3).reset_index()
+team_summary = team_summary.sort_values(by='Distance', ascending=False).reset_index(drop=True)
+team_summary['Pos'] = team_summary.index + 1
+team_summary = team_summary[['Pos', 'Team', 'Name', 'Distance', 'Diff', 'W/Kg', 'Time']]
 
 # if not live.empty:
 #     live = format_results(live, ath_ids)
@@ -156,7 +162,8 @@ tab1, tab2, tab3, tab4 = st.tabs(["Championship", "All Results", "About", "LIVE 
 
 with tab4:
     if live is not None and not live.empty:
-        st.dataframe(live, height=2000, hide_index=True)
+        st.dataframe(team_summary, height = int(35.2*(team_summary.shape[0]+1)), hide_index=True)
+        st.dataframe(live, height = int(35.2*(live.shape[0]+1)), hide_index=True)
     else:
         st.write("No live data right now.")
 

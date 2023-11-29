@@ -82,7 +82,7 @@ s6 = final_format(s6)
 
 
 #Get live event
-zwift_ids = [3961357, 3960872, 3960871, 3960869]
+zwift_ids = [3977847, 3977849, 3977853, 3977842]
 teams = ['Tesla', 'Amazon', 'AZT', 'Lego']
 
 dfs = []

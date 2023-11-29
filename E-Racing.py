@@ -94,7 +94,7 @@ for i, team in zip(zwift_ids, teams):
 
 live = pd.concat(dfs, ignore_index=True)
 if not live.empty:
-    live = live.sort_values(by='Distance', ascending=False).reset_index(drop=True)
+    live = live.sort_values(by='Time', ascending=True).reset_index(drop=True)
     live['Pos'] = live.index + 1
 
     # furthest = live['Distance'].nlargest(4).iloc[-1]
@@ -106,7 +106,7 @@ if not live.empty:
     # Filter the DataFrame to keep only the 4th fastest time from each team
     team_summary = live.groupby('Team').apply(lambda x: x.nsmallest(4, 'Time')).reset_index(drop=True)
     team_summary = team_summary.groupby('Team').nth(3).reset_index()
-    team_summary = team_summary.sort_values(by='Time', ascending=False).reset_index(drop=True)
+    team_summary = team_summary.sort_values(by='Time', ascending=True).reset_index(drop=True)
     team_summary['Pos'] = team_summary.index + 1
     team_summary = team_summary[['Pos', 'Team', 'Name', 'Distance', 'W/Kg', 'Time']]
 

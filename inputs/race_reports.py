@@ -224,5 +224,67 @@ def race_reports():
     
     I sat, contemplating the meeting for a while. And smiled. I had a plan ...'''
 
+    ttt_general = '''
+    Dark arts of team time trials. 
 
-    return s1_azt, s1_tesla, s2_tesla, s2_abs, s2_azt, s3_tesla, s3_lego
+    What a glorious pen. How neat it is. Everyone in one place. People aren’t strewn all over the road. Glorious. What a nice pen. 
+
+    We had a day’s worth of WhatsApp’s to discuss tactics. There were two clear camps. 
+
+    In one, we had the method proposed by Teo. Short hard turns. On off on off. That’s how the pros do it. Max watts for 30 seconds - blow your balls off then rest at the back afterwards. It’s the fastest way. 
+
+    In the other we had Graeme. Measured. Calculating.  But not a purist. Not racing with his heart. Graeme thought we should take longer less extreme pulls. Suggesting that the key lay in smooth hand-overs and not dropping any riders unnecessarily . It might not be the fastest way for pros. But were we Zwift pros? Maybe we were!? 
+
+    Well after a long day of WhatsApp’s, one camp was clearly going to win out. Which one though? Short and hard. Or long and smooth. How do you like it?
+
+    It’s just it wasn’t at all clear which camp we were all in with the clock ticking over to one minute to lift off. George Dix asked on discord what our tactics were? No one knew. Graeme didn’t even seem to be there. Bill had downgraded himself to the B team, so were we setting out with only 3 riders and 0 tactics? 
+
+    That’s when Andy piped up. Hi boys. “Hi Andy, what are you doing here?” Just watching? “Great. Might be a bit of a boring watch though, a time trial?” He didn’t seem to mind. I imagine he had a few beers to liven things up.  He was probably in the bath. 
+
+    In the remaining seconds before we departed, I suggested Teo take the first pull, but not go mad, as it was best to get together first. And not blow anyone’s balls off before we really began. 
+
+    What a glorious pen we were in. Such a nice pen. 
+
+    3…2…1… GO GO GO
+
+    Oh look! There’s Bill! We’ve got 4 men. Great. Oh and there’s Graeme! 5! Banzai!! 
+
+    Oh Christ. What’s happening. Why is he going so fast. I’m being dropped. I’m off the back. Christ. We’re 4 seconds in and I’m being dropped. Why are they going so fast!? 600 watts. This is Madness!!! 
+
+    Teo was on the front. 
+
+    It was clear from the gun which camp we were in. Teo’s camp. Maybe everyone knew it but me all along. But it was clear now. That’s for sure. He set off so fast 2 or 3 of us were immediately dropped. I worked hard to close the gap just in time for Teo to pull off and the mad hatter himself to take to the front. George was reading from the same hymn sheet alright. 
+
+    This was just as we approached the first hill. George dropped a feather and hit the afterburners like he was fleeing a crime scene. What the fuck was going on!? 
+
+    At this stage we had two riders up front (Teo and the mad hatter). Then I was about 50m back in 3rd place, Bill was dangling about 10m behind me and Graeme was another 50m off the back. 
+
+    Maybe this was better watching for Andy than I had thought. 
+
+    At was at this point that Maddy walked in to get some eggs out of the freezer. Afterwards she reported that she came in and heard me shouting this at the ipad. 
+
+    “What? No, we need to slow down. Stop pedalling. You have to stop pedalling. Stop it. Stop pedalling now. Stop it now. I can see you. You’re still pedalling. Stop it.”
+
+    This didn’t feel like it was going well. 
+
+    But things improved. We slowed down and Graeme got back on. But unfortunately now Graeme was in a real strop. Which was justifiable as the risks he had highlighted in the balls-out-Teo approach had roosted within a minute of the start.  
+
+    Graeme hung on for a bit, but by about 6km in, Graeme was clearly fundamentally against the whole approach taken by the team, and couldn’t snap out of his sulk and climbed into the virtual team car to shout at the DS and argue about terminating his contract early. 
+
+    (It brought to my mind that time Rohan Dennis stopped riding and then hide from his own team during a race, so his team had to go around asking the other teams if anyone had seen him.)
+
+    It was a shame to lose Graeme so early. But really, it was amazing G got out of the pen at all without a technical failure so really it was a plus. 
+
+    We cracked on and started to get the hang of it. Tough course - always up or down so very difficult to get any rhythm. But by half way round we were getting the hang of it a bit. And towards the end we hand a neat little line of 4 most of the time. 
+
+    I started to take real pride in nailing my hand overs. If only dad could see me now. 
+
+    We were only a few kms out and Bill was dying. So he took a couple of hero pulls to send us on our way, and the remaining 3 of us took it to the line. 
+
+    Home safe and sound. All over. Just like it never happened. 
+
+    Just after we finished Andy piped up again on discord. Great stuff boys. Good work. Enjoyable viewing.
+
+    “Jesus, Andy - you scared the life out of me. Are you still here?”  Just watching still. Good racing.'''
+
+    return s1_azt, s1_tesla, s2_tesla, s2_abs, s2_azt, s3_tesla, s3_lego, ttt_general

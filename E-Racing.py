@@ -37,7 +37,7 @@ handicaps = handicaps_format(handicaps)
 #Get text
 r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, handicaps_rules = rules()
 lego_pr, tesla_pr, azt_pr, abs_pr = press_releases()
-s1_azt, s1_tesla, s2_tesla, s2_abs, s2_azt, s3_tesla, s3_lego = race_reports()
+s1_azt, s1_tesla, s2_tesla, s2_abs, s2_azt, s3_tesla, s3_lego, ttt_gen = race_reports()
 
 #Get stage data
 s1, orange_df = get_stage(zwift_ids[0], "Stage_1", ath_ids, "No")
@@ -357,8 +357,8 @@ with tab2:
 
         with col2:
             st.subheader('Race Reports')
-            # with st.expander("Team Tesla - George Humphreys"):
-            #     st.markdown(s3_tesla)
+            with st.expander("General - The Dark Art of the Team Time Trial"):
+                 st.markdown(ttt_gen)
             # with st.expander("Team Lego Boots P&O debrief meeting with sponsors - Ed Humphreys"):
             #     st.markdown(s3_lego)
 

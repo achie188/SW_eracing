@@ -13,7 +13,7 @@ from inputs.helpers import get_ids
 from inputs.rules import rules
 from inputs.press_releases import press_releases
 from inputs.race_reports import race_reports
-from pipeline.formatting import get_zwift_ids, final_format, teams_slice, format_results
+from pipeline.formatting import get_zwift_ids, final_format, teams_slice, format_results, format_mmss
 from pipeline.calcs import get_stage, calc_overall_pts, calc_overall_orange, handicaps_format
 
 
@@ -96,6 +96,7 @@ live = pd.concat(dfs, ignore_index=True)
 live = live.sort_values(by='Distance', ascending=False).reset_index(drop=True)
 live['Pos'] = live.index + 1
 
+live['Time'] = live['Time'].apply(format_mmss)
 live = live[['Pos', 'Team', 'Name', 'Distance', 'W/Kg', 'Time']]
 
 

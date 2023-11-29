@@ -287,4 +287,24 @@ def race_reports():
 
     “Jesus, Andy - you scared the life out of me. Are you still here?”  Just watching still. Good racing.'''
 
-    return s1_azt, s1_tesla, s2_tesla, s2_abs, s2_azt, s3_tesla, s3_lego, ttt_general
+    ttt_azt = '''
+    The Team Trial. Always a pivotal week in the e-racing calendar. Historically, the winner of the TTT takes the crown at the end of the series… 
+
+    AZT were quietly confident. We’d put in a solid test run the previous evening and had almost a full roster at their disposable. New signing Gilroy was full of youthful exuberance and even the addition of a ruthless 19kg backpack couldn’t curb his enthusiasm. “Gilly’s up!!” – bellowing over the comms. 
+
+    We had a clear race plan and set off with real intent. Getting up to speed seamlessly and rolling through the line with consummate ease – but were we going fast enough? 
+    It was at that point we noticed a 9th man in the line – Alex H, dressed in Lego Black – pulling hard at the front….before promptly evaporating. Alex has always identified as a Trailfinder and his cameo didn’t go unnoticed by the sponsors.
+
+    We remained calm and remained focus. VC Tyler was on a particularly good day, doing regular, strong, hard turns at the front and marshalling those around him. But were we going fast enough?
+    Our Huwy certainly was – catapulting off the front through the IM sprint to pick up the juicy bonuses. 
+
+    Half way through, and it felt like we’d been out there all evening already. But we were all still together and morale was high. But were we going fast enough?
+    It was soon after that that Gilroy’s enthusiasm and 19kg ball and chain finally got the better of him, and with a final “Gilroyyyyyyyyyyy” he was left to lick his wounds. A most honourable effort for his debut on Zwift. 
+
+    We approached the KOM and knew we were in danger – with an average team weight of close to 100kg it always threatened to be our downfall. Beth eased off to have a crack at the segment and the remaining bloat of AZT hippopotamuses laboured up the climb. We’d get them on the descent though, that’s for sure!! But were we going fast enough?
+
+    6 through the KOM checkpoint and we hurtled down the other side. When a hippopotamus is angry, it can be a very dangerous beast…and that climb had made us very angry. We thundered home over the last 5km, in what had felt like a thoroughly well executed race. But did we go fast enough?
+
+    3rd plaice for the hippos on the night – they couldn’t have given any more. The Amazonian juggernaut rolls on. The winner of the TTT always takes the crown they say…'''
+
+    return s1_azt, s1_tesla, s2_tesla, s2_abs, s2_azt, s3_tesla, s3_lego, ttt_general, ttt_azt

@@ -101,7 +101,7 @@ if not live.empty:
     # live['Diff'] = furthest - live['Distance']
 
     live['Time'] = live['Time'].apply(format_mmss)
-    live = live[['Pos', 'Team', 'Name', 'Distance', 'Diff', 'W/Kg', 'Time']]
+    live = live[['Pos', 'Team', 'Name', 'Distance', 'W/Kg', 'Time']]
 
     # Filter the DataFrame to keep only the 4th fastest time from each team
     team_summary = live.groupby('Team').apply(lambda x: x.nlargest(4, 'Distance')).reset_index(drop=True)

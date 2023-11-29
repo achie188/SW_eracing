@@ -65,6 +65,4 @@ def pull_ttt(event_id):
 
     race_data.drop(columns=['firstName', 'lastName'], inplace=True)
 
-    race_data = race_data[['Pos', 'Team', 'Name', 'Distance', 'W/Kg', 'Time']]
-
     return race_data

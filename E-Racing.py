@@ -93,7 +93,10 @@ for i, team in zip(zwift_ids, teams):
     dfs.append(df)
 
 live = pd.concat(dfs, ignore_index=True)
-live = live.sort_values(by='Distance').reset_index(drop=True)
+live = live.sort_values(by='Distance', ascending=False).reset_index(drop=True)
+live['Pos'] = live.index + 1
+
+live = live[['Pos', 'Team', 'Name', 'Distance', 'W/Kg', 'Time']]
 
 
 # if not live.empty:

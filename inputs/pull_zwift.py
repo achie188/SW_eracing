@@ -60,8 +60,11 @@ def pull_ttt(event_id):
     race_data = race_data.rename(columns={'distanceInMeters': 'Distance'}).round(0)
     race_data = race_data.rename(columns={'powerInWattsPerKg': 'W/Kg'})
     race_data = race_data.rename(columns={'completionTimeInSeconds': 'Time'}).round(1)
-    race_data['Name'] = race_data['firstName'] + race_data['lastName'] 
+    race_data = race_data.rename(columns={'position': 'Pos'})
+    race_data['Name'] = race_data['firstName'] + ' ' + race_data['lastName'] 
 
     race_data.drop(columns=['firstName', 'lastName'], inplace=True)
+
+    race_data = race_data[['Pos', 'Team', 'Name', 'Distance', 'W/Kg', 'Time']]
 
     return race_data

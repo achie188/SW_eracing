@@ -18,7 +18,7 @@ from pipeline.calcs import get_stage, calc_overall_pts, calc_overall_orange, han
 
 
 # Manual overrides
-refresh_interval = 20
+refresh_interval = 10
 stages_complete = ['Prologue', 'Stage 1', 'Stage 2', 'Stage 3']
 
 
@@ -82,7 +82,7 @@ s6 = final_format(s6)
 
 
 #Get live event
-zwift_ids = [3961357, 3960872, 3960871, 3960869]
+zwift_ids = [3977847, 3977849, 3977853, 3977842]
 teams = ['Tesla', 'Amazon', 'AZT', 'Lego']
 
 dfs = []
@@ -93,21 +93,22 @@ for i, team in zip(zwift_ids, teams):
     dfs.append(df)
 
 live = pd.concat(dfs, ignore_index=True)
-live = live.sort_values(by='Distance', ascending=False).reset_index(drop=True)
-live['Pos'] = live.index + 1
+if not live.empty:
+    live = live.sort_values(by='Distance', ascending=False).reset_index(drop=True)
+    live['Pos'] = live.index + 1
 
-furthest = live['Distance'].nlargest(4).iloc[-1]
-live['Diff'] = furthest - live['Distance']
+    furthest = live['Distance'].nlargest(4).iloc[-1]
+    live['Diff'] = furthest - live['Distance']
 
-live['Time'] = live['Time'].apply(format_mmss)
-live = live[['Pos', 'Team', 'Name', 'Distance', 'Diff', 'W/Kg', 'Time']]
+    live['Time'] = live['Time'].apply(format_mmss)
+    live = live[['Pos', 'Team', 'Name', 'Distance', 'Diff', 'W/Kg', 'Time']]
 
-# Filter the DataFrame to keep only the 4th fastest time from each team
-team_summary = live.groupby('Team').apply(lambda x: x.nlargest(4, 'Distance')).reset_index(drop=True)
-team_summary = team_summary.groupby('Team').nth(3).reset_index()
-team_summary = team_summary.sort_values(by='Distance', ascending=False).reset_index(drop=True)
-team_summary['Pos'] = team_summary.index + 1
-team_summary = team_summary[['Pos', 'Team', 'Name', 'Distance', 'Diff', 'W/Kg', 'Time']]
+    # Filter the DataFrame to keep only the 4th fastest time from each team
+    team_summary = live.groupby('Team').apply(lambda x: x.nlargest(4, 'Distance')).reset_index(drop=True)
+    team_summary = team_summary.groupby('Team').nth(3).reset_index()
+    team_summary = team_summary.sort_values(by='Distance', ascending=False).reset_index(drop=True)
+    team_summary['Pos'] = team_summary.index + 1
+    team_summary = team_summary[['Pos', 'Team', 'Name', 'Distance', 'Diff', 'W/Kg', 'Time']]
 
 # if not live.empty:
 #     live = format_results(live, ath_ids)

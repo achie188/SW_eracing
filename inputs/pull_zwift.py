@@ -57,14 +57,14 @@ def pull_ttt(event_id):
     if not(race_data).empty:
         race_data.drop(columns=['position', 'playerId', 'heartRateInBpm', 'powerOutputInWatts', 'liveTimeGapToLeaderInSeconds', 'speedInKmHours', 'powerupUsed', 'jerseyHash', 'location', 'countryCodeAlpha2Code', 'crossingStartingLineGap', 'rideOnsCounter', 'arrivalAtInSeconds', 'groupNumber'], inplace=True)
 
-    race_data = race_data.rename(columns={
-        'distanceInMeters': 'Distance',
-        'powerInWattsPerKg': 'W/Kg',
-        'completionTimeInSeconds': 'Time',
-    }).round({'Distance': 0, 'W/Kg': 2, 'Time': 1})
+        race_data = race_data.rename(columns={
+            'distanceInMeters': 'Distance',
+            'powerInWattsPerKg': 'W/Kg',
+            'completionTimeInSeconds': 'Time',
+        }).round({'Distance': 0, 'W/Kg': 2, 'Time': 1})
 
-    race_data['Name'] = race_data['firstName'] + ' ' + race_data['lastName'] 
+        race_data['Name'] = race_data['firstName'] + ' ' + race_data['lastName'] 
 
-    race_data.drop(columns=['firstName', 'lastName'], inplace=True)
+        race_data.drop(columns=['firstName', 'lastName'], inplace=True)
 
     return race_data

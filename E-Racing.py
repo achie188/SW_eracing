@@ -18,7 +18,7 @@ from pipeline.calcs import get_stage, calc_overall_pts, calc_overall_orange, han
 
 
 # Manual overrides
-refresh_interval = 300
+refresh_interval = 20
 stages_complete = ['Prologue', 'Stage 1', 'Stage 2', 'Stage 3']
 
 

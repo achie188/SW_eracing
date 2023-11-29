@@ -97,8 +97,8 @@ if not live.empty:
     live = live.sort_values(by='Distance', ascending=False).reset_index(drop=True)
     live['Pos'] = live.index + 1
 
-    furthest = live['Distance'].nlargest(4).iloc[-1]
-    live['Diff'] = furthest - live['Distance']
+    # furthest = live['Distance'].nlargest(4).iloc[-1]
+    # live['Diff'] = furthest - live['Distance']
 
     live['Time'] = live['Time'].apply(format_mmss)
     live = live[['Pos', 'Team', 'Name', 'Distance', 'Diff', 'W/Kg', 'Time']]
@@ -106,7 +106,7 @@ if not live.empty:
     # Filter the DataFrame to keep only the 4th fastest time from each team
     team_summary = live.groupby('Team').apply(lambda x: x.nlargest(4, 'Distance')).reset_index(drop=True)
     team_summary = team_summary.groupby('Team').nth(3).reset_index()
-    team_summary = team_summary.sort_values(by='Distance', ascending=False).reset_index(drop=True)
+    team_summary = team_summary.sort_values(by='Time', ascending=False).reset_index(drop=True)
     team_summary['Pos'] = team_summary.index + 1
     team_summary = team_summary[['Pos', 'Team', 'Name', 'Distance', 'Diff', 'W/Kg', 'Time']]
 

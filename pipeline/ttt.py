@@ -72,10 +72,9 @@ def sort_ttt(orange_df, ath_ids, gsheets):
 
         ind_o_pts = ind_o_pts.sort_values(by='Time_secs', ascending=True).reset_index(drop=True)
         ind_o_pts['Time_nice'] = ind_o_pts['Time_secs'].apply(format_mmss)
-        ind_o_pts = ind_o_pts.rename(columns={'Time_nice': 'Time'})
         
         ind_o_pts['Pos'] = ind_o_pts.index + 1
-        ind_o_pts = ind_o_pts[['Pos', 'Team', 'Name', 'Time', 'Power', 'W/Kg', 'HR', 'Orange']]
+        ind_o_pts = ind_o_pts[['Pos', 'Team', 'Name', 'Time_nice', 'Time_secs', 'Power', 'W/Kg', 'HR', 'Orange']]
 
         push_gsheet(ind_o_pts, "TTT_Ind")
         push_gsheet(team, "TTT_Teams")

@@ -18,8 +18,8 @@ from pipeline.ttt import sort_ttt
 
 
 # Manual overrides
-refresh_interval = 10
-stages_complete = ['Prologue', 'Stage 1', 'Stage 2', 'Stage 3']
+refresh_interval = 300
+stages_complete = ['Prologue', 'Stage 1', 'Stage 2', 'Stage 3', 'TTT']
 
 
 
@@ -27,7 +27,7 @@ location = os.getcwd()
 
 
 #Get ids
-stages, ath_ids, prologue, pts, handicaps, orange_pass = get_ids("No")
+stages, ath_ids, prologue, pts, handicaps, orange_pass = get_ids("Yes")
 
 stage_values = ['Stage_1', 'Stage_2', 'Stage_3', 'Stage_4', 'Stage_5', 'Stage_6']
 zwift_ids = get_zwift_ids(stage_values, stages)
@@ -53,11 +53,11 @@ s6, orange_df = get_stage(zwift_ids[5], "Stage_6", ath_ids, "No", orange_df)
 
 
 #Orange Jersey
-orange_df = calc_overall_orange(prologue, s1, s2, s3, s4, s5, s6, stages_complete, orange_pass)
+orange_df = calc_overall_orange(prologue, s1, s2, s3, ttt_ind, s4, s5, s6, stages_complete, orange_pass)
 
 
 #Calc points
-ind_pts, team_pts, kom_pts, sprinter_pts = calc_overall_pts(prologue, s1, s2, s3, s4, s5, s6)
+ind_pts, team_pts, kom_pts, sprinter_pts = calc_overall_pts(prologue, s1, s2, s3, ttt_ind, s4, s5, s6, ttt_team)
 
 
 
@@ -106,7 +106,7 @@ st.set_page_config(
     layout="wide"
 )
 
-#st_autorefresh(refresh_interval*1000, limit=1000)
+st_autorefresh(refresh_interval*1000, limit=1000)
 
 st.markdown("""
         <style>

@@ -136,7 +136,7 @@ def get_stage(stage, stage_num, ath_ids, gsheet="No", orange_df=prologue):
     return stage_res, orange_df
 
 
-def calc_overall_pts(pro, s1, s2, s3, s4, s5, s6):
+def calc_overall_pts(pro, s1, s2, s3, ttt, s4, s5, s6, ttt_teams):
 
     ath_ids = load_csv(athlete_path)
 
@@ -145,13 +145,14 @@ def calc_overall_pts(pro, s1, s2, s3, s4, s5, s6):
         process_dataframe(s1, 'Stage 1'),
         process_dataframe(s2, 'Stage 2'),
         process_dataframe(s3, 'Stage 3'),
+        process_dataframe(ttt, 'TTT'),
         process_dataframe(s4, 'Stage 4'),
         process_dataframe(s5, 'Stage 5'),
         process_dataframe(s6, 'Stage 6'),
     ]
 
     # Concatenate the DataFrames
-    all_dataframes = [pro, s1, s2, s3, s4, s5, s6]
+    all_dataframes = [pro, s1, s2, s3, ttt, s4, s5, s6]
     combined_df = pd.concat(all_dataframes, ignore_index=True)
     combined_df['Total'] = pd.to_numeric(combined_df['Total'], errors='coerce')
     combined_df['KOM'] = pd.to_numeric(combined_df['KOM'], errors='coerce')
@@ -185,6 +186,13 @@ def calc_overall_pts(pro, s1, s2, s3, s4, s5, s6):
     team_df = combined_df.pivot_table(index='Team', columns='Stage', values='Total', aggfunc='sum', fill_value=0)
     team_df.reset_index(inplace=True)
     numeric_columns = team_df.select_dtypes(include=[np.number]).columns
+
+    # add ttt
+    ttt_teams = ttt_teams[['Team', 'Total']]
+    merged_df = pd.merge(team_df, ttt_teams[['Team', 'Total']], on='Team', how='left')
+    merged_df['TTT'] += merged_df['Total']  
+    merged_df = merged_df.drop(columns='Total')
+
     team_df['Total'] = team_df[numeric_columns].sum(axis=1)
 
     team_df = team_df.loc[team_df['Total'] != 0]
@@ -246,13 +254,14 @@ def calc_overall_pts(pro, s1, s2, s3, s4, s5, s6):
     return ind_df, team_df, kom_df, sprinter_df
 
 
-def calc_overall_orange(pro, s1, s2, s3, s4, s5, s6, columns_to_replace, orange_pass):
+def calc_overall_orange(pro, s1, s2, s3, ttt, s4, s5, s6, columns_to_replace, orange_pass):
 
     all_dataframes = [
         process_dataframe(pro, 'Prologue'),
         process_dataframe(s1, 'Stage 1'),
         process_dataframe(s2, 'Stage 2'),
         process_dataframe(s3, 'Stage 3'),
+        process_dataframe(ttt, 'TTT'),
         process_dataframe(s4, 'Stage 4'),
         process_dataframe(s5, 'Stage 5'),
         process_dataframe(s6, 'Stage 6'),

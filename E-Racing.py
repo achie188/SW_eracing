@@ -88,7 +88,7 @@ ttt_azt = pull_ttt('3960851')
 ttt_lego = pull_ttt('3966815')
 
 live = pd.concat([ttt_tesla, ttt_abs, ttt_azt, ttt_lego], ignore_index=True)
-live = live.sort_values(by='time').reset_index(drop=True)
+live = live.sort_values(by='distance').reset_index(drop=True)
 
 # if not live.empty:
 #     live = format_results(live, ath_ids)

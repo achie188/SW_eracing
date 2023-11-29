@@ -104,7 +104,7 @@ if not live.empty:
     live = live[['Pos', 'Team', 'Name', 'Distance', 'W/Kg', 'Time']]
 
     # Filter the DataFrame to keep only the 4th fastest time from each team
-    team_summary = live.groupby('Team').apply(lambda x: x.nlargest(4, 'Time')).reset_index(drop=True)
+    team_summary = live.groupby('Team').apply(lambda x: x.nsmallest(4, 'Time')).reset_index(drop=True)
     team_summary = team_summary.groupby('Team').nth(3).reset_index()
     team_summary = team_summary.sort_values(by='Time', ascending=False).reset_index(drop=True)
     team_summary['Pos'] = team_summary.index + 1

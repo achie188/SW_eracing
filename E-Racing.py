@@ -7,12 +7,11 @@ from PIL import Image
 
 sys.path.append('/Users/achie188/Library/CloudStorage/GitHub/Personal/SW_eracing')
 
-from inputs.pull_gsheet import pull_gsheet, push_gsheet
 from inputs.helpers import get_ids
 from inputs.rules import rules
 from inputs.press_releases import press_releases
 from inputs.race_reports import race_reports
-from pipeline.formatting import get_zwift_ids, final_format, teams_slice, format_results, format_mmss
+from pipeline.formatting import get_zwift_ids, final_format, teams_slice
 from pipeline.calcs import get_stage, calc_overall_pts, calc_overall_orange, handicaps_format
 from pipeline.ttt import sort_ttt
 

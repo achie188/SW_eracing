@@ -71,12 +71,12 @@ s4 = final_format(s4)
 s5 = final_format(s5)
 s6 = final_format(s6)
 
-
+live = ttt_team
 #Get live event
-# if not live.empty:
-#     live = format_results(live, ath_ids)
-#     live.drop(columns=['Time_secs'], inplace=True)
-#     live = live.rename(columns={'Time_nice': 'Time'})
+if not live.empty:
+    live = format_results(live, ath_ids)
+    live.drop(columns=['Time_secs'], inplace=True)
+    live = live.rename(columns={'Time_nice': 'Time'})
 
 
 #Team slices

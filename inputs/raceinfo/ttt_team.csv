@@ -1,5 +1,5 @@
-Pos,Team,Name,Time_secs,Time_nice,W/Kg,HR,Points,BP,Total
-1,ABS,D. Thompson,54891:50:24,38:07:00,3.44,0,335,,335
-2,Tesla,E. Smith,55893:21:36,38:48:00,3.26,156,251,,251
-3,AZT,T. Lopez,56261:02:24,39:04:00,3.28,165,167,,167
-4,Lego,E. Wetbeak,57400:19:12,39:51:00,3.48,155,84,,84
+Pos,Team,Name,Time,Points,BP,Total
+1,ABS,D. Thompson,38:07,335,,335
+2,Tesla,E. Smith,38:48,251,,251
+3,AZT,T. Lopez,39:04,167,,167
+4,Lego,E. Wetbeak,39:51,84,,84

@@ -78,10 +78,10 @@ def sort_ttt(orange_df, ath_ids, gsheets):
         ind_o_pts['Pos'] = ind_o_pts.index + 1
         ind_o_pts = ind_o_pts[['Pos', 'Team', 'Name', 'Time_nice', 'Time_secs', 'Power', 'W/Kg', 'HR', 'Orange']]
 
-        push_gsheet(ind_o_pts, "TTT_Ind")
+        push_gsheet(ind_o_pts, "TTT")
         push_gsheet(team, "TTT_Teams")
 
-        ind_ttt = pull_gsheet("TTT_Ind")
+        ind_ttt = pull_gsheet("TTT")
         team_ttt = pull_gsheet("TTT_Teams")
 
         save_csv(ind_ttt, ind_path)

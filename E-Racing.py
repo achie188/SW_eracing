@@ -82,10 +82,10 @@ s6 = final_format(s6)
 
 
 #Get live event
-ttt_tesla = pull_ttt(zwift_ids[3])
-ttt_abs = pull_ttt(zwift_ids[4])
-ttt_azt = pull_ttt(zwift_ids[5])
-ttt_lego = pull_ttt(zwift_ids[6])
+ttt_tesla = pull_ttt('3960850')
+ttt_abs = pull_ttt('3894781')
+ttt_azt = pull_ttt('3960851')
+ttt_lego = pull_ttt('3966815')
 
 
 if not ttt_tesla.empty:

@@ -82,7 +82,7 @@ s6 = final_format(s6)
 
 
 #Get live event
-zwift_ids = [3960850, 3894781, 3960851, 3966815]
+zwift_ids = [3961357, 3960872, 3960871, 3960869]
 teams = ['Tesla', 'Amazon', 'AZT', 'Lego']
 
 dfs = []
@@ -96,8 +96,11 @@ live = pd.concat(dfs, ignore_index=True)
 live = live.sort_values(by='Distance', ascending=False).reset_index(drop=True)
 live['Pos'] = live.index + 1
 
+furthest = live['Distance'].max()
+live['Diff'] = furthest - live['Distance']
+
 live['Time'] = live['Time'].apply(format_mmss)
-live = live[['Pos', 'Team', 'Name', 'Distance', 'W/Kg', 'Time']]
+live = live[['Pos', 'Team', 'Name', 'Distance', 'Diff', 'W/Kg', 'Time']]
 
 
 # if not live.empty:

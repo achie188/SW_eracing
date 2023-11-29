@@ -165,11 +165,14 @@ with tab4:
 
     with col1:
         if live is not None and not live.empty:
+            st.subheader('Team Live Positions')
+            st.dataframe(team_summary, height = int(35.2*(team_summary.shape[0]+1)), hide_index=True)
             st.dataframe(live, height = int(35.2*(live.shape[0]+1)), hide_index=True)
         else:
             st.write("No live data right now.")
     with col2:
-        st.dataframe(team_summary, height = int(35.2*(team_summary.shape[0]+1)), hide_index=True)
+        st.subheader('Individual Live Positions')
+        st.dataframe(live, height = int(35.2*(live.shape[0]+1)), hide_index=True)
    
 
 

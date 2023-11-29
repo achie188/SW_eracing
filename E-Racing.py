@@ -73,10 +73,10 @@ s6 = final_format(s6)
 
 live = ttt_team
 #Get live event
-if not live.empty:
-    live = format_results(live, ath_ids)
-    live.drop(columns=['Time_secs'], inplace=True)
-    live = live.rename(columns={'Time_nice': 'Time'})
+# if not live.empty:
+#     live = format_results(live, ath_ids)
+#     live.drop(columns=['Time_secs'], inplace=True)
+#     live = live.rename(columns={'Time_nice': 'Time'})
 
 
 #Team slices
@@ -130,13 +130,13 @@ with tab4:
     with col1:
         if live is not None and not live.empty:
             st.subheader('Team Live Positions')
-            st.dataframe(team_summary, height = int(35.2*(team_summary.shape[0]+1)), hide_index=True)
+            st.dataframe(ttt_team, height = int(35.2*(ttt_team.shape[0]+1)), hide_index=True)
         else:
             st.write("No live data right now.")
     with col2:
         if live is not None and not live.empty:
             st.subheader('Individual Live Positions')
-            st.dataframe(live, height = int(35.2*(live.shape[0]+1)), hide_index=True)
+            st.dataframe(ttt_ind, height = int(35.2*(ttt_ind.shape[0]+1)), hide_index=True)
    
 
 

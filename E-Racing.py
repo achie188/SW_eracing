@@ -161,11 +161,16 @@ tab1, tab2, tab3, tab4 = st.tabs(["Championship", "All Results", "About", "LIVE 
                                                     ###############################
 
 with tab4:
-    if live is not None and not live.empty:
+    col1, col2 = st.columns(2)
+
+    with col1:
+        if live is not None and not live.empty:
+            st.dataframe(live, height = int(35.2*(live.shape[0]+1)), hide_index=True)
+        else:
+            st.write("No live data right now.")
+    with col2:
         st.dataframe(team_summary, height = int(35.2*(team_summary.shape[0]+1)), hide_index=True)
-        st.dataframe(live, height = int(35.2*(live.shape[0]+1)), hide_index=True)
-    else:
-        st.write("No live data right now.")
+   
 
 
 

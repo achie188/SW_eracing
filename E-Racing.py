@@ -82,9 +82,14 @@ s6 = final_format(s6)
 
 
 #Get live event
-live = pull_zwift(zwift_ids[2])
-if not live.empty:
-    live = format_results(live, ath_ids)
+ttt_tesla = pull_ttt(zwift_ids[3])
+ttt_abs = pull_ttt(zwift_ids[4])
+ttt_azt = pull_ttt(zwift_ids[5])
+ttt_lego = pull_ttt(zwift_ids[6])
+
+
+if not ttt_tesla.empty:
+    live = format_results(ttt_tesla, ath_ids)
     live.drop(columns=['Time_secs'], inplace=True)
     live = live.rename(columns={'Time_nice': 'Time'})
 
@@ -135,8 +140,8 @@ tab1, tab2, tab3, tab4 = st.tabs(["Championship", "All Results", "About", "LIVE 
                                                     ###############################
 
 with tab4:
-    if live is not None and not live.empty:
-        st.dataframe(live, height=2000, hide_index=True)
+    if ttt_tesla is not None and not ttt_tesla.empty:
+        st.dataframe(ttt_tesla, height=2000, hide_index=True)
     else:
         st.write("No live data right now.")
 

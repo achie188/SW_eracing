@@ -55,8 +55,13 @@ def pull_ttt(event_id):
     race_data = pd.DataFrame(placement_data)
 
     if not(race_data).empty:
-        race_data.drop(columns=['powerOutputInWatts', 'liveTimeGapToLeaderInSeconds', 'speedInKmHours', 'powerupUsed', 'jerseyHash', 'location', 'countryCodeAlpha2Code', 'crossingStartingLineGap', 'rideOnsCounter', 'arrivalAtInSeconds', 'groupNumber'], inplace=True)
+        race_data.drop(columns=['playerId', 'heartRateinBpm', 'powerOutputInWatts', 'liveTimeGapToLeaderInSeconds', 'speedInKmHours', 'powerupUsed', 'jerseyHash', 'location', 'countryCodeAlpha2Code', 'crossingStartingLineGap', 'rideOnsCounter', 'arrivalAtInSeconds', 'groupNumber'], inplace=True)
 
-    race_data = race_data.rename(columns={'distanceInMeters': 'Distance'}).round(1)
+    race_data = race_data.rename(columns={'distanceInMeters': 'Distance'}).round(0)
+    race_data = race_data.rename(columns={'powerInWattsPerKg': 'W/Kg'})
+    race_data = race_data.rename(columns={'completionTimeInSeconds': 'Time'}).round(1)
+    race_data['Name'] = race_data['firstName'] + race_data['lastName'] 
+
+    race_data.drop(columns=['firstName', 'lastName'], inplace=True)
 
     return race_data

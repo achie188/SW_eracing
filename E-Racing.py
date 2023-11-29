@@ -87,11 +87,13 @@ ttt_abs = pull_ttt('3894781')
 ttt_azt = pull_ttt('3960851')
 ttt_lego = pull_ttt('3966815')
 
+live = pd.concat([ttt_tesla, ttt_abs, ttt_azt, ttt_lego], ignore_index=True)
+live = live.sort_values(by='time').reset_index(drop=True)
 
-if not ttt_tesla.empty:
-    live = format_results(ttt_tesla, ath_ids)
-    live.drop(columns=['Time_secs'], inplace=True)
-    live = live.rename(columns={'Time_nice': 'Time'})
+# if not live.empty:
+#     live = format_results(live, ath_ids)
+#     live.drop(columns=['Time_secs'], inplace=True)
+#     live = live.rename(columns={'Time_nice': 'Time'})
 
 
 #Team slices

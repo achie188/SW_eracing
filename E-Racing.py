@@ -357,7 +357,7 @@ with tab2:
 
         with col2:
             st.subheader('Race Reports')
-            with st.expander("General - The Dark Art of the Team Time Trial"):
+            with st.expander("ARCHIVES - The Dark Art of the Team Time Trial"):
                  st.markdown(ttt_gen)
             with st.expander("Team AZT - Teo Lopez"):
                 st.markdown(ttt_azt)

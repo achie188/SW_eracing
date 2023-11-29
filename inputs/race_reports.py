@@ -225,6 +225,8 @@ def race_reports():
     I sat, contemplating the meeting for a while. And smiled. I had a plan ...'''
 
     ttt_general = '''
+    A Report From The Sexy Walrus Archives - TTT From Yesteryear...
+
     What a glorious pen. How neat it is. Everyone in one place. People aren’t strewn all over the road. Glorious. What a nice pen. 
 
     We had a day’s worth of WhatsApp’s to discuss tactics. There were two clear camps. 

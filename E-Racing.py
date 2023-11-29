@@ -171,8 +171,9 @@ with tab4:
         else:
             st.write("No live data right now.")
     with col2:
-        st.subheader('Individual Live Positions')
-        st.dataframe(live, height = int(35.2*(live.shape[0]+1)), hide_index=True)
+        if live is not None and not live.empty:
+            st.subheader('Individual Live Positions')
+            st.dataframe(live, height = int(35.2*(live.shape[0]+1)), hide_index=True)
    
 
 

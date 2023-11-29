@@ -193,7 +193,7 @@ def calc_overall_pts(pro, s1, s2, s3, ttt, s4, s5, s6, ttt_teams):
     merged_df['TTT'] += merged_df['Total']  
     merged_df = merged_df.drop(columns='Total')
 
-    team_df['Total'] = team_df[numeric_columns].sum(axis=1)
+    team_df['Total'] = merged_df[numeric_columns].sum(axis=1)
 
     team_df = team_df.loc[team_df['Total'] != 0]
 

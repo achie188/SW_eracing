@@ -55,8 +55,9 @@ def get_ttt(ath_ids):
     team_summary['Time_nice'] = team_summary['Time_secs'].apply(format_mmss)
 
     df = df[['#', 'Name', 'Team', 'Time_nice', 'Time_secs', 'Gap', 'Power', 'W/Kg', 'HR']]
-    team_summary = team_summary[['Pos', 'Team', 'Name', 'Time_nice']]
     team_summary = team_summary.rename(columns={'Time_nice': 'Time'})
+    team_summary = team_summary[['Pos', 'Team', 'Name', 'Time']]
+    
 
     return df, team_summary
 

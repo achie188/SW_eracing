@@ -24,14 +24,14 @@ def get_ttt():
         # live['Diff'] = furthest - live['Distance']
 
         
-        live = live[['Pos', 'Team', 'Name', 'W/Kg', 'Time']]
+        live = live[['Pos', 'Team', 'Name', 'Time', 'Speed', 'Power', 'W/Kg', 'HR']]
 
         # Filter the DataFrame to keep only the 4th fastest time from each team
         team_summary = live.groupby('Team').apply(lambda x: x.nsmallest(4, 'Time')).reset_index(drop=True)
         team_summary = team_summary.groupby('Team').nth(3).reset_index()
         team_summary = team_summary.sort_values(by='Time', ascending=True).reset_index(drop=True)
         team_summary['Pos'] = team_summary.index + 1
-        team_summary = team_summary[['Pos', 'Team', 'Name', 'W/Kg', 'Time']]
+        team_summary = team_summary[['Pos', 'Team', 'Name', 'Time', 'Speed', 'Power', 'W/Kg', 'HR']]
 
         live['Time'] = live['Time'].apply(format_mmss)
         team_summary['Time'] = team_summary['Time'].apply(format_mmss)

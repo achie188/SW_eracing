@@ -7,7 +7,7 @@ from PIL import Image
 
 sys.path.append('/Users/achie188/Library/CloudStorage/GitHub/Personal/SW_eracing')
 
-from inputs.pull_zwift import pull_zwift
+from inputs.pull_zwift import pull_zwift, pull_ttt
 from inputs.pull_gsheet import pull_gsheet, push_gsheet
 from inputs.helpers import get_ids
 from inputs.rules import rules

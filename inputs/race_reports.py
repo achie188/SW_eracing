@@ -276,10 +276,10 @@ def race_reports():
 
     This didn’t feel like it was going well. 
 
-    But things improved. We slowed down and Graeme got back on. But unfortunately now Graeme was in a real strop. Which was justifiable as all the risks he had highlighted in the 
+    But things improved. We slowed down and Graeme got back on. But unfortunately now Graeme was in a real strop. Which was very justifiable as all the risks he had highlighted in the 
     balls-out-Teo approach had come home to roost within a minute of the start.  
 
-    Graeme hung on for a bit, but by about 6km in, Graeme was clearly fundamentally against the whole approach taken by the team, and couldn’t snap out of his sulk and climbed 
+    Graeme hung on for a bit, but by about 6km in, Graeme was clearly fundamentally against the whole approach taken by the team, couldn’t snap out of his sulk and climbed 
     into the virtual team car to shout at the DS and argue about terminating his contract early. 
 
     (It brought to my mind that time Rohan Dennis stopped riding and then hide from his own team during a race, so his team had to go around asking the other teams if anyone had 
@@ -296,9 +296,9 @@ def race_reports():
 
     Home safe and sound. All over. Just like it never happened. 
 
-    Just after we finished Andy piped up again on discord. Great stuff boys. Good work. Enjoyable viewing.
+    Just after we finished Andy piped up again on discord. "Great stuff boys. Good work. Enjoyable viewing."
 
-    “Jesus, Andy - you scared the life out of me. Are you still here?”  Just watching still. Good racing.'''
+    “Jesus, Andy - you scared the life out of me. Are you still here?”  Just watching still. Good stuff.'''
 
     ttt_azt = '''
     The Team Trial. Always a pivotal week in the e-racing calendar. Historically, the winner of the TTT takes the crown at the end of the series… 
@@ -344,7 +344,7 @@ def race_reports():
       bottle with the Tesla logo. The room fell silent as he confidently strode to the podium, a smirk playing on his face.
 
     "Sorry I'm late, folks. Traffic was terrible, and my electric bike is still in development," Musk said, causing a few journalists to chuckle. "I've been following the 
-    struggles my own Team Tesla (Thames Water).” Somehow you could hear the brackets when he said the team name. He continued, “I’ve decided it's time for a management update."
+    struggles my own Team Tesla (Thames Water).” Somehow you could hear the brackets when he said the other sponsor in team name. He continued, “I’ve decided it's time for a management update."
 
     Humphrey’s eyes widened, and he exchanged a bewildered glance with the team members in the room.
     "I'm stepping in as the new team manager, effective immediately. I came into this gig to revolutionise cycling, and who better to do that than me?” Musk declared, as the 
@@ -354,7 +354,7 @@ def race_reports():
     our UFC fight so I need a new physical challenge.”
 
     “I’m going to fire half the staff, costs are way too high. We also need a new name. Something like ‘Team X Cyclotron’ or ‘TeslaX Velocity Squad’. That should sort it all 
-    out. What else is there to it? It sounds easy.”
+    out. What else is there to it? Maybe team members should pay to be a part of the team. Whatever. It sounds easy.”
 
     The journalists erupted into a frenzy of questions. Musk fielded them with his signature charisma, effortlessly turning the press briefing into a spectacle. "I've been 
     training secretly in my Hyperloop tunnel. It's time to take Tesla's innovation to the world of cycling and conquer the E-Racing series!”

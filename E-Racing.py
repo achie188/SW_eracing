@@ -350,7 +350,7 @@ with tab2:
         col1, col2 = st.columns([5,3])
 
         with col1:
-            st.subheader('Team Time trial')
+            st.subheader('Team Time Trial')
             st.dataframe(ttt_team, height = int(35.2*(ttt_team.shape[0]+1)), hide_index=True)
             st.dataframe(ttt, height = int(35.2*(ttt_ind.shape[0]+1)), hide_index=True)
 

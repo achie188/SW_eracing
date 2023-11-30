@@ -326,4 +326,42 @@ def race_reports():
 
     3rd plaice for the hippos on the night – they couldn’t have given any more. The Amazonian juggernaut rolls on. The winner of the TTT always takes the crown they say…'''
 
-    return s1_azt, s1_tesla, s2_tesla, s2_abs, s2_azt, s3_tesla, s3_lego, ttt_general, ttt_azt
+    ttt_tesla = '''
+    I nervously adjusted my notepad and pen. This was my first assignment as a budding sports journalist, covering what many are calling the 4th Grand Tour - the Sexy Walrus 
+    E-Racing Series. Struggling cycling team, Team Tesla Thames Water were up next. Rumours of internal conflicts and underperformance had surrounded the team, and the 
+    atmosphere was tense.
+
+    The team manager, George Humphreys, stood at the podium, beads of sweat forming on his forehead. He looked like he'd been through a few uphill battles himself, not just 
+    on course. The air was thick with uncertainty as journalists fired questions at him.
+
+    "Mr. Humphreys, what's going wrong with Team Tesla Thames Water? Are the cyclists not charged up enough?" one journalist quipped, prompting a few awkward chuckles. 
+    “Watering down your strategies?” called another. The last was a little more abrupt, “Why are you guys doing so shit?”
+
+    Humphreys sighed. "Look, it's been a challenging season. We're working on some technical glitches, our water has ended up costing 5x as much as we expected and has 
+    given most of our riders dysentery, and don’t get me started on the suspicious nature of the other teams.”
+
+    Just as the pressure in the room was about to peak, the door swung open dramatically. In walked none other than Elon Musk, wearing a cycling helmet and holding a water
+      bottle with the Tesla logo. The room fell silent as he confidently strode to the podium, a smirk playing on his face.
+
+    "Sorry I'm late, folks. Traffic was terrible, and my electric bike is still in development," Musk said, causing a few journalists to chuckle. "I've been following the 
+    struggles my own Team Tesla (Thames Water).” Somehow you could hear the brackets when he said the team name. He continued, “I’ve decided it's time for a management update."
+
+    Humphrey’s eyes widened, and he exchanged a bewildered glance with the team members in the room.
+    "I'm stepping in as the new team manager, effective immediately. I came into this gig to revolutionise cycling, and who better to do that than me?” Musk declared, as the 
+    room erupted into a mix of gasps and whispers.
+
+    "But that's not all," Musk continued, grinning mischievously. "I've also decided to join the cycling team. I'll be leading from the front. Literally. Zuck backed out of 
+    our UFC fight so I need a new physical challenge.”
+
+    “I’m going to fire half the staff, costs are way too high. We also need a new name. Something like ‘Team X Cyclotron’ or ‘TeslaX Velocity Squad’. That should sort it all 
+    out. What else is there to it? It sounds easy.”
+
+    The journalists erupted into a frenzy of questions. Musk fielded them with his signature charisma, effortlessly turning the press briefing into a spectacle. "I've been 
+    training secretly in my Hyperloop tunnel. It's time to take Tesla's innovation to the world of cycling and conquer the E-Racing series!”
+
+    As I scribbled down Musk's bold statements, I couldn't help but marvel at the surreal turn of events. The press briefing had transformed from a gloomy assessment of Team 
+    Tesla Thames Water to a stage for Musk's audacious takeover - one hopes it goes better than Twitter.
+
+    And so, the cycling world awaits the debut of Elon Musk, the unexpected saviour on two wheels, ready to electrify the sport in more ways than one.'''
+
+    return s1_azt, s1_tesla, s2_tesla, s2_abs, s2_azt, s3_tesla, s3_lego, ttt_general, ttt_azt, ttt_tesla

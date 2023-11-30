@@ -36,7 +36,7 @@ handicaps = handicaps_format(handicaps)
 #Get text
 r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, handicaps_rules = rules()
 lego_pr, tesla_pr, azt_pr, abs_pr = press_releases()
-s1_azt, s1_tesla, s2_tesla, s2_abs, s2_azt, s3_tesla, s3_lego, ttt_gen, ttt_azt = race_reports()
+s1_azt, s1_tesla, s2_tesla, s2_abs, s2_azt, s3_tesla, s3_lego, ttt_gen, ttt_azt, ttt_tesla = race_reports()
 
 #Get stage data
 s1, orange_df = get_stage(zwift_ids[0], "Stage_1", ath_ids, "No")
@@ -360,6 +360,8 @@ with tab2:
                  st.markdown(ttt_gen)
             with st.expander("Team AZT - Teo Lopez"):
                 st.markdown(ttt_azt)
+            with st.expander("Team Tesla Press Briefing - Graeme Acheson"):
+                st.markdown(ttt_tesla)
 
     with tab26:
         col1, col2 = st.columns([5,3])

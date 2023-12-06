@@ -280,7 +280,7 @@ with tab2:
         
         with col1:
             st.subheader('Prologue Results')
-            st.dataframe(prologue, height = int(35.2*(prologue.shape[0]+1)), hide_index=True)
+            st.dataframe(prologue, height = 1200, hide_index=True)
 
         with col2:
             st.subheader('Relevant Rules')

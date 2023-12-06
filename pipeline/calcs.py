@@ -220,7 +220,7 @@ def calc_overall_pts(pro, s1, s2, s3, ttt, s4, s5, s6):
 
     column_order = list(team_df.columns)
     column_order.remove('TTT')  
-    column_order.insert(5, 'TTT')  
+    column_order.insert(6, 'TTT')  
     team_df = team_df[column_order]
 
     # calc KOM pts
@@ -242,6 +242,11 @@ def calc_overall_pts(pro, s1, s2, s3, ttt, s4, s5, s6):
 
     kom_df = kom_df.round(0)
 
+    column_order = list(kom_df.columns)
+    column_order.remove('TTT')  
+    column_order.insert(5, 'TTT')  
+    kom_df = kom_df[column_order]
+
     # calc sprinter pts
     sprinter_df = combined_df.pivot_table(index='Name', columns='Stage', values='Int. S', aggfunc='sum', fill_value=0)
     sprinter_df.reset_index(inplace=True)
@@ -260,6 +265,11 @@ def calc_overall_pts(pro, s1, s2, s3, ttt, s4, s5, s6):
     sprinter_df.drop(columns=['index', 'Prologue'], inplace=True)  
 
     sprinter_df = sprinter_df.round(0)
+
+    column_order = list(sprinter_df.columns)
+    column_order.remove('TTT')  
+    column_order.insert(5, 'TTT')  
+    sprinter_df = sprinter_df[column_order]
 
     return ind_df, team_df, kom_df, sprinter_df
 

@@ -92,4 +92,4 @@ def sort_ttt(orange_df, ath_ids, gsheets):
         team_ttt = load_csv(team_path)
 
 
-    return ind_ttt, team_ttt, orange
+    return ind_ttt, team_ttt, orange_df

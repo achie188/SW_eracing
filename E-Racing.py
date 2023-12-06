@@ -361,7 +361,7 @@ with tab2:
 
         with col1:
             st.subheader('Stage 4 Results')
-            # st.dataframe(s4, height = int(35.2*(s4.shape[0]+1)), hide_index=True)
+            st.dataframe(s4, height = int(35.2*(s4.shape[0]+1)), hide_index=True)
 
     with tab27:
         col1, col2 = st.columns([5,3])

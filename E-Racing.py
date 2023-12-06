@@ -18,8 +18,8 @@ from pipeline.ttt import sort_ttt
 
 
 # Manual overrides
-refresh_interval = 300
-stages_complete = ['Prologue', 'Stage 1', 'Stage 2', 'Stage 3', 'TTT']
+refresh_interval = 60
+stages_complete = ['Prologue', 'Stage 1', 'Stage 2', 'Stage 3', 'TTT', 'Stage 4']
 
 
 
@@ -46,7 +46,7 @@ s3, orange_df = get_stage(zwift_ids[2], "Stage_3", ath_ids, "No", orange_df)
 
 ttt_ind, ttt_team, orange_df = sort_ttt(orange_df, ath_ids, "No")
 
-s4, orange_df = get_stage(zwift_ids[3], "Stage_4", ath_ids, "No", orange_df)
+s4, orange_df = get_stage(zwift_ids[3], "Stage_4", ath_ids, "Yes", orange_df)
 s5, orange_df = get_stage(zwift_ids[4], "Stage_5", ath_ids, "No", orange_df)
 s6, orange_df = get_stage(zwift_ids[5], "Stage_6", ath_ids, "No", orange_df)
 

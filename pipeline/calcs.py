@@ -136,7 +136,7 @@ def get_stage(stage, stage_num, ath_ids, gsheet="No", orange_df=prologue):
     return stage_res, orange_df
 
 
-def calc_overall_pts(pro, s1, s2, s3, ttt, s4, s5, s6, ttt_teams):
+def calc_overall_pts(pro, s1, s2, s3, ttt, s4, s5, s6):
 
     ath_ids = load_csv(athlete_path)
 
@@ -182,6 +182,11 @@ def calc_overall_pts(pro, s1, s2, s3, ttt, s4, s5, s6, ttt_teams):
     ind_df = ind_df.round(0)
     ind_df = add_team(ind_df, ath_ids)
 
+    column_order = list(ind_df.columns)
+    column_order.remove('TTT')  
+    column_order.insert(7, 'TTT')  
+    ind_df = ind_df[column_order]
+
     # calc team pts
     team_df = combined_df.pivot_table(index='Team', columns='Stage', values='Total', aggfunc='sum', fill_value=0)
     team_df.reset_index(inplace=True)
@@ -212,6 +217,11 @@ def calc_overall_pts(pro, s1, s2, s3, ttt, s4, s5, s6, ttt_teams):
     team_df.drop(columns=['index'], inplace=True)  
 
     team_df = team_df.round(0)
+
+    column_order = list(team_df.columns)
+    column_order.remove('TTT')  
+    column_order.insert(5, 'TTT')  
+    team_df = team_df[column_order]
 
     # calc KOM pts
     kom_df = combined_df.pivot_table(index='Name', columns='Stage', values='KOM', aggfunc='sum', fill_value=0)

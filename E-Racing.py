@@ -57,7 +57,7 @@ orange_df = calc_overall_orange(prologue, s1, s2, s3, ttt_ind, s4, s5, s6, stage
 
 
 #Calc points
-ind_pts, team_pts, kom_pts, sprinter_pts = calc_overall_pts(prologue, s1, s2, s3, ttt_ind, s4, s5, s6, ttt_team)
+ind_pts, team_pts, kom_pts, sprinter_pts = calc_overall_pts(prologue, s1, s2, s3, ttt_ind, s4, s5, s6)
 
 
 

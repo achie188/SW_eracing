@@ -19,7 +19,7 @@ from pipeline.ttt import sort_ttt
 
 # Manual overrides
 refresh_interval = 300
-stages_complete = ['Prologue', 'Stage 1', 'Stage 2', 'Stage 3', 'TTT']
+stages_complete = ['Prologue', 'Stage 1', 'Stage 2', 'Stage 3', 'TTT' ,'Stage_4']
 
 
 
@@ -44,7 +44,7 @@ s1, orange_df = get_stage(zwift_ids[0], "Stage_1", ath_ids, "No")
 s2, orange_df = get_stage(zwift_ids[1], "Stage_2", ath_ids, "No", orange_df)
 s3, orange_df = get_stage(zwift_ids[2], "Stage_3", ath_ids, "No", orange_df)
 
-ttt_ind, ttt_team, orange_df = sort_ttt(orange_df, ath_ids, "No")
+ttt_ind, ttt_team, orange_df = sort_ttt(orange_df, ath_ids, "Yes")
 
 s4, orange_df = get_stage(zwift_ids[3], "Stage_4", ath_ids, "No", orange_df)
 s5, orange_df = get_stage(zwift_ids[4], "Stage_5", ath_ids, "No", orange_df)
@@ -77,8 +77,8 @@ s6 = final_format(s6)
 
 
 #Get live event
-live = pull_zwift('3979927')
-live = format_results(live, ath_ids)
+live = pull_zwift('3995583')
+# live = format_results(live, ath_ids)
 
 
 #Team slices

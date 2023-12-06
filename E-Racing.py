@@ -77,7 +77,7 @@ s6 = final_format(s6)
 
 
 #Get live event
-live = pd.none
+live = pd.DataFrame()
 
 
 

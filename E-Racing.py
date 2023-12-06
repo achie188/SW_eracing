@@ -77,8 +77,8 @@ s6 = final_format(s6)
 
 
 #Get live event
-live = pull_zwift('3995583')
-# live = format_results(live, ath_ids)
+live = pd.none
+
 
 
 #Team slices

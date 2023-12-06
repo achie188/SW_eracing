@@ -43,7 +43,7 @@ s1, orange_df = get_stage(zwift_ids[0], "Stage_1", ath_ids, "No")
 s2, orange_df = get_stage(zwift_ids[1], "Stage_2", ath_ids, "No", orange_df)
 s3, orange_df = get_stage(zwift_ids[2], "Stage_3", ath_ids, "No", orange_df)
 
-ttt_ind, ttt_team, orange_df = sort_ttt(orange_df, ath_ids, "Yes")
+ttt_ind, ttt_team, orange_df = sort_ttt(orange_df, ath_ids, "No")
 
 s4, orange_df = get_stage(zwift_ids[3], "Stage_4", ath_ids, "No", orange_df)
 s5, orange_df = get_stage(zwift_ids[4], "Stage_5", ath_ids, "No", orange_df)

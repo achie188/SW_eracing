@@ -27,7 +27,7 @@ location = os.getcwd()
 
 
 #Get ids
-stages, ath_ids, prologue, pts, handicaps, orange_pass = get_ids("No")
+stages, ath_ids, prologue, pts, handicaps, orange_pass = get_ids("Yes")
 
 stage_values = ['Stage_1', 'Stage_2', 'Stage_3', 'Stage_4', 'Stage_5', 'Stage_6']
 zwift_ids = get_zwift_ids(stage_values, stages)
@@ -46,7 +46,7 @@ s3, orange_df = get_stage(zwift_ids[2], "Stage_3", ath_ids, "No", orange_df)
 
 ttt_ind, ttt_team, orange_df = sort_ttt(orange_df, ath_ids, "No")
 
-s4, orange_df = get_stage(zwift_ids[3], "Stage_4", ath_ids, "No", orange_df)
+s4, orange_df = get_stage(zwift_ids[3], "Stage_4", ath_ids, "Yes", orange_df)
 s5, orange_df = get_stage(zwift_ids[4], "Stage_5", ath_ids, "No", orange_df)
 s6, orange_df = get_stage(zwift_ids[5], "Stage_6", ath_ids, "No", orange_df)
 

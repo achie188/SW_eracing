@@ -250,7 +250,7 @@ def race_reports():
 
     What a glorious pen we were in. Such a nice pen. 
 
-    3…2…1… GO GO GO
+    3 … 2 … 1 … GO GO GO!
 
     Oh look! There’s Bill! We’ve got 4 men. Great. Oh and there’s Graeme! 5! Banzai!! 
 
@@ -377,7 +377,7 @@ def race_reports():
 
     However, as the first climb approached their true nature was revealead. Their virtual bikes danced in perfect harmony, propelling them forward with an ease that 
     seemed to mock the efforts of those around them. The disgruntled peloton, filled with riders who had spent countless hours mastering the nuances of Zwift racing, became 
-    a mere backdrop to their unexpected triumph.
+    a mere backdrop to their triumph.
 
     The more experienced riders, clad in their custom kits and armed with meticulous race strategies, could only watch as the Greenish Brothers defied all expectations and rode
     effortlessly away up the hills picking up nearly all possible points. They crossed the finish line in a blaze of virtual glory, avatars adorned with laurels. 
@@ -391,8 +391,7 @@ def race_reports():
     they’re all shit and I smashed them all.’
 
     In the end, the disgruntled veterans could only console themselves with the realization that in Zwift, as in life, the unexpected is always possible. The Greenish Brothers, 
-    once novices in a sea of experience, had etched their names in Zwift history, proving that sometimes, a fresh perspective and unbridled enthusiasm can outpace the most 
-    seasoned competition. The virtual realm had witnessed a revolution, and the Greenish Brothers were its unlikely champions.
+    novices in a sea of experience, had etched their names in Zwift history. The virtual realm had witnessed a revolution, the Greenish Brothers its unlikely champions.
     '''
 
     return s1_azt, s1_tesla, s2_tesla, s2_abs, s2_azt, s3_tesla, s3_lego, ttt_general, ttt_azt, ttt_tesla, s4_tesla

@@ -364,4 +364,35 @@ def race_reports():
 
     And so, the cycling world awaits the debut of Elon Musk, the unexpected saviour on two wheels, ready to electrify the sport in more ways than one.'''
 
-    return s1_azt, s1_tesla, s2_tesla, s2_abs, s2_azt, s3_tesla, s3_lego, ttt_general, ttt_azt, ttt_tesla
+    s4_tesla = '''
+    The Sexy Walrus E-Series Revolution: Greenish Brothers' Domination Continues
+
+    When the Greenish siblings first entered the virtual world of Zwift and Sexy Walrus, little was known of them. The default gear, the basic avatars and bikes – they were the 
+    embodiment of the inexperienced. Little did the Walrus peleton know that their journey would be marked by an improbable ascent to victory, defying the odds and leaving a trail of 
+    grizzled veterans in their wake.
+
+    Stage 4 race began, a slightly hillier one, hoping to lean towards the lighter riders in the pack. Amidst the sea of seasoned avatars the Greenish Brothers embarked on 
+    the race with unbridled enthusiasm. The concept of watts per kilogram and virtual tactics foreign to them, approaching the race with the simplicity of true novices. 
+    Pedaling away, they seemingly marveled at the beauty of the virtual landscape, oblivious to the competitive currents swirling around them.
+
+    However, as the first climb approached their true nature was revealead. Their virtual bikes danced in perfect harmony, propelling them forward with an ease that 
+    seemed to mock the efforts of those around them. The disgruntled peloton, filled with riders who had spent countless hours mastering the nuances of Zwift racing, became 
+    a mere backdrop to their unexpected triumph.
+
+    The more experienced riders, clad in their custom kits and armed with meticulous race strategies, could only watch as the Greenish Brothers defied all expectations and rode
+    effortlessly away up the hills picking up nearly all possible points. They crossed the finish line in a blaze of virtual glory, avatars adorned with laurels. 
+    The Greenish Brothers had arrived.
+
+    Huw said diplomatically after the race, 'Full credit goes to the team and in particular our captain and inspirational leader Teo Lopez. We are merely the figureheads of the team, 
+    the pointy end of the spear. We pick up the points but the real work is done in the engine room of the team and we merely get to enjoy the spoils. The other teams were fantastic too,
+    it was a real battle out there for the first 35 seconds. There's some great athletes out there, it's a privilege to be a part of the race and amongst such great company.
+
+    Dav said, 'I started this e-cycling thing with all these nerdy online cycling gimps who spend all their time planning it and talking about it and building fancy websites and 
+    they’re all shit and I smashed them all.’
+
+    In the end, the disgruntled veterans could only console themselves with the realization that in Zwift, as in life, the unexpected is always possible. The Greenish Brothers, 
+    once novices in a sea of experience, had etched their names in Zwift history, proving that sometimes, a fresh perspective and unbridled enthusiasm can outpace the most 
+    seasoned competition. The virtual realm had witnessed a revolution, and the Greenish Brothers were its unlikely champions.
+    '''
+
+    return s1_azt, s1_tesla, s2_tesla, s2_abs, s2_azt, s3_tesla, s3_lego, ttt_general, ttt_azt, ttt_tesla, s4_tesla

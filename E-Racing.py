@@ -435,7 +435,7 @@ with tab3:
             st.markdown(r13)
 
     with tab42:
-        col1, col2 = st.columns(2)
+        col1, col2 = st.columns([3,4])
 
         with col1:
             col11, col12 = st.columns([1,4])
@@ -458,7 +458,7 @@ with tab3:
             st.dataframe(lego_boots, height = int(35.2*(lego_boots.shape[0]+1)), hide_index=True)
 
     with tab43:
-        col1, col2 = st.columns(2)
+        col1, col2 = st.columns([3,4])
 
         with col1:
             col11, col12 = st.columns([1,4])
@@ -481,7 +481,7 @@ with tab3:
             st.dataframe(amazon, height = int(35.2*(amazon.shape[0]+1)), hide_index=True)
 
     with tab44:
-        col1, col2 = st.columns(2)
+        col1, col2 = st.columns([3,4])
 
         with col1:
             col11, col12 = st.columns([1,4])
@@ -503,7 +503,7 @@ with tab3:
             st.dataframe(tesla, height = int(35.2*(tesla.shape[0]+1)), hide_index=True)
 
     with tab45:
-        col1, col2 = st.columns(2)
+        col1, col2 = st.columns([3,4])
 
         with col1:
             col11, col12 = st.columns([1,4])

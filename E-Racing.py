@@ -57,11 +57,13 @@ orange_df = calc_overall_orange(prologue, s1, s2, s3, ttt_ind, s4, s5, stages_co
 
 pts = pts[['#', 'Final_orange']]
 orange_pts = pd.merge(orange_df, pts, on='#', how='left')
+orange_pts['Final_orange'].fillna(0, inplace=True)
 s5_orange = orange_pts[['Name', 'Final_orange']]
 
 s5 = pd.merge(s5, s5_orange, on='Name', how='left')
 s5['Final_orange'].fillna(0, inplace=True)
-s5['Orange'] = np.maximum(pd.to_numeric(s5['Orange'], errors='coerce'), pd.to_numeric(s5['Final_orange'], errors='coerce'))
+#s5['Orange'] = np.maximum(pd.to_numeric(s5['Orange'], errors='coerce'), pd.to_numeric(s5['Final_orange'], errors='coerce'))
+s5['Orange'] = s5['Final_orange']
 s5.drop(columns=['Final_orange', 'Stage', 'KOM', 'Int. S', 'DS/DC', 'Report', 'MAR', 'Par.', 'Total'], inplace=True)
 
 push_gsheet(s5, 'Stage_5')
@@ -214,6 +216,7 @@ with tab1:
 
         with col1:
             st.subheader('Orange Jersey Race')
+            orange_pts = orange_pts.rename(columns={'Final_orange': 'Pts'})
             st.dataframe(orange_pts, height = int(35.2*(orange_df.shape[0]+1)), hide_index=True)
 
         with col2:

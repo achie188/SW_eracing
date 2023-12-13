@@ -214,7 +214,7 @@ with tab1:
 
         with col1:
             st.subheader('Orange Jersey Race')
-            st.dataframe(orange_df, height = int(35.2*(orange_df.shape[0]+1)), hide_index=True)
+            st.dataframe(orange_pts, height = int(35.2*(orange_df.shape[0]+1)), hide_index=True)
 
         with col2:
             st.subheader('Relevant Rules')

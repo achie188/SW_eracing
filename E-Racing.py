@@ -60,6 +60,7 @@ orange_pts = pd.merge(orange_df, pts, on='#', how='left')
 s5_orange = orange_pts[['Name', 'Final_orange']]
 
 s5 = pd.merge(s5, s5_orange, on='Name', how='left')
+s5['Final_orange'].fillna(0, inplace=True)
 s5['Orange'] = np.maximum(pd.to_numeric(s5['Orange'], errors='coerce'), pd.to_numeric(s5['Final_orange'], errors='coerce'))
 s5.drop(columns=['Final_orange', 'Stage', 'KOM', 'Int. S', 'DS/DC', 'Report', 'MAR', 'Par.', 'Total'], inplace=True)
 

@@ -21,7 +21,7 @@ from pipeline.ttt import sort_ttt
 
 # Manual overrides
 refresh_interval = 20
-stages_complete = ['Prologue', 'Stage 1', 'Stage 2', 'Stage 3', 'TTT', 'Stage 4']
+stages_complete = ['Prologue', 'Stage 1', 'Stage 2', 'Stage 3', 'TTT', 'Stage 4', 'Stage 5']
 
 
 

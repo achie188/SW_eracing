@@ -82,7 +82,6 @@ def orange(orange_df, new_stage):
         df = df.rename(columns={'Orange_y': 'Orange'})
     df = df[['Name', 'Orange']]
     
-
     return df, orange_df
 
 
@@ -136,7 +135,7 @@ def get_stage(stage, stage_num, ath_ids, gsheet="No", orange_df=prologue):
     return stage_res, orange_df
 
 
-def calc_overall_pts(pro, s1, s2, s3, ttt, s4, s5, s6):
+def calc_overall_pts(pro, s1, s2, s3, ttt, s4, s5):
 
     ath_ids = load_csv(athlete_path)
 
@@ -148,11 +147,10 @@ def calc_overall_pts(pro, s1, s2, s3, ttt, s4, s5, s6):
         process_dataframe(ttt, 'TTT'),
         process_dataframe(s4, 'Stage 4'),
         process_dataframe(s5, 'Stage 5'),
-        process_dataframe(s6, 'Stage 6'),
     ]
 
     # Concatenate the DataFrames
-    all_dataframes = [pro, s1, s2, s3, ttt, s4, s5, s6]
+    all_dataframes = [pro, s1, s2, s3, ttt, s4, s5]
     combined_df = pd.concat(all_dataframes, ignore_index=True)
     combined_df['Total'] = pd.to_numeric(combined_df['Total'], errors='coerce')
     combined_df['KOM'] = pd.to_numeric(combined_df['KOM'], errors='coerce')
@@ -274,7 +272,7 @@ def calc_overall_pts(pro, s1, s2, s3, ttt, s4, s5, s6):
     return ind_df, team_df, kom_df, sprinter_df
 
 
-def calc_overall_orange(pro, s1, s2, s3, ttt, s4, s5, s6, columns_to_replace, orange_pass):
+def calc_overall_orange(pro, s1, s2, s3, ttt, s4, s5, columns_to_replace, orange_pass):
 
     all_dataframes = [
         process_dataframe(pro, 'Prologue'),
@@ -284,7 +282,6 @@ def calc_overall_orange(pro, s1, s2, s3, ttt, s4, s5, s6, columns_to_replace, or
         process_dataframe(ttt, 'TTT'),
         process_dataframe(s4, 'Stage 4'),
         process_dataframe(s5, 'Stage 5'),
-        process_dataframe(s6, 'Stage 6'),
     ]
 
     # Concatenate the DataFramesome    all_dataframes = [pro, s1, s2a, s2b, s3, s4, s5, s6]

@@ -4,6 +4,7 @@ from streamlit_autorefresh import st_autorefresh
 import sys
 import os
 from PIL import Image
+import numpy as np
 
 sys.path.append('/Users/achie188/Library/CloudStorage/GitHub/Personal/SW_eracing')
 
@@ -12,14 +13,15 @@ from inputs.rules import rules
 from inputs.press_releases import press_releases
 from inputs.race_reports import race_reports
 from inputs.pull_zwift import pull_zwift
+from inputs.pull_gsheet import pull_gsheet, push_gsheet
 from pipeline.formatting import get_zwift_ids, final_format, teams_slice, format_results
 from pipeline.calcs import get_stage, calc_overall_pts, calc_overall_orange, handicaps_format
 from pipeline.ttt import sort_ttt
 
 
 # Manual overrides
-refresh_interval = 300
-stages_complete = ['Prologue', 'Stage 1', 'Stage 2', 'Stage 3', 'TTT', 'Stage 4']
+refresh_interval = 20
+stages_complete = ['Prologue', 'Stage 1', 'Stage 2', 'Stage 3', 'TTT', 'Stage 4', 'Stage 5']
 
 
 
@@ -27,7 +29,7 @@ location = os.getcwd()
 
 
 #Get ids
-stages, ath_ids, prologue, pts, handicaps, orange_pass = get_ids("Yes")
+stages, ath_ids, prologue, pts, handicaps, orange_pass = get_ids("No")
 
 stage_values = ['Stage_1', 'Stage_2', 'Stage_3', 'Stage_4', 'Stage_5']
 zwift_ids = get_zwift_ids(stage_values, stages)
@@ -47,9 +49,24 @@ s3, orange_df = get_stage(zwift_ids[2], "Stage_3", ath_ids, "No", orange_df)
 ttt_ind, ttt_team, orange_df = sort_ttt(orange_df, ath_ids, "No")
 
 s4, orange_df = get_stage(zwift_ids[3], "Stage_4", ath_ids, "No", orange_df)
-s5, orange_df = get_stage(zwift_ids[4], "Stage_5", ath_ids, "No", orange_df)
+s5, orange_df = get_stage(zwift_ids[4], "Stage_5", ath_ids, "Yes", orange_df)
 
 
+#Sort out final stage
+pts = pts[['Orange', 'Final_orange']]
+pts['Final_orange'] = pts['Final_orange'].replace('', np.nan)
+pts = pts.dropna(subset=['Final_orange'])
+
+s5 = pd.merge(s5, pts, left_on='Orange', right_on='Orange', how='left')
+s5['Final_orange'] = s5['Final Orange']
+s5.drop(columns=['Final Orange', 'KOM', 'Int. S', 'DS/DC', 'Report', 'MAR', 'Par.', 'Total'], inplace=True)
+s5 = s5.rename(columns={'Final_orange': 'Final Orange'})
+s5['Final Orange'] = s5['Final Orange'].fillna(0)
+s5['Name'] = s5['Name'].replace('', np.nan)
+s5 = s5.dropna(subset=['Name'])
+
+push_gsheet(s5, 'Stage_5')
+s5 = pull_gsheet('Stage_5')
 
 #Orange Jersey
 orange_df = calc_overall_orange(prologue, s1, s2, s3, ttt_ind, s4, s5, stages_complete, orange_pass)
@@ -75,7 +92,7 @@ s5 = final_format(s5)
 
 
 #Get live event
-live = pd.DataFrame()
+live = pull_zwift(zwift_ids[4])
 
 
 
@@ -144,7 +161,7 @@ with tab1:
     tab11, tab12, tab13, tab14, tab15, tab16 = st.tabs(['Teams', 'Orange', 'Individual', 'KOM', 'Sprinter', 'Handicaps'])
 
     with tab13:
-        col1, col2 = st.columns([2,3])
+        col1, col2 = st.columns(2)
 
         with col1:
             st.subheader('Individual Series Standings')
@@ -170,7 +187,7 @@ with tab1:
                 st.markdown(r13)
 
     with tab11:
-        col1, col2 = st.columns([2,3])
+        col1, col2 = st.columns(2)
 
         with col1:
             st.subheader('Teams Series Standings')
@@ -196,7 +213,7 @@ with tab1:
                 st.markdown(r13)    
 
     with tab12:
-        col1, col2 = st.columns([2,3])
+        col1, col2 = st.columns(2)
 
         with col1:
             st.subheader('Orange Jersey Race')
@@ -212,7 +229,7 @@ with tab1:
                 st.markdown(r13)
 
     with tab14:
-        col1, col2 = st.columns([2,3])
+        col1, col2 = st.columns(2)
 
         with col1:
             st.subheader('Polka Dot Jersey')
@@ -230,7 +247,7 @@ with tab1:
                 st.markdown(r13)
 
     with tab15:
-        col1, col2 = st.columns([2,3])
+        col1, col2 = st.columns(2)
 
         with col1:
             st.subheader('Ciclamino Jersey')
@@ -248,7 +265,7 @@ with tab1:
                 st.markdown(r13)
 
     with tab16:
-        col1, col2 = st.columns([2,3])
+        col1, col2 = st.columns(2)
 
         with col1: 
             st.subheader('Handicaps')
@@ -371,7 +388,11 @@ with tab2:
 
         with col1:
             st.subheader('Stage 5 Results')
-            st.dataframe(s5, height = int(35.2*(s5.shape[0]+1)), hide_index=True)
+            if live is not None and not live.empty:
+                st.dataframe(s5, height = int(35.2*(s5.shape[0]+1)), hide_index=True)
+            else:
+                st.write("No stage data right now.")
+            
 
 
 

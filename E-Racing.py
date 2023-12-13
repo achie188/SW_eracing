@@ -64,7 +64,7 @@ s5['Orange'] = s5['Final_orange']
 s5.drop(columns=['Final_orange', 'Stage', 'KOM', 'Int. S', 'DS/DC', 'Report', 'MAR', 'Par.', 'Total'], inplace=True)
 
 push_gsheet(s5, 'Stage_5')
-stage_res = pull_gsheet('Stage_5')
+s5 = pull_gsheet('Stage_5')
 
 
 

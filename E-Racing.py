@@ -27,9 +27,9 @@ location = os.getcwd()
 
 
 #Get ids
-stages, ath_ids, prologue, pts, handicaps, orange_pass = get_ids("No")
+stages, ath_ids, prologue, pts, handicaps, orange_pass = get_ids("Yes")
 
-stage_values = ['Stage_1', 'Stage_2', 'Stage_3', 'Stage_4', 'Stage_5', 'Stage_6']
+stage_values = ['Stage_1', 'Stage_2', 'Stage_3', 'Stage_4', 'Stage_5']
 zwift_ids = get_zwift_ids(stage_values, stages)
 
 handicaps = handicaps_format(handicaps)
@@ -46,18 +46,17 @@ s3, orange_df = get_stage(zwift_ids[2], "Stage_3", ath_ids, "No", orange_df)
 
 ttt_ind, ttt_team, orange_df = sort_ttt(orange_df, ath_ids, "No")
 
-s4, orange_df = get_stage(zwift_ids[3], "Stage_4", ath_ids, "Yes", orange_df)
+s4, orange_df = get_stage(zwift_ids[3], "Stage_4", ath_ids, "No", orange_df)
 s5, orange_df = get_stage(zwift_ids[4], "Stage_5", ath_ids, "No", orange_df)
-s6, orange_df = get_stage(zwift_ids[5], "Stage_6", ath_ids, "No", orange_df)
 
 
 
 #Orange Jersey
-orange_df = calc_overall_orange(prologue, s1, s2, s3, ttt_ind, s4, s5, s6, stages_complete, orange_pass)
+orange_df = calc_overall_orange(prologue, s1, s2, s3, ttt_ind, s4, s5, stages_complete, orange_pass)
 
 
 #Calc points
-ind_pts, team_pts, kom_pts, sprinter_pts = calc_overall_pts(prologue, s1, s2, s3, ttt_ind, s4, s5, s6)
+ind_pts, team_pts, kom_pts, sprinter_pts = calc_overall_pts(prologue, s1, s2, s3, ttt_ind, s4, s5)
 
 
 
@@ -73,7 +72,6 @@ ttt = final_format(ttt_ind)
 
 s4 = final_format(s4)
 s5 = final_format(s5)
-s6 = final_format(s6)
 
 
 #Get live event
@@ -373,7 +371,7 @@ with tab2:
 
         with col1:
             st.subheader('Stage 5 Results')
-            # st.dataframe(s5, height = int(35.2*(s5.shape[0]+1)), hide_index=True)
+            st.dataframe(s5, height = int(35.2*(s5.shape[0]+1)), hide_index=True)
 
 
 

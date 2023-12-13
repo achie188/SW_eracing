@@ -21,7 +21,7 @@ from pipeline.ttt import sort_ttt
 
 # Manual overrides
 refresh_interval = 20
-stages_complete = ['Prologue', 'Stage 1', 'Stage 2', 'Stage 3', 'TTT', 'Stage 4', 'Stage 5']
+stages_complete = ['Prologue', 'Stage 1', 'Stage 2', 'Stage 3', 'TTT', 'Stage 4']
 
 
 
@@ -57,16 +57,17 @@ pts = pts[['Orange', 'Final_orange']]
 pts['Final_orange'] = pts['Final_orange'].replace('', np.nan)
 pts = pts.dropna(subset=['Final_orange'])
 
-s5 = pd.merge(s5, pts, left_on='Orange', right_on='Orange', how='left')
-s5['Final_orange'] = s5['Final Orange']
-s5.drop(columns=['Final Orange', 'KOM', 'Int. S', 'DS/DC', 'Report', 'MAR', 'Par.', 'Total'], inplace=True)
-s5 = s5.rename(columns={'Final_orange': 'Final Orange'})
-s5['Final Orange'] = s5['Final Orange'].fillna(0)
-s5['Name'] = s5['Name'].replace('', np.nan)
-s5 = s5.dropna(subset=['Name'])
+if s5 is not None and not s5.empty:
+    s5 = pd.merge(s5, pts, left_on='Orange', right_on='Orange', how='left')
+    s5['Final_orange'] = s5['Final Orange']
+    s5.drop(columns=['Final Orange', 'KOM', 'Int. S', 'DS/DC', 'Report', 'MAR', 'Par.', 'Total'], inplace=True)
+    s5 = s5.rename(columns={'Final_orange': 'Final Orange'})
+    s5['Final Orange'] = s5['Final Orange'].fillna(0)
+    s5['Name'] = s5['Name'].replace('', np.nan)
+    s5 = s5.dropna(subset=['Name'])
 
-push_gsheet(s5, 'Stage_5')
-s5 = pull_gsheet('Stage_5')
+    push_gsheet(s5, 'Stage_5')
+    s5 = pull_gsheet('Stage_5')
 
 #Orange Jersey
 orange_df = calc_overall_orange(prologue, s1, s2, s3, ttt_ind, s4, s5, stages_complete, orange_pass)

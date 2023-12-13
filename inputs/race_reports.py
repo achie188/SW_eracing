@@ -398,4 +398,37 @@ def race_reports():
     in a sea of experience, had etched their names in Sexy Walrus history. The virtual realm had witnessed a revolution, the Greenish Brothers its champions.
     '''
 
-    return s1_azt, s1_tesla, s2_tesla, s2_abs, s2_azt, s3_tesla, s3_lego, ttt_general, ttt_azt, ttt_tesla, s4_tesla
+    s5_lego = '''
+    I was so excited. This was my fifth race this year. I had missed last week due to the quantity of bile I was evacuating out of my stomach into various bowls. A 
+    bowel to bowl transfer. Which is unusual, as it’s usually after a race that I feel like vomiting - it’s just last week I decided I’d act it out before the race 
+    for a change. 
+
+  I digress. Forgive me. I was excited.  It was my fifth race this year, and I was yet to make an attack. I had spent each and every race hanging on in the bunch on 
+  the flats. Hanging on for dear life on the climbs. And hanging on near the back on every sprint section. 
+
+  But here. 10k in. I was feeling good. It was the only time in the last 10 minutes we hadn’t been gruelling up some gruelling hill. And I felt something I hadn’t 
+  felt before. Not for a long time. I was thinking “hang on. I might be feeling good enough for an attack here.” We were cruising down a descent, and there was a 
+  medium hill coming up that might not be on anyone’s radar. 
+
+  I was so excited. I started telling people about it. First i told my team. “Hey guys - I’m going to send it on this next hill.”  
+  Then I shouted out to my wife in the kitchen “HEY! MADDY! I’M GOING TO MAKE AN ATTACK!” I could tell by the way she was shaking her head she was proud of me. This 
+  gave me even more confidence. “I’M GOING TO SEND IT ON THE NEXT HILL MADDY!” She walked out of the kitchen. I assumed she was going to go wake the kids up and tell 
+  them too. 
+
+  I was so excited now. Who else could I tell!? I rang up the captain of Tesla. No answer. So I left a message. “GEORGE. I’M GOING TO SEND IT ON THE NEXT CLIMB. LET’S 
+  SEE IF WE CAN DROP THESE AMAZON MOTHHHHEEEEEERRRRRRR FUCKERRRRRRRRRRRRRS.”
+
+  The start of the hill came. I was unsure if it really was the hill I thought it was. And for a moment I thought maybe I didn’t feel that good after all. Maybe I had 
+  overcommitted myself. Maybe I should just follow the wheels like I always do. 
+
+  Nic’s voice came over comms. “Errr. Eddie. I thought you were, err, going to, err, send it. Or something.”  
+
+  Alright Nic. Al-fucking-right Nic. You’ve made your point. I’ll fucking send it. Arghhhhhhhhh!  
+
+  And there it was. My one attack of the series. And what a thing it was. 90s at 450w. A whole peloton strung out behind me. 
+
+  Totally pointless of course. I couldn’t make the kind of break I wanted, a large group reformed on the descent again. The KoM was now looming and my testicles were 
+  hanging by a thread.
+  '''
+
+    return s1_azt, s1_tesla, s2_tesla, s2_abs, s2_azt, s3_tesla, s3_lego, ttt_general, ttt_azt, ttt_tesla, s4_tesla, s5_lego

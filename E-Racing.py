@@ -39,7 +39,7 @@ handicaps = handicaps_format(handicaps)
 #Get text
 r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, handicaps_rules = rules()
 lego_pr, tesla_pr, azt_pr, abs_pr = press_releases()
-s1_azt, s1_tesla, s2_tesla, s2_abs, s2_azt, s3_tesla, s3_lego, ttt_gen, ttt_azt, ttt_tesla, s4_tesla = race_reports()
+s1_azt, s1_tesla, s2_tesla, s2_abs, s2_azt, s3_tesla, s3_lego, ttt_gen, ttt_azt, ttt_tesla, s4_tesla, s5_lego = race_reports()
 
 #Get stage data
 s1, orange_df = get_stage(zwift_ids[0], "Stage_1", ath_ids, "No")
@@ -387,11 +387,11 @@ with tab2:
 
         with col1:
             st.subheader('Stage 5 Results')
-            if live is not None and not live.empty:
-                st.dataframe(s5, height = int(35.2*(s5.shape[0]+1)), hide_index=True)
-            else:
-                st.write("No stage data right now.")
-            
+            st.dataframe(s5, height = int(35.2*(s5.shape[0]+1)), hide_index=True)
+        with col2:
+            st.subheader('Race Reports')
+            with st.expander("Team Lego - Ed Humphreys"):
+                st.markdown(s5_lego)     
 
 
 

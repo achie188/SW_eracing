@@ -61,7 +61,6 @@ s5_orange = orange_pts[['Name', 'Final_orange']]
 
 s5 = pd.merge(s5, s5_orange, on='Name', how='left')
 s5['Orange'] = np.maximum(pd.to_numeric(s5['Orange'], errors='coerce'), pd.to_numeric(s5['Final_orange'], errors='coerce'))
-s5['Orange'] = np.maximum(s5['Orange'], s5['Final_orange'])
 s5.drop(columns=['Final_orange', 'Stage', 'KOM', 'Int. S', 'DS/DC', 'Report', 'MAR', 'Par.', 'Total'], inplace=True)
 
 push_gsheet(s5, 'Stage_5')
